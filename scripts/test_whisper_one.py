@@ -1,27 +1,33 @@
-"""测试 Whisper 识别一集 - 台湾口音中文"""
+"""测试 faster-whisper GPU 加速识别一集 - 台湾口音中文"""
 
 import os
+import sys
 import glob
 import time
-import whisper
+import json
 
-DOWNLOAD_DIR = r"c:\Projects\wechat-course-dl\downloads"
-TRANSCRIPT_DIR = r"c:\Projects\wechat-course-dl\transcripts"
+# 项目根目录
+ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
+DOWNLOAD_DIR = os.path.join(ROOT_DIR, "downloads")
+TRANSCRIPT_DIR = os.path.join(ROOT_DIR, "transcripts")
 os.makedirs(TRANSCRIPT_DIR, exist_ok=True)
 
-# 找第一集 (序号最大的是 108，文件名排序后最小序号的 mp4)
-videos = sorted(glob.glob(os.path.join(DOWNLOAD_DIR, "*.mp4")))
+from faster_whisper import WhisperModel
 
-# 找一个短的视频测试 (001 阴阳 约 2:58)
+# 找视频文件
+videos = sorted(glob.glob(os.path.join(DOWNLOAD_DIR, "*.mp4")))
+if not videos:
+    print(f"没有找到视频文件: {DOWNLOAD_DIR}")
+    sys.exit(1)
+
+# 找一个短的视频测试 (优先 001)
 test_video = None
 for v in videos:
-    name = os.path.basename(v)
-    if "001" in name:
+    if "001" in os.path.basename(v):
         test_video = v
         break
 
 if not test_video:
-    # 用最小的文件
     videos_with_size = [(v, os.path.getsize(v)) for v in videos]
     videos_with_size.sort(key=lambda x: x[1])
     test_video = videos_with_size[0][0]
@@ -32,29 +38,44 @@ size_mb = os.path.getsize(test_video) / 1024 / 1024
 print(f"测试视频: {name}")
 print(f"文件大小: {size_mb:.1f}MB")
 
-# 使用 small 模型 (CPU 上速度合理，中文识别质量不错)
-# 台湾口音中文设置 language="zh" 即可
-MODEL = "small"
-print(f"\n加载 Whisper {MODEL} 模型...")
-t0 = time.time()
-model = whisper.load_model(MODEL)
-print(f"模型加载: {time.time()-t0:.1f}秒")
+# 加载模型 (GPU 加速)
+MODEL = "large-v3"
+DEVICE = "cuda"
+COMPUTE_TYPE = "float16"
 
+print(f"\n加载 faster-whisper {MODEL} 模型 (device={DEVICE}, compute={COMPUTE_TYPE})...")
+t0 = time.time()
+model = WhisperModel(MODEL, device=DEVICE, compute_type=COMPUTE_TYPE)
+print(f"模型加载: {time.time() - t0:.1f}秒")
+
+# 转录
 print(f"\n开始转录...")
 t1 = time.time()
-result = model.transcribe(
+segments_iter, info = model.transcribe(
     test_video,
-    language="zh",       # 指定中文
-    verbose=False,
-    fp16=False,          # CPU 模式
-    initial_prompt="以下是中医课程讲座内容，讲师为台湾口音。",  # 提示词帮助识别
+    language="zh",
+    initial_prompt="以下是中医课程讲座内容，讲师为台湾口音。涉及阴阳五行、脏腑经络、气血津液、辨证论治。",
+    vad_filter=True,
+    beam_size=5,
 )
-elapsed = time.time() - t1
 
-text = result["text"]
-print(f"\n转录完成! 耗时: {elapsed:.1f}秒")
-print(f"识别文字: {len(text)} 字")
-print(f"\n{'='*60}")
+segments = []
+text_parts = []
+for seg in segments_iter:
+    segments.append({
+        "start": round(seg.start, 2),
+        "end": round(seg.end, 2),
+        "text": seg.text.strip(),
+    })
+    text_parts.append(seg.text.strip())
+
+text = "".join(text_parts)
+elapsed = time.time() - t1
+speed = info.duration / elapsed if elapsed > 0 else 0
+
+print(f"\n转录完成! 耗时: {elapsed:.1f}秒 (音频: {info.duration:.0f}秒, {speed:.1f}x 实时)")
+print(f"识别文字: {len(text)} 字, {len(segments)} 段")
+print(f"\n{'=' * 60}")
 print("转录结果预览 (前 1000 字):")
 print("=" * 60)
 print(text[:1000])
@@ -66,18 +87,16 @@ out_path = os.path.join(TRANSCRIPT_DIR, f"{out_name}.txt")
 with open(out_path, "w", encoding="utf-8") as f:
     f.write(text)
 
-# 保存带时间戳的版本
-import json
-segments = []
-for seg in result["segments"]:
-    segments.append({
-        "start": round(seg["start"], 2),
-        "end": round(seg["end"], 2),
-        "text": seg["text"].strip(),
-    })
 detail_path = os.path.join(TRANSCRIPT_DIR, f"{out_name}_detail.json")
 with open(detail_path, "w", encoding="utf-8") as f:
-    json.dump({"text": text, "segments": segments}, f, ensure_ascii=False, indent=2)
+    json.dump({
+        "text": text,
+        "language": info.language,
+        "duration": round(info.duration, 2),
+        "transcribe_time": round(elapsed, 2),
+        "speed_ratio": round(speed, 1),
+        "segments": segments,
+    }, f, ensure_ascii=False, indent=2)
 
 print(f"\n保存到: {out_path}")
 print(f"详细版: {detail_path}")
