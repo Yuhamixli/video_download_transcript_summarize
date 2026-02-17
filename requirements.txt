@@ -1,0 +1,16 @@
+# === 核心依赖 ===
+requests>=2.31.0
+mitmproxy>=10.0.0
+
+# === 语音识别（本地 Whisper，可选） ===
+openai-whisper>=20231117
+# faster-whisper>=1.0.0        # GPU 加速替代方案，推荐在工作站使用
+torch>=2.0.0
+imageio-ffmpeg>=0.4.9          # 内置 ffmpeg 二进制
+
+# === 大模型（大纲生成 & ASR 纠错） ===
+openai>=1.0.0
+
+# === 云端 ASR（推荐，精度远高于 Whisper） ===
+# alibabacloud-nls>=1.0.0      # 阿里云 ASR
+# websocket-client>=1.6.0      # 讯飞 ASR 依赖
