@@ -11,6 +11,8 @@ import glob
 import time
 import argparse
 import logging
+import traceback
+from datetime import datetime
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
@@ -182,6 +184,8 @@ def main():
     success = 0
     skip = 0
     errors = 0
+    failed_files = []
+    results = []
     total_start = time.time()
 
     for i, video_path in enumerate(videos):
@@ -192,23 +196,56 @@ def main():
         if not args.force and os.path.exists(output_path) and os.path.getsize(output_path) > 10:
             log.info(f"[{i+1}/{len(videos)}] 跳过 (已存在): {name}")
             skip += 1
+            results.append({"file": filename, "status": "skipped"})
             continue
 
         log.info(f"[{i+1}/{len(videos)}] 转录: {name}")
         try:
-            transcribe_video(model, video_path, output_path)
+            text = transcribe_video(model, video_path, output_path)
             success += 1
+            results.append({
+                "file": filename,
+                "status": "success",
+                "chars": len(text),
+            })
         except Exception as e:
-            log.error(f"  转录失败: {e}")
+            err_msg = f"{type(e).__name__}: {e}"
+            log.error(f"  转录失败: {err_msg}")
+            log.debug(traceback.format_exc())
             errors += 1
+            failed_files.append({"file": filename, "error": err_msg})
+            results.append({"file": filename, "status": "failed", "error": err_msg})
 
     total_elapsed = time.time() - total_start
 
+    # 保存运行报告 (含失败列表，便于重跑)
+    report_path = os.path.join(os.path.dirname(__file__), "transcribe_report.json")
+    report = {
+        "run_time": datetime.now().isoformat(),
+        "model": args.model,
+        "device": device,
+        "compute_type": compute_type,
+        "total_videos": len(videos),
+        "success": success,
+        "skipped": skip,
+        "failed": errors,
+        "total_seconds": round(total_elapsed, 1),
+        "failed_files": failed_files,
+        "results": results,
+    }
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
     print(f"\n{'=' * 60}")
-    print(f" 转录完成! 总耗时: {total_elapsed:.1f}秒")
+    print(f" 转录完成! 总耗时: {total_elapsed/3600:.1f}小时 ({total_elapsed:.0f}秒)")
     print(f"   成功: {success}")
     print(f"   跳过: {skip}")
     print(f"   失败: {errors}")
+    if failed_files:
+        print(f"\n   ❌ 失败文件:")
+        for f_item in failed_files:
+            print(f"      - {f_item['file']}: {f_item['error']}")
+    print(f"\n   报告: {report_path}")
     print(f"   输出: {TRANSCRIPT_DIR}")
     print(f"{'=' * 60}")
 

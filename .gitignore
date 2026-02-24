@@ -9,6 +9,9 @@ cookies.txt
 cookies.json
 .env
 
+# === 运行报告 ===
+transcribe_report.json
+
 # === Python ===
 __pycache__/
 *.pyc
