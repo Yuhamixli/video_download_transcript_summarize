@@ -362,6 +362,7 @@ def main():
             if result["status"] == "success":
                 success += 1
                 total_corrections += result["num_corrections"]
+                time.sleep(1)
             else:
                 skip += 1
         except Exception as e:
@@ -371,6 +372,7 @@ def main():
             errors += 1
             failed_files.append({"file": name, "error": err_msg})
             results.append({"file": name, "status": "failed", "error": err_msg})
+            time.sleep(3)
 
     total_elapsed = time.time() - total_start
 
