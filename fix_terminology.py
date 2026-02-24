@@ -267,6 +267,12 @@ def process_transcript(client, txt_path, model, system_prompt, force=False):
 
     corrected_text, corrections = parse_correction_result(raw_result)
 
+    # 安全检查: 纠错后文本不应比原文短太多
+    if len(corrected_text) < len(original_text) * 0.3 and len(original_text) > 50:
+        log.warning(f"  纠错结果异常 (原文{len(original_text)}字→{len(corrected_text)}字)，使用原文")
+        corrected_text = original_text
+        corrections = []
+
     # 保存纠错后文本
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(corrected_text)

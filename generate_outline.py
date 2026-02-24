@@ -142,7 +142,7 @@ def main():
     print(f" API: {API_BASE}")
     print("=" * 60)
 
-    client = OpenAI(api_key=API_KEY, base_url=API_BASE)
+    client = OpenAI(api_key=API_KEY, base_url=API_BASE, timeout=120.0, max_retries=5)
 
     transcripts, corrected_count = get_transcript_files()
     if args.file:

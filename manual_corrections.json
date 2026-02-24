@@ -3,32 +3,6104 @@
   "_format": "每条记录: wrong=ASR错误文本, correct=正确文本, context=出现语境(可选), note=备注(可选)",
   "_howto": "添加新条目后重新运行 fix_terminology.py --force 即可应用",
   "corrections": [
-    {"wrong": "红脉", "correct": "洪脉", "context": "脉诊", "note": "洪脉(flood pulse)，ASR常误识为红脉"},
-    {"wrong": "白骨汤", "correct": "白虎汤", "context": "方剂", "note": "白虎汤(White Tiger Decoction)"},
-    {"wrong": "空脉", "correct": "芤脉", "context": "脉诊", "note": "芤脉(hollow pulse)，芤为生僻字"},
-    {"wrong": "抠脉", "correct": "芤脉", "context": "脉诊"},
-    {"wrong": "华脉", "correct": "滑脉", "context": "脉诊", "note": "滑脉(slippery pulse)"},
-    {"wrong": "颈脉", "correct": "紧脉", "context": "脉诊", "note": "紧脉(tight pulse)"},
-    {"wrong": "冲管", "correct": "葱管", "context": "脉诊", "note": "芤脉如按葱管"},
-    {"wrong": "弹引", "correct": "痰饮", "context": "病因", "note": "痰饮(phlegm-fluid retention)"},
-    {"wrong": "死肌", "correct": "痰浊", "context": "病因"},
-    {"wrong": "抗热", "correct": "亢热", "context": "病证", "note": "亢热(hyperactive heat)"},
-    {"wrong": "阴室", "correct": "阴盛", "context": "阴阳", "note": "阴盛(yin excess)"},
-    {"wrong": "达意", "correct": "广义", "note": "台湾口音同音误识"},
-    {"wrong": "方计", "correct": "方剂"},
-    {"wrong": "方记", "correct": "方剂"},
-    {"wrong": "方济", "correct": "方剂"},
-    {"wrong": "血味", "correct": "穴位"},
-    {"wrong": "卖诊", "correct": "脉诊"},
-    {"wrong": "圣音虚", "correct": "肾阴虚"},
-    {"wrong": "寸官词", "correct": "寸关尺"},
-    {"wrong": "寸官次", "correct": "寸关尺"},
-    {"wrong": "经落", "correct": "经络"},
-    {"wrong": "精落", "correct": "经络"},
-    {"wrong": "藏腑", "correct": "脏腑"},
-    {"wrong": "脏府", "correct": "脏腑"},
-    {"wrong": "金液", "correct": "津液"},
-    {"wrong": "变证论治", "correct": "辨证论治"},
-    {"wrong": "扶正去邪", "correct": "扶正祛邪"}
+    {
+      "wrong": "红脉",
+      "correct": "洪脉",
+      "context": "脉诊",
+      "note": "洪脉(flood pulse)，ASR常误识为红脉"
+    },
+    {
+      "wrong": "白骨汤",
+      "correct": "白虎汤",
+      "context": "方剂",
+      "note": "白虎汤(White Tiger Decoction)"
+    },
+    {
+      "wrong": "空脉",
+      "correct": "芤脉",
+      "context": "脉诊",
+      "note": "芤脉(hollow pulse)，芤为生僻字"
+    },
+    {
+      "wrong": "抠脉",
+      "correct": "芤脉",
+      "context": "脉诊"
+    },
+    {
+      "wrong": "华脉",
+      "correct": "滑脉",
+      "context": "脉诊",
+      "note": "滑脉(slippery pulse)"
+    },
+    {
+      "wrong": "颈脉",
+      "correct": "紧脉",
+      "context": "脉诊",
+      "note": "紧脉(tight pulse)"
+    },
+    {
+      "wrong": "冲管",
+      "correct": "葱管",
+      "context": "脉诊",
+      "note": "芤脉如按葱管"
+    },
+    {
+      "wrong": "弹引",
+      "correct": "痰饮",
+      "context": "病因",
+      "note": "痰饮(phlegm-fluid retention)"
+    },
+    {
+      "wrong": "死肌",
+      "correct": "痰浊",
+      "context": "病因"
+    },
+    {
+      "wrong": "抗热",
+      "correct": "亢热",
+      "context": "病证",
+      "note": "亢热(hyperactive heat)"
+    },
+    {
+      "wrong": "阴室",
+      "correct": "阴盛",
+      "context": "阴阳",
+      "note": "阴盛(yin excess)"
+    },
+    {
+      "wrong": "达意",
+      "correct": "广义",
+      "note": "台湾口音同音误识"
+    },
+    {
+      "wrong": "方计",
+      "correct": "方剂"
+    },
+    {
+      "wrong": "方记",
+      "correct": "方剂"
+    },
+    {
+      "wrong": "方济",
+      "correct": "方剂"
+    },
+    {
+      "wrong": "血味",
+      "correct": "穴位"
+    },
+    {
+      "wrong": "卖诊",
+      "correct": "脉诊"
+    },
+    {
+      "wrong": "圣音虚",
+      "correct": "肾阴虚"
+    },
+    {
+      "wrong": "寸官词",
+      "correct": "寸关尺"
+    },
+    {
+      "wrong": "寸官次",
+      "correct": "寸关尺"
+    },
+    {
+      "wrong": "经落",
+      "correct": "经络"
+    },
+    {
+      "wrong": "精落",
+      "correct": "经络"
+    },
+    {
+      "wrong": "藏腑",
+      "correct": "脏腑"
+    },
+    {
+      "wrong": "脏府",
+      "correct": "脏腑"
+    },
+    {
+      "wrong": "金液",
+      "correct": "津液"
+    },
+    {
+      "wrong": "变证论治",
+      "correct": "辨证论治"
+    },
+    {
+      "wrong": "扶正去邪",
+      "correct": "扶正祛邪"
+    },
+    {
+      "wrong": "咸脉",
+      "correct": "弦脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸主痛",
+      "correct": "弦主痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气质",
+      "correct": "气滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "半表半理之病",
+      "correct": "半表半里之病",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干预气质",
+      "correct": "气滞血虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸又滑",
+      "correct": "弦又滑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸又硕",
+      "correct": "弦又数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸又滑又硕",
+      "correct": "弦又滑又数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "像这个",
+      "correct": "保留",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "可以讲",
+      "correct": "可以判断",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "它脉管的位置是",
+      "correct": "保留",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "它脉管的形状",
+      "correct": "保留",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "我们说的咸脉",
+      "correct": "我们说的弦脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "弹引症",
+      "correct": "痰饮症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干火上年",
+      "correct": "肝火上炎",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸石硕",
+      "correct": "弦滑数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸硕",
+      "correct": "弦数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干胆丝热",
+      "correct": "肝胆湿热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸滑硕",
+      "correct": "弦滑数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干胆的问题",
+      "correct": "肝胆的问题",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干血虚",
+      "correct": "血虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "悬系色",
+      "correct": "弦细数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "它不但载变咸脉",
+      "correct": "它不但变弦脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干血虚啊",
+      "correct": "血虚啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干阴虚",
+      "correct": "阴虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸细硕",
+      "correct": "弦细数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干阴虚本身呢",
+      "correct": "阴虚本身呢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气质血虚",
+      "correct": "气滞血虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸紧脉",
+      "correct": "弦紧脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸紧",
+      "correct": "弦紧",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "里面有气质",
+      "correct": "里面有气滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气质又造成血虚",
+      "correct": "气滞又造成血虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉子里面的流畅性的脉",
+      "correct": "脉诊里面的流畅性的脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "颈脉",
+      "correct": "紧脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "色脉",
+      "correct": "涩脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "弹印",
+      "correct": "痰饮 [病因]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "石迹",
+      "correct": "痰浊 [病因]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "充韧气盛",
+      "correct": "孕脉气盛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "颅脉",
+      "correct": "洪脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "综医诊断学",
+      "correct": "中医诊断学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "重案",
+      "correct": "重按",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大臣鸡汤",
+      "correct": "大承气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "瘦脉",
+      "correct": "数脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "斜实",
+      "correct": "邪实",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸实脉",
+      "correct": "弦实脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咸瘦脉",
+      "correct": "弦数脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血虚、舌头蛋、脉细色",
+      "correct": "血虚、舌淡、脉细涩",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "色脉",
+      "correct": "涩脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "朔脉",
+      "correct": "涩脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大乘其他汤症",
+      "correct": "大承气汤症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉枕",
+      "correct": "脉诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上汉杂病论",
+      "correct": "《伤寒杂病论》 [经典著作]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上汉脉",
+      "correct": "伤寒脉 [经典著作]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "磁塑",
+      "correct": "迟数 [脉象]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寸关齿",
+      "correct": "寸关尺 [诊脉部位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮虚脉",
+      "correct": "浮芤脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虹虚脉",
+      "correct": "洪芤脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "霉脉",
+      "correct": "芤脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "细缩脉",
+      "correct": "细数脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮颈",
+      "correct": "浮紧 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三寒论",
+      "correct": "伤寒论 [经典著作]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "麻黄汤针",
+      "correct": "麻黄汤证 [方剂]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "太阳三寒",
+      "correct": "太阳伤寒 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桂枝汤针",
+      "correct": "桂枝汤证 [方剂]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮塑脉",
+      "correct": "浮数脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉针",
+      "correct": "脉诊 [诊法]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脑侧",
+      "correct": "桡侧",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三部九喉",
+      "correct": "三部九候",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三寒论",
+      "correct": "伤寒论",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "人营脉",
+      "correct": "人迎脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "敷羊脉",
+      "correct": "趺阳脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脑动脉",
+      "correct": "桡动脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寸关齿",
+      "correct": "寸关尺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "后式的",
+      "correct": "后世的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "九喉",
+      "correct": "九候",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "轻曲",
+      "correct": "轻取",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中曲",
+      "correct": "中取",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉整基础",
+      "correct": "脉诊基础",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "问二辩里面的小辩",
+      "correct": "问二便里面的小便",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "尿壁不通",
+      "correct": "癃闭不通",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "尿出流",
+      "correct": "尿出艰",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "膀胱失恶",
+      "correct": "膀胱失约",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "八证闪",
+      "correct": "八髎穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "扎证",
+      "correct": "扎针",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小辩混浊",
+      "correct": "小便混浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寄生肾气",
+      "correct": "济生肾气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "十味帝皇玩",
+      "correct": "十味地黄丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "膀胱失寒",
+      "correct": "膀胱虚寒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气体附化",
+      "correct": "气化正常",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水液",
+      "correct": "水湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "贫尿",
+      "correct": "频尿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "贵妇地黄丸",
+      "correct": "桂附地黄丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "车钳子",
+      "correct": "车前子",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小便痛是另外一个小便",
+      "correct": "小便痛是另外一个小便问题",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阵型",
+      "correct": "证型",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "病级",
+      "correct": "病机",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "抖动舌",
+      "correct": "颤舌 [舌诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "齿横舌",
+      "correct": "齿痕舌 [舌诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "盲刺舌",
+      "correct": "芒刺舌 [舌诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "凹陷舌",
+      "correct": "凹陷舌 [舌诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "列文",
+      "correct": "裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下交",
+      "correct": "下焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾阴虚有乐",
+      "correct": "肾阴虚有热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心性裂纹",
+      "correct": "心阴虚裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃性裂纹",
+      "correct": "胃阴虚裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾性裂纹",
+      "correct": "脾虚裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺性裂纹",
+      "correct": "肺阴虚裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "目内字",
+      "correct": "目内眦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "目外字",
+      "correct": "目外眦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮",
+      "correct": "睑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "黄灼",
+      "correct": "黄翳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血淤",
+      "correct": "血瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝阳上炕",
+      "correct": "肝阳上亢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "风润",
+      "correct": "风热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "眼疹",
+      "correct": "眼诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "望尘",
+      "correct": "望诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "望而自知",
+      "correct": "望而之知",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "直诊",
+      "correct": "望诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "好气",
+      "correct": "暑气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴",
+      "correct": "邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血",
+      "correct": "邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴字",
+      "correct": "邪字",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "原木求鱼",
+      "correct": "缘木求鱼",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "陈武则",
+      "correct": "陈无择",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三因疾病证方论",
+      "correct": "三因极一病证方论",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六因",
+      "correct": "六淫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "风寒属湿造火",
+      "correct": "风寒暑湿燥火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰瘾",
+      "correct": "痰饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自闭原因",
+      "correct": "不内不外因",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "压腻",
+      "correct": "碾压",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "重受",
+      "correct": "重伤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自闭因素",
+      "correct": "不内不外因素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水液的孕化图",
+      "correct": "水液的运化图",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃是今夜的源头",
+      "correct": "胃是津液的源头",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾孕化水丝",
+      "correct": "脾运化水湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水丝呢",
+      "correct": "水湿呢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰影",
+      "correct": "痰饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚线丝",
+      "correct": "虚线水湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输布",
+      "correct": "输布/运化",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾认为脏的水",
+      "correct": "脾为脏的水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "速降空调水道",
+      "correct": "速降调水道",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "乳氧",
+      "correct": "濡养",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "分清别左",
+      "correct": "分清别浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大目",
+      "correct": "大肠",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾很重",
+      "correct": "肾很重要",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "孕化水液",
+      "correct": "运化水液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "纯人左",
+      "correct": "纯净",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰水",
+      "correct": "痰水/痰饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺为除痰之气",
+      "correct": "肺为贮痰之气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水丝",
+      "correct": "水湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三胶",
+      "correct": "三焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精液的源头",
+      "correct": "津液的源头",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "疏布",
+      "correct": "输布",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经",
+      "correct": "精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经液",
+      "correct": "津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经",
+      "correct": "津",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "可吸是血液",
+      "correct": "可是血液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "预防血淤",
+      "correct": "防止血瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经是清的",
+      "correct": "津是清的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "尿经",
+      "correct": "尿津",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮肾",
+      "correct": "肾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "清者为经",
+      "correct": "清者为津",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不包裹",
+      "correct": "不包含",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "瘾是比较清晰的",
+      "correct": "饮是比较清晰的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "叫瘾",
+      "correct": "叫饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "更浊一点，叫做瘾",
+      "correct": "更浊一点，叫做饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精气血经液",
+      "correct": "精气血津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血躁",
+      "correct": "血燥",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水骨之气",
+      "correct": "水谷之气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "七情欲解",
+      "correct": "七情郁结",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经气衰少",
+      "correct": "精气衰少",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血热跟血躁",
+      "correct": "血热跟血燥",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热破血形",
+      "correct": "热迫血妄行",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血里面的",
+      "correct": "血里的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝气质",
+      "correct": "肝气滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气为血之涮",
+      "correct": "气为血之帅",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心足血",
+      "correct": "心主血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾腾血",
+      "correct": "脾统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝肠血",
+      "correct": "肝藏血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "统设血液",
+      "correct": "统摄血液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "收射它",
+      "correct": "收摄它",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输血",
+      "correct": "贮血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "筋、气、血、筋液",
+      "correct": "精、气、血、津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "八针汤",
+      "correct": "八珍汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "神智",
+      "correct": "神志",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "骨气",
+      "correct": "谷气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "氢气",
+      "correct": "清气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水骨经维",
+      "correct": "水谷精微",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾肠金额化学",
+      "correct": "肾间动气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "银气",
+      "correct": "营气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "银形脉内",
+      "correct": "营行脉内",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精液",
+      "correct": "津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蒸气",
+      "correct": "卫气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺巢",
+      "correct": "肺系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "相夫之官",
+      "correct": "相傅之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输补",
+      "correct": "输布",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经气血经液",
+      "correct": "精气血津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃冰",
+      "correct": "胃气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "盈气",
+      "correct": "营气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "引气",
+      "correct": "营气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "巨噬系",
+      "correct": "巨噬细胞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蒸气",
+      "correct": "真气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外血",
+      "correct": "外邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "筋络",
+      "correct": "经络",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "营胃",
+      "correct": "营卫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "香木",
+      "correct": "相互",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "氢气",
+      "correct": "中气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "骨气",
+      "correct": "元气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺氧呼吸",
+      "correct": "肺的呼吸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "氧气跟二氧化",
+      "correct": "氧气跟二氧化碳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "二氧化的协同作用",
+      "correct": "二氧化碳的协同作用",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "清气加骨气等于中气",
+      "correct": "清气加谷气等于中气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精、血啊、精啊、液啊",
+      "correct": "精、血、津、液啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "生子之精",
+      "correct": "生殖之精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精脆",
+      "correct": "精微",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "有非常细微精脆的物质",
+      "correct": "有非常细微精微的物质",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣经",
+      "correct": "精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣阴",
+      "correct": "阴精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣阳",
+      "correct": "阳气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "增腾",
+      "correct": "蒸腾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣气",
+      "correct": "阳气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "狭义的经",
+      "correct": "狭义的精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经啊",
+      "correct": "精啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "潜方用药",
+      "correct": "辨证用药",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经气",
+      "correct": "精、气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经血经液",
+      "correct": "精气血津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经维物质",
+      "correct": "精微物质",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "温訓練的作用",
+      "correct": "温煦的作用",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏相学",
+      "correct": "脏象学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏相",
+      "correct": "脏象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "君主之关",
+      "correct": "君主之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "将军之关",
+      "correct": "将将军之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心血的肝血的状态",
+      "correct": "心血和肝血的状态",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心肠神",
+      "correct": "心藏神",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "调打",
+      "correct": "调达",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾同血",
+      "correct": "脾统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水火济济卦",
+      "correct": "水火既济卦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "梨挂",
+      "correct": "离挂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "香蕉",
+      "correct": "相交",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心肾香蕉",
+      "correct": "心肾相交",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "火水卫济卦",
+      "correct": "火水未济卦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "失明",
+      "correct": "失眠",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "相父之关",
+      "correct": "相傅之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "氢气",
+      "correct": "氧气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水股之气",
+      "correct": "水谷之气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气急",
+      "correct": "气机",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输血",
+      "correct": "疏泄",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "生酱",
+      "correct": "升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输力",
+      "correct": "输布",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经维",
+      "correct": "精微",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝气多而肝郁",
+      "correct": "肝气郁结",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝气泛脾胃",
+      "correct": "肝气犯脾胃",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气积",
+      "correct": "气机",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经血同源",
+      "correct": "精血同源",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肠、血互用",
+      "correct": "藏血互用",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴阳互滋互滋",
+      "correct": "阴阳互滋互储",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肠、血",
+      "correct": "藏血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肠、肌",
+      "correct": "藏精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "排经",
+      "correct": "排精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮与肺",
+      "correct": "脾与肺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮现在说",
+      "correct": "脾现在说",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "立线体",
+      "correct": "粒线体",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "位阶",
+      "correct": "阶位",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水液由脾气伤出于肺",
+      "correct": "水液由脾气升出于肺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下属",
+      "correct": "下输",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾阻丝而物丝",
+      "correct": "脾主湿而恶湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水液代谢呼吸运动",
+      "correct": "水液代谢、呼吸运动",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴阳的固脂",
+      "correct": "阴阳的互资",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺的氢气",
+      "correct": "肺的氧气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾，肿经",
+      "correct": "肾，主经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "速降",
+      "correct": "肃降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "助阴之本",
+      "correct": "诸阴之本",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "助阳之本",
+      "correct": "诸阳之本",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "支助",
+      "correct": "资助",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "好患",
+      "correct": "功能",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺吸的氢气",
+      "correct": "肺吸的氧气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳肾阴肾",
+      "correct": "阳虚阴虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴阳互支",
+      "correct": "阴阳互资",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "坐墙之官",
+      "correct": "作强之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏腺学",
+      "correct": "脏腑学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "主肠经",
+      "correct": "主藏经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肠经",
+      "correct": "藏经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾的脏腺",
+      "correct": "肾的脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾上的内分泌",
+      "correct": "肾脏的内分泌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾腺",
+      "correct": "肾脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾脉",
+      "correct": "肾气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经期",
+      "correct": "精气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾经",
+      "correct": "肾精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "分清别蜇",
+      "correct": "分清别浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "佐水",
+      "correct": "浊水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "煮水液",
+      "correct": "主水液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "煮纳气",
+      "correct": "主纳气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "煮肠经",
+      "correct": "主藏经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏腔穴",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蜜蜂蜂",
+      "correct": "命门火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾气虚酸",
+      "correct": "肾气虚的表现",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "苍秉之官",
+      "correct": "仓廪之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五胃出焉",
+      "correct": "五味出焉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "主身轻",
+      "correct": "主升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "主铜血",
+      "correct": "主统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中胶",
+      "correct": "中焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "喜造物湿",
+      "correct": "喜燥恶湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾氧",
+      "correct": "脾阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾和胃",
+      "correct": "脾胃",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾丝健运",
+      "correct": "脾失健运",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "孕化",
+      "correct": "运化",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "身轻",
+      "correct": "升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "降着",
+      "correct": "降浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气肌",
+      "correct": "气机",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阻升清",
+      "correct": "主升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮胃",
+      "correct": "胰脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮组酮血",
+      "correct": "脾主统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮不酮血",
+      "correct": "脾不统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "止癫",
+      "correct": "血小板",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "龟皮汤",
+      "correct": "归脾汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "隔疏",
+      "correct": "膈俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "百慧",
+      "correct": "百会",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "养齿",
+      "correct": "阴陵泉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮脏",
+      "correct": "脾脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胰脏血",
+      "correct": "胰脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮组生青",
+      "correct": "胰主升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脂",
+      "correct": "清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮生性",
+      "correct": "胰主升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮胃的脏像血",
+      "correct": "胰脏的脏象血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮组肌肉",
+      "correct": "脾主肌肉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮酥",
+      "correct": "脾俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "同龄",
+      "correct": "统摄",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阻升轻",
+      "correct": "主升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮组升轻",
+      "correct": "脾主升清",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮阳",
+      "correct": "脾阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "亢奋",
+      "correct": "过亢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮主肌肉",
+      "correct": "脾主肌肉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮脏的脏象血",
+      "correct": "脾脏的脏象血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "林澜密典",
+      "correct": "灵兰秘典",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "谋律",
+      "correct": "谋虑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "新是",
+      "correct": "心是",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮头血",
+      "correct": "肺朝百脉/肺主气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝肠血",
+      "correct": "肝主血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输泻",
+      "correct": "疏泄",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丹糖",
+      "correct": "单糖",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输解",
+      "correct": "疏解",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外形",
+      "correct": "外邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下四丘",
+      "correct": "下丘脑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "口骨",
+      "correct": "咽干",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "死心烦",
+      "correct": "心烦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "财富气振",
+      "correct": "肝气郁结",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "死",
+      "correct": "是",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾",
+      "correct": "甚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝阳死",
+      "correct": "肝阳啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳上抗",
+      "correct": "阳上亢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾脏腺素",
+      "correct": "肾上腺素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾脏激素",
+      "correct": "肾脏激素/糖皮质激素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胰高血糖素啊",
+      "correct": "胰高血糖素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "甲状腺素啊",
+      "correct": "甲状腺素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾上腺脾脂激素",
+      "correct": "肾上腺皮脂激素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾脏激素",
+      "correct": "肾脏激素/肾脏皮质激素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胰岛素生长激素",
+      "correct": "胰岛素、生长激素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下血",
+      "correct": "脏象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五行脏相学",
+      "correct": "五行脏腑学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外血要侵犯",
+      "correct": "外邪要侵犯",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "一致之程度不同",
+      "correct": "一致但程度不同",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "神昏瞻羽",
+      "correct": "神昏谵语",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热露心包",
+      "correct": "热入心包",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "昆病学",
+      "correct": "温病学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "盈分症",
+      "correct": "营分症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蛇僵硬",
+      "correct": "舌僵硬",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蛇生红",
+      "correct": "舌生红",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蛇肉僵硬",
+      "correct": "舌肉僵硬",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "结界",
+      "correct": "概念",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳辅",
+      "correct": "阳腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴脏",
+      "correct": "阴腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "绳子",
+      "correct": "关系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "孕化生青",
+      "correct": "运化生精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "酮血",
+      "correct": "统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阻气失呼吸",
+      "correct": "主气司呼吸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阻水,纳气,肠筋",
+      "correct": "主水,纳气,主骨",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "盐",
+      "correct": "咸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮涕",
+      "correct": "涕",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大小变",
+      "correct": "大小便",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "滑",
+      "correct": "华",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "早",
+      "correct": "爪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮",
+      "correct": "脾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肥系统",
+      "correct": "脾系统",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮系统",
+      "correct": "脾系统",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺对筋",
+      "correct": "肺对金",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮对土",
+      "correct": "脾对土",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肠血",
+      "correct": "藏血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胀",
+      "correct": "膀胱",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "刺肠",
+      "correct": "小肠",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "神",
+      "correct": "肾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "亲气",
+      "correct": "清气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "恶气",
+      "correct": "浊气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "均分",
+      "correct": "升降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺和胀和膀胱",
+      "correct": "肺和大肠、膀胱",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "表现在我们的脸",
+      "correct": "表现在我们的面色",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "表现在我们的指甲",
+      "correct": "表现在我们的爪甲",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "滋润",
+      "correct": "荣养",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "跟我们的脉有关系",
+      "correct": "与我们的脉有关系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "跟筋有关系啊",
+      "correct": "与筋有关系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "跟脾有关系",
+      "correct": "与脾有关系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "跟肺有关系",
+      "correct": "与肺有关系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "合于骨",
+      "correct": "主骨",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "开窍在舌",
+      "correct": "开窍于舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "开窍在目",
+      "correct": "开窍于目",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "开窍在口",
+      "correct": "开窍于口",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "开窍在鼻",
+      "correct": "开窍于鼻",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "开窍在?",
+      "correct": "开窍于?",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮胃",
+      "correct": "脾和胃",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "均火",
+      "correct": "君火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皇帝内经",
+      "correct": "黄帝内经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "述问篇",
+      "correct": "素问篇",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "均火以明",
+      "correct": "君火以明",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣",
+      "correct": "肾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丈夫",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "离卦中终须之意",
+      "correct": "离卦中虚须之意",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "君火的象火",
+      "correct": "君火的相火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "亮",
+      "correct": "两",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "深刻的图",
+      "correct": "生剋的图",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "筋",
+      "correct": "金",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "说得过",
+      "correct": "说得通",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胞膜",
+      "correct": "心包",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五行脏腑血脏腑啊",
+      "correct": "五行脏腑和脏腑啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "母子补穴",
+      "correct": "母子补泻",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚者补其木",
+      "correct": "虚者补其母",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "萤火",
+      "correct": "营火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "谢其子",
+      "correct": "泻其子",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血脏腑啊",
+      "correct": "脏腑啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "金的资源",
+      "correct": "金",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "国民中医必修课",
+      "correct": "国家中医必修课",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "做排底之后",
+      "correct": "做排列之后",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "述问第四",
+      "correct": "素问第四",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "金贵真言论",
+      "correct": "金匮真言论",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不仁义应之",
+      "correct": "不相应应之",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "这个说仁义应之啊",
+      "correct": "这个说相应应之啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五肢的阴阳",
+      "correct": "五脏的阴阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "守三阳，守三阴",
+      "correct": "手三阳，手三阴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "守太阳小肠经",
+      "correct": "手太阳小肠经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "守阳明大肠经",
+      "correct": "手阳明大肠经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "守少阳三交经",
+      "correct": "手少阳三焦经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "消化输泻",
+      "correct": "消化输送",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴胃之气",
+      "correct": "卫气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "卫胃之气",
+      "correct": "卫胃",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃呢是我们的",
+      "correct": "卫呢是我们的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "这个叫阴气",
+      "correct": "这个叫营气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气本身跟血想起来",
+      "correct": "气本身跟血比起來",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[1] 阴阳虚蚀",
+      "correct": "阴阳虚实",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[2] 阳蚀",
+      "correct": "阳实",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[4] 恋家子",
+      "correct": "修行人",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[5] 最后阴蚀",
+      "correct": "最后阴实",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[6] 身体的组织血",
+      "correct": "身体的组织血液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[7] 还还有一个",
+      "correct": "还有一个",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[8] 隔之于外",
+      "correct": "格之于外",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "[10] 赶快跳舞",
+      "correct": "赶快调养",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮组丝而物丝",
+      "correct": "脾主湿而恶湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺组塑降",
+      "correct": "肺主肃降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾是为水障",
+      "correct": "肾是为水脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经液来源",
+      "correct": "津液来源",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "分清别酌",
+      "correct": "分清别浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏水液运行",
+      "correct": "水液运行",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "带脉",
+      "correct": "代脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "触脉",
+      "correct": "促脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "朔脉",
+      "correct": "数脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "持脉",
+      "correct": "迟脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "归",
+      "correct": "规 [术语]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "节脉",
+      "correct": "结脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "解",
+      "correct": "结 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "时热",
+      "correct": "实热 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "音啊",
+      "correct": "阴啊 [阴阳]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "音份",
+      "correct": "阴分 [阴阳]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "后尘",
+      "correct": "后天 [基础理论]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "伤音啊",
+      "correct": "伤阴啊 [病因]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "侠义",
+      "correct": "狭义 [基础理论]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "音是什么",
+      "correct": "阴是什么 [阴阳]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "节脉呢",
+      "correct": "结脉呢 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒肾",
+      "correct": "寒结 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气节",
+      "correct": "气结 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒很肾",
+      "correct": "寒凝气结 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "触、节、怠",
+      "correct": "促、结、代 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "拔刀脉",
+      "correct": "把脉 [诊法]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "重案能来有脉",
+      "correct": "重按应来有脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "有斜气",
+      "correct": "有邪气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大臣鸡汤症",
+      "correct": "大承气汤症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "细瘦",
+      "correct": "细数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血虚、舌头蛋、脉细色",
+      "correct": "血虚、舌淡、脉细数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌蛋",
+      "correct": "舌淡",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "细硕",
+      "correct": "细数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上汉杂病论",
+      "correct": "《伤寒杂病论》",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上汉脉",
+      "correct": "伤寒脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "磁塑",
+      "correct": "迟数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉相",
+      "correct": "脉象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虹虚脉",
+      "correct": "芤虚脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "霉脉",
+      "correct": "芤脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "细缩脉",
+      "correct": "细数脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮颈",
+      "correct": "浮紧",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三寒论",
+      "correct": "《伤寒论》",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "麻黄汤针",
+      "correct": "麻黄汤证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "太阳三寒",
+      "correct": "太阳伤寒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桂枝汤针",
+      "correct": "桂枝汤证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "入理化热",
+      "correct": "入里化热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮塑脉",
+      "correct": "浮数脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "成曲空虚",
+      "correct": "呈芤空虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "齿脉",
+      "correct": "迟脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "红脉",
+      "correct": "洪脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "空脉",
+      "correct": "芤脉 [脉诊]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉血",
+      "correct": "脉象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "复诊",
+      "correct": "腹诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "方际",
+      "correct": "方剂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血热下面痛",
+      "correct": "胁下痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小健中汤",
+      "correct": "小建中汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五灵散",
+      "correct": "五苓散",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "真五汤",
+      "correct": "真武汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "半夏后货汤",
+      "correct": "半夏厚朴汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "林贵煮干汤",
+      "correct": "苓桂术甘汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大成器汤",
+      "correct": "大承气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大建筑汤",
+      "correct": "大承气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小成器汤",
+      "correct": "小承气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "八位帝皇完整",
+      "correct": "八味丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寄生圣器完",
+      "correct": "肾气丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "十位完",
+      "correct": "肾气丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小腱中汤",
+      "correct": "小建中汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大臣七汤",
+      "correct": "大承气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大财股汤症",
+      "correct": "大柴胡汤症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "财股桂枝汤",
+      "correct": "柴胡桂枝汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "银桂竹干汤",
+      "correct": "柴胡桂枝干姜汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "财股姜龙骨母腻汤",
+      "correct": "柴胡加龙骨牡蛎汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "柴龙母",
+      "correct": "柴胡加龙骨牡蛎汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桂龙母",
+      "correct": "桂枝加龙骨牡蛎汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "林桂枣干汤",
+      "correct": "苓桂枣甘汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾灼汤",
+      "correct": "肾着汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "腰龙龙如坐水中",
+      "correct": "腰重如坐水中",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桂枝浮云丸",
+      "correct": "桂枝茯苓丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桃和陈器汤",
+      "correct": "桃核承气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大黄木丹皮汤",
+      "correct": "大黄牡丹皮汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "柴线汤",
+      "correct": "柴胡汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "香沙六菌子汤",
+      "correct": "香砂六君子汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小剑冲汤",
+      "correct": "小建中汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "补中致死糖醉",
+      "correct": "补中益气汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊下",
+      "correct": "悸下",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊旁",
+      "correct": "悸旁",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊下动机",
+      "correct": "悸下悸动",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊旁压痛",
+      "correct": "悸旁压痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊为中心的膨满",
+      "correct": "脐为中心的膨满",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊下中线偏软",
+      "correct": "脐下中线偏软",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胸腹动剂",
+      "correct": "胸腹动悸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脊腹动剂",
+      "correct": "脐腹动悸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小腹中线卵",
+      "correct": "小腹中线软",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上腹部紧绷",
+      "correct": "上腹部绷紧",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "副诊",
+      "correct": "腹诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胸鞋",
+      "correct": "胸胁",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "踩骨线胸膛",
+      "correct": "膻中穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "香沙六局",
+      "correct": "香砂六君",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肚脊",
+      "correct": "肚脐",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "天书",
+      "correct": "天枢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "神缺血",
+      "correct": "神阙穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小腱中膛",
+      "correct": "小建中汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "当归扫药伞",
+      "correct": "当归四逆汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "送以后",
+      "correct": "宋以后",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "延男女之房",
+      "correct": "沿男女之房",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经落学",
+      "correct": "经络学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "膀胱筋",
+      "correct": "膀胱经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肚脉",
+      "correct": "督脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大株",
+      "correct": "大杼",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丰门",
+      "correct": "风门",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺树",
+      "correct": "肺俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "绝阴",
+      "correct": "厥阴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肚六",
+      "correct": "督俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "隔书",
+      "correct": "膈俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "目",
+      "correct": "胆",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三交肾气大关小膀中",
+      "correct": "十一十二肾俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "持骨银嘴",
+      "correct": "尺骨鹰嘴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "按折",
+      "correct": "按诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "背枕",
+      "correct": "背诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "按枕",
+      "correct": "按诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "体质",
+      "correct": "体征",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "试诊合餐",
+      "correct": "四诊合参",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "腕腹",
+      "correct": "脘腹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "做奇梦",
+      "correct": "做春梦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾阴虚有任",
+      "correct": "肾阴虚有热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "流精",
+      "correct": "遗精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "今夜睡醒",
+      "correct": "夜间睡醒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "今夜在梦中流出来",
+      "correct": "夜间在梦中流出来",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "方寄",
+      "correct": "方剂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "知伯帝黄丸",
+      "correct": "知柏地黄丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "列位帝黄丸",
+      "correct": "知柏地黄丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "饱和丸",
+      "correct": "保和丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "导赐赏黄盐",
+      "correct": "导赤散黄连",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "龙胆，谢肝汤",
+      "correct": "龙胆泻肝汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "泰西",
+      "correct": "太溪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "造海",
+      "correct": "照海",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "治世圣书",
+      "correct": "至阴神枢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蓝骨三阴交",
+      "correct": "蠡沟三阴交",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心术",
+      "correct": "心俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "安三神",
+      "correct": "安神三穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "礼内庭，竹山礼",
+      "correct": "厉兑、内庭，足三里",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中文",
+      "correct": "足三里",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "扫福",
+      "correct": "少府",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝术",
+      "correct": "肝俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肌纤维",
+      "correct": "肌酸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "天王补星丹",
+      "correct": "天王补心丹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三枣仁汤",
+      "correct": "酸枣仁汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "甘脉大枣汤",
+      "correct": "甘麦大枣汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉细缩",
+      "correct": "脉细数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌红胎少",
+      "correct": "舌红苔少",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心脏不交",
+      "correct": "心肾不交",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾水无法上枢",
+      "correct": "肾水无法上济",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "已经下悲痛",
+      "correct": "已下悲痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "打喝欠",
+      "correct": "打哈欠",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "喝欠贫住",
+      "correct": "哈欠连连",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "时机",
+      "correct": "实证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃不合耳则寝不安",
+      "correct": "胃不和则卧不安",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃不合耳则夜不安",
+      "correct": "胃不和则卧不安",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "安山神",
+      "correct": "安神",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "时机用饱和丸",
+      "correct": "实证用保和丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "二层汤",
+      "correct": "二陈汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "哨音寒化症",
+      "correct": "少阴寒化症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "慢弦细",
+      "correct": "脉弦细",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "里内亭",
+      "correct": "内关",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "竹山里",
+      "correct": "足三里",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中晚",
+      "correct": "中脘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "人脉",
+      "correct": "任脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胆术",
+      "correct": "胆俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "秋虚",
+      "correct": "丘墟",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "狭习",
+      "correct": "侠溪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蜂融",
+      "correct": "丰隆",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾术",
+      "correct": "脾俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "哨音症",
+      "correct": "少阴症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "官员肾术",
+      "correct": "关元肾俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚偶",
+      "correct": "虚证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "黄莲阿椒汤",
+      "correct": "黄连阿胶汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "溶胆蟹肝汤",
+      "correct": "龙胆泻肝汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "安三神",
+      "correct": "安眠三穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "格术",
+      "correct": "膈俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "官缘",
+      "correct": "关元",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "太析",
+      "correct": "太溪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "扫腹",
+      "correct": "少腹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "行肩",
+      "correct": "行间",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "正形",
+      "correct": "证型",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "消骨散肌",
+      "correct": "消谷善饥",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肌不欲食",
+      "correct": "饥不欲食",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "食症",
+      "correct": "实证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚症",
+      "correct": "虚证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "实在虚症",
+      "correct": "实证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "你的交友女朋友",
+      "correct": "你的女朋友",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "问二辩",
+      "correct": "问二便",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "二辩",
+      "correct": "二便",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大辩",
+      "correct": "大便",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "形,一个叫做直",
+      "correct": "形,一个叫做质,一个叫做时",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "养死状",
+      "correct": "羊屎状",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干预",
+      "correct": "阴虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "常热",
+      "correct": "肠热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "没水",
+      "correct": "缺水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五根泻泻",
+      "correct": "五更泄泻",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝欲脾虚",
+      "correct": "肝郁脾虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾疏",
+      "correct": "脾俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "天疏",
+      "correct": "天枢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大肠易积重合症",
+      "correct": "大肠易激综合症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴室",
+      "correct": "阴虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "枪火",
+      "correct": "羌活 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "后膝",
+      "correct": "后溪 [穴位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "眉铃骨",
+      "correct": "眉棱骨 [部位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "足阳明未经",
+      "correct": "足阳明胃经 [经络]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "白子",
+      "correct": "白芷 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外观阻灵器",
+      "correct": "外关加风池 [穴位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "哨音头痛",
+      "correct": "少阳头痛 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "细心",
+      "correct": "细辛 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "毒火",
+      "correct": "独活 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "太析",
+      "correct": "太溪 [穴位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾术",
+      "correct": "肾俞 [穴位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肠组",
+      "correct": "苍术 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "白组",
+      "correct": "白术 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丘阴阴拳",
+      "correct": "丘墟阴陵泉 [穴位]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "缺阴头痛",
+      "correct": "厥阴头痛 [病证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "躺下减弱",
+      "correct": "躺下减轻 [症状]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒能感",
+      "correct": "寒热感 [症状]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒灵肝脉",
+      "correct": "寒凝肝脉 [病机]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝阳伤口",
+      "correct": "肝阳上亢 [病机]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝阳上康",
+      "correct": "肝阳上亢 [病机]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "字法",
+      "correct": "治法 [术语]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "字音",
+      "correct": "姿势 [词汇]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "睾苯",
+      "correct": "藁本 [中药]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "无猪鱼汤",
+      "correct": "吴茱萸汤 [方剂]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "失重",
+      "correct": "痰湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝气预制",
+      "correct": "肝气郁结",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小妹在身上",
+      "correct": "小妹在现场",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大肠筋",
+      "correct": "大肠经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺筋",
+      "correct": "肺经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小肠筋",
+      "correct": "小肠经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "闭",
+      "correct": "痹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "风闭寒湿闭寒闭",
+      "correct": "风痹寒湿痹寒痹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热闭",
+      "correct": "热痹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血须",
+      "correct": "血虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咳嗽",
+      "correct": "曲池",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "拙",
+      "correct": "着",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "弹射很拙",
+      "correct": "症状很着",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "顿痛",
+      "correct": "钝痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣书",
+      "correct": "肾俞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "观音",
+      "correct": "关元",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "封病",
+      "correct": "风病",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "壁",
+      "correct": "痹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "生痛",
+      "correct": "酸痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蛋头汗出",
+      "correct": "但头汗出",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺主速降",
+      "correct": "肺主肃降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "倒汗",
+      "correct": "盗汗",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "闲闲的",
+      "correct": "",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "黄阳症",
+      "correct": "亡阳症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外风",
+      "correct": "外感",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "物寒发热交替",
+      "correct": "恶寒发热交替",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小柴胡汤症",
+      "correct": "小柴胡汤证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "柴胡气症",
+      "correct": "柴胡证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "咽肝口苦目眩",
+      "correct": "咽干口苦目眩",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胸邪苦满",
+      "correct": "胸胁苦满",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉不堪重案",
+      "correct": "脉不堪重按",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "房积",
+      "correct": "方剂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中业书",
+      "correct": "中医书",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虐症",
+      "correct": "疟疾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "打百子",
+      "correct": "打摆子",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "采骨剂",
+      "correct": "柴胡剂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外观家族灵气",
+      "correct": "柴胡家族方剂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小采骨",
+      "correct": "小柴胡",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "病患",
+      "correct": "病人",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "被子都不行",
+      "correct": "被子都不暖",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "等同一",
+      "correct": "等同于",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "采骨",
+      "correct": "柴胡",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "调试很强",
+      "correct": "适应很强",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉塑",
+      "correct": "脉数",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "伤菊瘾",
+      "correct": "桑菊饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "吟啬闪",
+      "correct": "银翘散",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌合正常",
+      "correct": "舌苔正常",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蛇尖红",
+      "correct": "舌尖红",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "煙痛",
+      "correct": "咽痛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "魚記",
+      "correct": "鱼际",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "哨三号",
+      "correct": "少商",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "麻黄糖",
+      "correct": "麻黄汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桂子汤",
+      "correct": "桂枝汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉浮落",
+      "correct": "脉浮缓",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外大词",
+      "correct": "外关",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大柱",
+      "correct": "大椎",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "河谷",
+      "correct": "合谷",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "烈缺",
+      "correct": "列缺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "山風",
+      "correct": "散风",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "烈治",
+      "correct": "列缺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "表实症",
+      "correct": "表实证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "陈修元",
+      "correct": "陈修园",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "医学实在意",
+      "correct": "医学实在易",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三问头生",
+      "correct": "三问头身",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胸血",
+      "correct": "胸胁",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小柴,苦汤症",
+      "correct": "小柴胡汤症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "七容,八可,聚当便",
+      "correct": "七问耳聋，八问口渴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "九阴脉色茶阴阳",
+      "correct": "九问脉色察阴阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "十重七味,张神剑",
+      "correct": "十问旧病，问病因",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "文整",
+      "correct": "问诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "再见扶药餐鸡面",
+      "correct": "再见妇科问经带",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "游壁问荆棋",
+      "correct": "幼科问惊疳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "持树崩壁皆可见",
+      "correct": "经带胎产皆可见",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "载天片语告儿科",
+      "correct": "再问天花麻疹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "天花马枕",
+      "correct": "天花麻疹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水豆",
+      "correct": "水痘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "文诊",
+      "correct": "闻诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "听声辨畏",
+      "correct": "听声音",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "述问的阴阳印象大论",
+      "correct": "《素问》的阴阳印象大论",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾是什么意思",
+      "correct": "肾是什么声音",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "大乘其汤症",
+      "correct": "大承气汤证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "正身",
+      "correct": "郑声",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "乐老心神",
+      "correct": "热扰心神",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "笑必坚喘",
+      "correct": "咳嗽必兼喘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "笑喘",
+      "correct": "咳嗽喘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "喘未必坚小",
+      "correct": "喘未必兼嗽",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "吼的声音",
+      "correct": "喉中有音",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "元明经",
+      "correct": "《明医杂著》",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "香水味",
+      "correct": "甜香甜香的味道",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮病",
+      "correct": "脾病",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "消可症",
+      "correct": "消渴症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "消可",
+      "correct": "消渴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃碗",
+      "correct": "胃脘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "素食",
+      "correct": "宿食",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小额诊断",
+      "correct": "小儿诊断",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小额",
+      "correct": "小儿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "直诊",
+      "correct": "指纹诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "一席",
+      "correct": "一息",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "轻曲极得",
+      "correct": "轻取即得",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "重案则空",
+      "correct": "重按则空",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小儿午夜发热",
+      "correct": "小儿夜间发热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "死鸡",
+      "correct": "食积",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "食积了",
+      "correct": "食积",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小儿小儿热",
+      "correct": "小儿热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虫鸡",
+      "correct": "虫积",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾气不顾",
+      "correct": "肾气不固",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "调呼",
+      "correct": "调护",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾经不足",
+      "correct": "肾精不足",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "质根量",
+      "correct": "质和量",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小儿肝肌",
+      "correct": "小儿肝郁",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "食肌",
+      "correct": "食欲",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "腱中",
+      "correct": "建中",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中周",
+      "correct": "中焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "腱色",
+      "correct": "健脾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "后天之气主",
+      "correct": "后天之气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虫疾",
+      "correct": "虫积",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "直诊",
+      "correct": "指诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "男上加男",
+      "correct": "难上加难",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "理症",
+      "correct": "里症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "违症",
+      "correct": "危症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丰寒",
+      "correct": "风寒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "雅科",
+      "correct": "哑科",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "旺诊",
+      "correct": "望诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "齿横舌",
+      "correct": "齿痕舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "盲刺舌",
+      "correct": "芒刺舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下交热",
+      "correct": "下焦热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下交列文",
+      "correct": "下焦裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心肾不交列文",
+      "correct": "心肾不交裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小横往外放舌",
+      "correct": "小横纹往外分布",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小文",
+      "correct": "细纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃性裂纹",
+      "correct": "胃形裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心性裂纹",
+      "correct": "心形裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "全舌性的",
+      "correct": "全舌型的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮冰样的裂纹",
+      "correct": "冰纹样的裂纹",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌形舌相",
+      "correct": "舌形舌象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胎",
+      "correct": "苔",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经验",
+      "correct": "津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰隐",
+      "correct": "痰饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "老心",
+      "correct": "扰心",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "战斧",
+      "correct": "部位",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "长舌腹",
+      "correct": "长舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒阻缩影",
+      "correct": "寒则缩敛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌趾的软硬",
+      "correct": "舌质的软硬",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热露心包",
+      "correct": "热陷心包",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "微软舌",
+      "correct": "萎软舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌微软",
+      "correct": "萎软舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "这个很软",
+      "correct": "萎软",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌相",
+      "correct": "舌象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胖舌头",
+      "correct": "胖大舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "蓝子舌",
+      "correct": "青紫舌",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒淋",
+      "correct": "寒凝",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "青淤",
+      "correct": "青瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "实证的时候有胎",
+      "correct": "实证的时候有苔",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水多，有胎",
+      "correct": "水多，有苔",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚证的时候无胎",
+      "correct": "虚证的时候无苔",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "剥落胎",
+      "correct": "剥落苔",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热入银血",
+      "correct": "热入营血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "银粪症",
+      "correct": "营分症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃气银血变症",
+      "correct": "卫气营血变症",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌胎",
+      "correct": "舌苔",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "配合",
+      "correct": "舌质",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "羊须",
+      "correct": "阳虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌子",
+      "correct": "舌质",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "橘色",
+      "correct": "紫色",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝血须",
+      "correct": "肝血虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮的问题",
+      "correct": "脾的问题",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮须",
+      "correct": "脾虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮阳须",
+      "correct": "脾阳虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮气须",
+      "correct": "脾气虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下胃",
+      "correct": "膀胱",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下胶",
+      "correct": "下焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血淤",
+      "correct": "血瘀 [病因]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝血淤阻",
+      "correct": "肝血瘀阻 [脏腑辨证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝气泛屏",
+      "correct": "肝气郁结 [脏腑辨证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "口肠微开",
+      "correct": "口唇微开 [诊法]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "染指这血瘀嘛",
+      "correct": "然后是血瘀嘛 [病因]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "两拳都发红",
+      "correct": "两颧都发红 [诊法]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "望整方面",
+      "correct": "望诊方面 [诊法]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "掉发涂发",
+      "correct": "掉发秃发",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "长痒",
+      "correct": "长养",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "越强",
+      "correct": "越旺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾筋不足",
+      "correct": "肾精不足",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "枯稿",
+      "correct": "枯槁",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浮出",
+      "correct": "浮现",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干开窍在目",
+      "correct": "肝开窍在目",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "枯稿干黑",
+      "correct": "枯槁干黑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "耳轮干枯胶黑",
+      "correct": "耳轮干枯焦黑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浓血",
+      "correct": "脓血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝胆丝的",
+      "correct": "肝胆湿热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "浓水",
+      "correct": "脓水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾有乐",
+      "correct": "脾有热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺有乐",
+      "correct": "肺有热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水形不差",
+      "correct": "水饮不化",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水影停滞",
+      "correct": "水饮停滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "机具",
+      "correct": "积聚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "望摄",
+      "correct": "望诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "硬糖",
+      "correct": "印堂",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "三根",
+      "correct": "山根",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮胃中焦",
+      "correct": "脾胃中焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脸呈绿色",
+      "correct": "脸呈青色",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮土咯",
+      "correct": "脾土咯",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮虚",
+      "correct": "脾虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干血淤",
+      "correct": "干血瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "伟黄",
+      "correct": "萎黄",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气血凉虚",
+      "correct": "气血两虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "于血",
+      "correct": "瘀血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血组织",
+      "correct": "瘀血组织",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "饮血不容于面",
+      "correct": "营血不容于面",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "卖的还没把",
+      "correct": "脉的还没把",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "轻胃热",
+      "correct": "清胃热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "理型",
+      "correct": "虚型",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "抗净",
+      "correct": "亢进",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气质血淤",
+      "correct": "气滞血瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "声音虚有的",
+      "correct": "肾阴虚的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "望整",
+      "correct": "望诊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "先把本质办好",
+      "correct": "先把本体办好",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "体质办好",
+      "correct": "体质调好",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "扶完正气",
+      "correct": "扶完正气后",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "四半功倍",
+      "correct": "事半功倍",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肿瘤炎",
+      "correct": "肿瘤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "攻阴时",
+      "correct": "攻瘤时",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "攻肩的药",
+      "correct": "攻瘤的药",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "菌药",
+      "correct": "峻药",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "两个监制",
+      "correct": "两个原则",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "一先补正气",
+      "correct": "先补正气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "标本同志",
+      "correct": "标本同治",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾痒",
+      "correct": "脾虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "补脾痒",
+      "correct": "补脾虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾痒虚",
+      "correct": "脾虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "药养调养",
+      "correct": "药调养",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾气区",
+      "correct": "脾气虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "穷龟交外汤",
+      "correct": "芎归胶艾汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气血监治",
+      "correct": "气血兼治",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "止滞本",
+      "correct": "治本",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉管炎",
+      "correct": "血栓性静脉炎",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "危险",
+      "correct": "消失",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "学好",
+      "correct": "治疗",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "对着它的标取答",
+      "correct": "对着它的标去治",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "第二次\"学好",
+      "correct": "治疗",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "久试",
+      "correct": "久视",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "久坐三漏",
+      "correct": "久坐伤肉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "山西产品",
+      "correct": "手机屏幕",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "张卫兵要站着",
+      "correct": "要站着",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "伤皮",
+      "correct": "伤肺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮主肌肉",
+      "correct": "肺主气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮气虚",
+      "correct": "肺气虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "买记",
+      "correct": "脉经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "劳一秒",
+      "correct": "劳逸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "饮食失忆",
+      "correct": "饮食失宜",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "失忆",
+      "correct": "失宜",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮变得比较湿",
+      "correct": "脾变得比较湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮煮湿而误湿",
+      "correct": "脾恶湿而喜燥",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰丝",
+      "correct": "痰湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阻力",
+      "correct": "阻滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰丝主皮",
+      "correct": "痰湿主脾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "油炸毁人龙",
+      "correct": "油炸毁人容",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "生育意会",
+      "correct": "生育亦会",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "饮食思维",
+      "correct": "饮食失宜",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝肝胃",
+      "correct": "肝胃",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气情",
+      "correct": "七情",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干气",
+      "correct": "肝气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "干气死则恐",
+      "correct": "肝气虚则恐",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气机丧腻",
+      "correct": "气机乱逆",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "焕散",
+      "correct": "涣散",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "思则气解",
+      "correct": "思则气结",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精气下限",
+      "correct": "精气下陷",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精则气乱",
+      "correct": "惊则气乱",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "知者为恐",
+      "correct": "知者为惊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "病因群",
+      "correct": "病因学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "喜怒忧失悲恐惊",
+      "correct": "喜怒忧思悲恐惊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心足喜",
+      "correct": "喜伤心",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "伤肾",
+      "correct": "恐伤肾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不可以太过",
+      "correct": "不可太过",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外阴里面",
+      "correct": "外因里面",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六阴",
+      "correct": "六淫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "火阴",
+      "correct": "火淫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "烧火",
+      "correct": "少火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "撞火",
+      "correct": "壮火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "火常置内生",
+      "correct": "火常由内生",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热喔",
+      "correct": "热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝好的火叫烧火",
+      "correct": "肝好的火叫少火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "老动血愤",
+      "correct": "扰动血分",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "破血忘形",
+      "correct": "迫血妄行",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热破血邪",
+      "correct": "热迫血妄行",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "生风动血的血",
+      "correct": "生风动血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外阴",
+      "correct": "外因",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "躁",
+      "correct": "燥",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "伤经",
+      "correct": "伤津",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "足气",
+      "correct": "主气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏法",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "照",
+      "correct": "燥",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六云",
+      "correct": "六淫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丝营",
+      "correct": "湿邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "内丝",
+      "correct": "内湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丝邪",
+      "correct": "湿邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "身体强",
+      "correct": "身体壮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不会潮湿",
+      "correct": "不会湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外面丝",
+      "correct": "外面湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "渐渐丝起来",
+      "correct": "渐渐湿起来",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "从外阴变内邪",
+      "correct": "从外湿变内湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丝的特性",
+      "correct": "湿的特性",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "黏字",
+      "correct": "黏滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下脚",
+      "correct": "下肢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "它丝性",
+      "correct": "它湿性",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "好",
+      "correct": "",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "宁治",
+      "correct": "凝滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "收饮",
+      "correct": "收引",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒血",
+      "correct": "寒邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "居疾",
+      "correct": "拘急",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "发热而发寒",
+      "correct": "发热恶寒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "勿寒",
+      "correct": "恶寒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "丰寒属湿灶火",
+      "correct": "风寒暑湿燥火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六营",
+      "correct": "六淫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "宿问",
+      "correct": "素问",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "古空论",
+      "correct": "上古天真论",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "百病之死",
+      "correct": "百病之始",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "悟风",
+      "correct": "恶风",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳慰",
+      "correct": "阳位",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "稍痒",
+      "correct": "瘙痒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六明治风",
+      "correct": "六淫之邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外音",
+      "correct": "外因",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "善形朔变",
+      "correct": "风胜形的善变",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自闭原因",
+      "correct": "外因",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "压腻",
+      "correct": "压伤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "重受",
+      "correct": "虫伤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自闭因素",
+      "correct": "其他因素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾孕化水丝",
+      "correct": "脾运化水液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水丝",
+      "correct": "水液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "对水的疏忽啊",
+      "correct": "对水的运化啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "小肠分清别左",
+      "correct": "小肠分清别浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "纯人左",
+      "correct": "清浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水液运化里面",
+      "correct": "水运化里面",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰瘾呢",
+      "correct": "痰饮呢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰水",
+      "correct": "痰饮水湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚线式痰",
+      "correct": "虚线痰/痰饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮",
+      "correct": "肺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮组丝而物丝",
+      "correct": "肺主通调水道",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水障",
+      "correct": "水脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏体",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "在中间有两个",
+      "correct": "有两个",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "油网",
+      "correct": "焦膜",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "账符",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "酌",
+      "correct": "浊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏水液",
+      "correct": "脏腑水液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经、气、血、经液",
+      "correct": "精、气、血、津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经是水液中较清晰的",
+      "correct": "津是水液中较清晰的",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "预防血淤",
+      "correct": "预防血瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮肾",
+      "correct": "脾肾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "经呢",
+      "correct": "津呢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "痰跟瘾啊",
+      "correct": "痰跟饮啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "瘾啊",
+      "correct": "饮啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "瘾,比我们的这个",
+      "correct": "饮,比我们的这个",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "更浊一点,叫做瘾",
+      "correct": "更浊一点,叫做饮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝欲",
+      "correct": "肝郁",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "照热照热",
+      "correct": "躁热躁热",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "热破血形",
+      "correct": "热迫血溢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝气质",
+      "correct": "肝气郁滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "筋液",
+      "correct": "津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舒服",
+      "correct": "输布",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾肠金额化学",
+      "correct": "肾间气化",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血球",
+      "correct": "血细胞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气动",
+      "correct": "气旺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气积生降",
+      "correct": "气机升降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气积出入",
+      "correct": "气机出入",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气积的生降",
+      "correct": "气机的生降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上交啦",
+      "correct": "上焦啦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中交",
+      "correct": "中焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气肌生降",
+      "correct": "气机生降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉外为胃气",
+      "correct": "脉外为卫气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉内为盈气",
+      "correct": "脉内为营气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "叫胃气",
+      "correct": "叫卫气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "外面的胃气",
+      "correct": "外面的卫气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "营胃调和",
+      "correct": "营卫调和",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "营胃的调和",
+      "correct": "营卫的调和",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "筋络之气",
+      "correct": "经络之气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "氢气",
+      "correct": "宗气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "立线体",
+      "correct": "线粒体",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "虚衰",
+      "correct": "虚损",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣阳虚",
+      "correct": "肾阳虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣阳",
+      "correct": "肾阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣阴虚",
+      "correct": "肾阴虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "灵兰密典",
+      "correct": "灵兰秘典",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "相父之官",
+      "correct": "相傅之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自洁出焉",
+      "correct": "治节出焉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "宣发速降",
+      "correct": "宣发肃降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "朝百脉主自洁",
+      "correct": "朝百脉主治节",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "上交",
+      "correct": "上焦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "造血啊",
+      "correct": "燥邪啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胶脏",
+      "correct": "娇脏",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺主脾毛",
+      "correct": "肺主皮毛",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "股气",
+      "correct": "谷气",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "胃气经液",
+      "correct": "卫气津液",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "输不全身",
+      "correct": "输布全身",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "宿降",
+      "correct": "肃降",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "裂穴",
+      "correct": "列缺穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "治贫尿",
+      "correct": "治频尿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉会太原",
+      "correct": "脉会太渊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "太原血在哪",
+      "correct": "太渊穴在哪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "背经上",
+      "correct": "肺经上",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "通调摆脉",
+      "correct": "通调百脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "潮摆脉",
+      "correct": "朝百脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏相学",
+      "correct": "藏象学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "它组血脉",
+      "correct": "其主血脉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脸",
+      "correct": "面",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "精神意志斯文活动",
+      "correct": "精神意志思维活动",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "是心。有血啊",
+      "correct": "是血。有血啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "通理",
+      "correct": "通里",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "舌强不语",
+      "correct": "舌强不语/舌蹇不语",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "通理穴",
+      "correct": "通里穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏象学",
+      "correct": "藏象学",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "述问",
+      "correct": "素问",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "君主之观",
+      "correct": "君主之官",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不受病也",
+      "correct": "不主病也",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏小血",
+      "correct": "藏象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮统血",
+      "correct": "脾统血",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自主,自律神经",
+      "correct": "自主神经",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "甲状腺膀术",
+      "correct": "甲状腺激素",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心膀态",
+      "correct": "心脏态",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "比较下来",
+      "correct": "降下来",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "代受",
+      "correct": "代心受邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏相",
+      "correct": "藏象",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五行脏腑血脏腑",
+      "correct": "五行脏腑与脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "植母补穴",
+      "correct": "母子补泻",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "补穴",
+      "correct": "补泻",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "实者谢其子",
+      "correct": "实者泻其子",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "补谢的关系",
+      "correct": "补泻的关系",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "我们国民中医必修课",
+      "correct": "我们是中医必修课",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "五行脏腑血",
+      "correct": "五行与脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "相互跟相称",
+      "correct": "相侮与相乘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "反互跟相称",
+      "correct": "反侮与相乘",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水称火",
+      "correct": "水乘火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "火称金",
+      "correct": "火乘金",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "金称木",
+      "correct": "金乘木",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "木称火",
+      "correct": "木乘土",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "木称土",
+      "correct": "木乘土",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "土称水",
+      "correct": "土乘水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "反五",
+      "correct": "相侮",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "火无水",
+      "correct": "火侮水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "金无火",
+      "correct": "金侮火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "木无金",
+      "correct": "木侮金",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "土无木",
+      "correct": "土侮木",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "水无土",
+      "correct": "水侮土",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏腑血",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "金生利水",
+      "correct": "金生水",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "循环不移",
+      "correct": "循环不已",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "抚养",
+      "correct": "扶阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "福阳",
+      "correct": "扶阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "福阳派",
+      "correct": "扶阳派",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自干草",
+      "correct": "自甘草/保持原样",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "要之饱福阳气为本",
+      "correct": "要以扶阳气为本",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "窦才",
+      "correct": "窦材",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "朱丹西",
+      "correct": "朱丹溪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴常有余",
+      "correct": "阴常不足",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴虚阳",
+      "correct": "阴虚阳亢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "因力",
+      "correct": "因为",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴阳相互隔聚",
+      "correct": "阴阳相互隔拒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "这叫阴阳隔聚",
+      "correct": "这叫阴阳隔拒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳症是阴",
+      "correct": "阳症似阴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳症实验啊",
+      "correct": "阳症似阴啊",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳明腐症",
+      "correct": "阳明腑证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脉红大",
+      "correct": "脉洪大",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "隔聚,分开了",
+      "correct": "隔拒,分开了",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不会。迷惑",
+      "correct": "不会迷惑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "缺阴",
+      "correct": "厥阴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "少阳、阳明太阳",
+      "correct": "少阳、阳明、太阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "中阴必阳，中阳必阴",
+      "correct": "重阴必阳，重阳必阴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "寒即生热，热即生寒",
+      "correct": "寒极生热，热极生寒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "腹子",
+      "correct": "附子",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "从阳避阴",
+      "correct": "从阳化阴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "从阴就会避阳",
+      "correct": "从阴就会化阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳死阳死阳死",
+      "correct": "阳亢阳亢阳亢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴死",
+      "correct": "阴亢",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "感染热血则阴虚",
+      "correct": "感染热邪则阴虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "感染寒血则阳虚",
+      "correct": "感染寒邪则阳虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "食血侵入人体",
+      "correct": "邪气侵入人体",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "这个热血",
+      "correct": "这个热邪",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴之死也",
+      "correct": "阴之使也",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "背书穴",
+      "correct": "背俞穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "目穴",
+      "correct": "募穴",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "金贵圣气丸",
+      "correct": "金匮肾气丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "八位帝皇丸",
+      "correct": "八味肾气丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六位帝皇丸",
+      "correct": "六味地黄丸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "互耕",
+      "correct": "互根",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "帝皇三要三猪鱼",
+      "correct": "山药山茱萸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "圣甘皮",
+      "correct": "山萸肉",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "折谢福林",
+      "correct": "泽泻茯苓",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "泡妇子",
+      "correct": "炮附子",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "滋阴",
+      "correct": "补阳",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "述问",
+      "correct": "《素问》",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "印象大论",
+      "correct": "《阴阳应象大论》",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "自增药大论",
+      "correct": "《阴阳应象大论》",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "乐者含之，含者乐之",
+      "correct": "热者寒之，寒者热之",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "六个功能",
+      "correct": "六淫",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "互跟",
+      "correct": "互根",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "秘密中有我",
+      "correct": "你中有我，我中有你",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "直的变化",
+      "correct": "质的变化",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "格局",
+      "correct": "格拒",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阳脏阳腑阴脏阳腑阴脏",
+      "correct": "阳脏、阳腑、阴脏、阴腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "属户",
+      "correct": "属火",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "木火跟木",
+      "correct": "木，木",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "阴的叫做肾肝脾在下面",
+      "correct": "阴的叫做肾、肝、脾在下面",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "藏府",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心肝皮肺肾",
+      "correct": "心肝脾肺肾",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "皮土",
+      "correct": "脾土",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "有很多的黑化",
+      "correct": "有很多的变化",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "血欲",
+      "correct": "血瘀",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "气致",
+      "correct": "气滞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "没合理",
+      "correct": "没道理",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "国民中医必修课",
+      "correct": "国术中医必修课",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "做排底之后",
+      "correct": "做排比之后",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "平淡到日中",
+      "correct": "平旦到日中",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "合夜到基明",
+      "correct": "合夜到鸡鸣",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "不仁义应之",
+      "correct": "不应乎仁义",
+      "note": "LLM 自动发现，待人工审核"
+    }
   ]
 }
