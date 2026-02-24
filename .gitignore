@@ -1,16 +1,18 @@
-# === 数据文件（不上传） ===
+# === 数据文件（大文件不上传） ===
 downloads/
-#transcripts/
-#outlines/
-#captured/
 
 # === 敏感信息 ===
 cookies.txt
 cookies.json
 .env
 
+# === 测试/临时文件 ===
+test_video_page.html
+scripts/test_video_page.html
+
 # === 运行报告 ===
-#transcribe_report.json
+transcribe_report.json
+fix_terminology_report.json
 
 # === Python ===
 __pycache__/
