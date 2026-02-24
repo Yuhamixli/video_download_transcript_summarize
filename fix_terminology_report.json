@@ -1,0 +1,38 @@
+{
+  "run_time": "2026-02-24T19:44:07.810349",
+  "model": "minimax/minimax-m2.5",
+  "api_base": "https://openrouter.ai/api/v1",
+  "total_files": 1,
+  "success": 1,
+  "skipped": 0,
+  "failed": 0,
+  "total_corrections": 14,
+  "total_seconds": 45.0,
+  "failed_files": [],
+  "results": [
+    {
+      "file": "002_0108中医诊断学-切诊-脉诊8、9、10",
+      "status": "success",
+      "time": 44.7,
+      "original_chars": 2791,
+      "corrected_chars": 2771,
+      "num_corrections": 14,
+      "corrections": [
+        "红脉 → 洪脉 (同音误识，台湾口音\"hong\"易误识别为\"红\")",
+        "白骨汤 → 白虎汤 (同音误识，\"hu\"→\"gu\")",
+        "空脉 → 芤脉 (同音误识，\"kou\"→\"kong\")",
+        "抠脉 → 芤脉 (同音误识)",
+        "冲管 → 葱管 (同音误识，\"cong\"→\"chong\")",
+        "自恕不清 → 至细不清 (根据上下文推断，\"细\"与前文细脉相关)",
+        "死肌 → 痰浊 (同音误识，\"tan\"→\"si\")",
+        "弹引 → 痰饮 (同音误识，\"tan yin\"→\"tan yin\"，但前文已有\"痰饮\")",
+        "细血 → 热血 (同音误识，\"re\"→\"xi\")",
+        "抗热 → 亢热 (同音误识，\"kang\"→\"kang\"，但此处应为\"亢热\")",
+        "死痰 → 痰 (同音误识，根据上下文应为\"痰\")",
+        "华脉 → 滑脉 (同音误识，\"hua\"→\"hua\")",
+        "颈脉 → 紧脉 (同音误识，\"jin\"→\"jing\")",
+        "去取血 → 治疗 (语义推断，ASR误识别)"
+      ]
+    }
+  ]
+}

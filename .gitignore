@@ -1,8 +1,8 @@
 # === 数据文件（不上传） ===
 downloads/
-transcripts/
-outlines/
-captured/
+#transcripts/
+#outlines/
+#captured/
 
 # === 敏感信息 ===
 cookies.txt
@@ -10,7 +10,7 @@ cookies.json
 .env
 
 # === 运行报告 ===
-transcribe_report.json
+#transcribe_report.json
 
 # === Python ===
 __pycache__/

@@ -1,0 +1,548 @@
+{
+  "run_time": "2026-02-17T22:27:12.476400",
+  "model": "large-v3",
+  "device": "cuda",
+  "compute_type": "float16",
+  "total_videos": 107,
+  "success": 106,
+  "skipped": 1,
+  "failed": 0,
+  "total_seconds": 16045.5,
+  "failed_files": [],
+  "results": [
+    {
+      "file": "002_0108中医诊断学-切诊-脉诊8、9、10.mp4",
+      "status": "success",
+      "chars": 2791
+    },
+    {
+      "file": "003_0107中医诊断学-切诊-脉诊7.mp4",
+      "status": "success",
+      "chars": 854
+    },
+    {
+      "file": "004_0106中医诊断学-切诊-脉诊6.mp4",
+      "status": "success",
+      "chars": 1156
+    },
+    {
+      "file": "005_0105中医诊断学-切诊-脉诊5.mp4",
+      "status": "success",
+      "chars": 1453
+    },
+    {
+      "file": "006_0104中医诊断学-切诊-脉诊4.mp4",
+      "status": "success",
+      "chars": 1143
+    },
+    {
+      "file": "007_0103中医诊断学-切诊-脉诊3.mp4",
+      "status": "success",
+      "chars": 1223
+    },
+    {
+      "file": "008_0102中医诊断学-切诊-脉诊2.mp4",
+      "status": "success",
+      "chars": 1000
+    },
+    {
+      "file": "009_0101中医诊断学-切诊-脉诊1.mp4",
+      "status": "success",
+      "chars": 1375
+    },
+    {
+      "file": "010_099-100 中医诊断学-切诊-按诊之腹诊2.mp4",
+      "status": "success",
+      "chars": 3704
+    },
+    {
+      "file": "011_098中医诊断学-切诊-按诊之腹诊1.mp4",
+      "status": "success",
+      "chars": 922
+    },
+    {
+      "file": "012_097中医诊断学-切诊-按诊1.mp4",
+      "status": "success",
+      "chars": 812
+    },
+    {
+      "file": "013_096中医诊断学-切诊-脉诊和按诊.mp4",
+      "status": "success",
+      "chars": 729
+    },
+    {
+      "file": "014_095中医诊断学-问诊-问睡眠3.mp4",
+      "status": "success",
+      "chars": 1861
+    },
+    {
+      "file": "015_094中医诊断学-问诊-问睡眠2.mp4",
+      "status": "success",
+      "chars": 919
+    },
+    {
+      "file": "016_093中医诊断学-问诊-问睡眠1.mp4",
+      "status": "success",
+      "chars": 934
+    },
+    {
+      "file": "017_092中医诊断学-问诊-问饮水.mp4",
+      "status": "success",
+      "chars": 929
+    },
+    {
+      "file": "018_091中医诊断学-问诊-问饮食.mp4",
+      "status": "success",
+      "chars": 1030
+    },
+    {
+      "file": "019_090中医诊断学-问诊-问二便-小便.mp4",
+      "status": "success",
+      "chars": 1038
+    },
+    {
+      "file": "020_089中医诊断学-问诊-问二便-大便.mp4",
+      "status": "success",
+      "chars": 1430
+    },
+    {
+      "file": "021_088中医诊断学-问诊-问痛-头痛.mp4",
+      "status": "success",
+      "chars": 3246
+    },
+    {
+      "file": "022_087中医诊断学-问诊-问痛-身痛.mp4",
+      "status": "success",
+      "chars": 2142
+    },
+    {
+      "file": "023_086中医诊断学-问诊-问汗.mp4",
+      "status": "success",
+      "chars": 1179
+    },
+    {
+      "file": "024_085中医诊断学-问诊-问寒热2.mp4",
+      "status": "success",
+      "chars": 1606
+    },
+    {
+      "file": "025_084中医诊断学-问诊-问寒热1.mp4",
+      "status": "success",
+      "chars": 1323
+    },
+    {
+      "file": "026_083中医诊断学-问诊-十问.mp4",
+      "status": "success",
+      "chars": 1310
+    },
+    {
+      "file": "027_082中医诊断学-闻诊要点.mp4",
+      "status": "success",
+      "chars": 1818
+    },
+    {
+      "file": "028_081中医诊断学-小儿诊断要点.mp4",
+      "status": "success",
+      "chars": 1043
+    },
+    {
+      "file": "029_080中医诊断学-望诊-小儿指诊.mp4",
+      "status": "success",
+      "chars": 819
+    },
+    {
+      "file": "030_079中医诊断学-望诊-望舌13.mp4",
+      "status": "success",
+      "chars": 1076
+    },
+    {
+      "file": "031_078中医诊断学-望诊-望舌12.mp4",
+      "status": "success",
+      "chars": 738
+    },
+    {
+      "file": "032_077中医诊断学-望诊-望舌11.mp4",
+      "status": "success",
+      "chars": 523
+    },
+    {
+      "file": "033_076中医诊断学-望诊-望舌10.mp4",
+      "status": "success",
+      "chars": 396
+    },
+    {
+      "file": "034_075中医诊断学-望诊-望舌9.mp4",
+      "status": "success",
+      "chars": 478
+    },
+    {
+      "file": "035_074中医诊断学-望诊-望舌8.mp4",
+      "status": "success",
+      "chars": 1328
+    },
+    {
+      "file": "036_073中医诊断学-望诊-望舌7.mp4",
+      "status": "success",
+      "chars": 701
+    },
+    {
+      "file": "037_072中医诊断学-望诊-望舌6.mp4",
+      "status": "success",
+      "chars": 585
+    },
+    {
+      "file": "038_071中医诊断学-望诊-望舌5.mp4",
+      "status": "success",
+      "chars": 1081
+    },
+    {
+      "file": "039_070中医诊断学-望诊-望舌4.mp4",
+      "status": "success",
+      "chars": 373
+    },
+    {
+      "file": "040_069中医诊断学-望诊-望舌3.mp4",
+      "status": "success",
+      "chars": 620
+    },
+    {
+      "file": "041_068中医诊断学-望诊-望舌2.mp4",
+      "status": "success",
+      "chars": 1001
+    },
+    {
+      "file": "042_067中医诊断学-望诊-望舌1.mp4",
+      "status": "success",
+      "chars": 941
+    },
+    {
+      "file": "043_066中医诊断学-望诊-望口唇.mp4",
+      "status": "success",
+      "chars": 828
+    },
+    {
+      "file": "044_065中医诊断学-望诊-望发.mp4",
+      "status": "success",
+      "chars": 531
+    },
+    {
+      "file": "045_064中医诊断学-望诊-望耳.mp4",
+      "status": "success",
+      "chars": 682
+    },
+    {
+      "file": "046_063中医诊断学-望诊-望眼.mp4",
+      "status": "success",
+      "chars": 2013
+    },
+    {
+      "file": "047_062中医诊断学-望诊-望鼻.mp4",
+      "status": "success",
+      "chars": 746
+    },
+    {
+      "file": "048_061中医诊断学-望诊-望色（五官和皮肤）.mp4",
+      "status": "success",
+      "chars": 1848
+    },
+    {
+      "file": "049_060中医诊断学-望诊-整体体态.mp4",
+      "status": "success",
+      "chars": 1034
+    },
+    {
+      "file": "050_059中医诊断学-四诊.mp4",
+      "status": "success",
+      "chars": 1496
+    },
+    {
+      "file": "051_058标本理论的治病原则-先治本再治标的时机.mp4",
+      "status": "success",
+      "chars": 748
+    },
+    {
+      "file": "052_057标本理论的治病原则-先治标再治本的时机.mp4",
+      "status": "success",
+      "chars": 717
+    },
+    {
+      "file": "053_056标本理论的治病原则-标本同治的时机.mp4",
+      "status": "success",
+      "chars": 525
+    },
+    {
+      "file": "054_055标本理论的治病原则-只治本的时机.mp4",
+      "status": "success",
+      "chars": 341
+    },
+    {
+      "file": "055_054标本理论的治病原则-因果的辨别.mp4",
+      "status": "success",
+      "chars": 573
+    },
+    {
+      "file": "056_053中医病因学-不内不外因-劳逸不当致病.mp4",
+      "status": "success",
+      "chars": 1019
+    },
+    {
+      "file": "057_052中医病因学-不内不外因-饮食失宜致病.mp4",
+      "status": "success",
+      "chars": 1194
+    },
+    {
+      "file": "058_051中医病因学-内因-七情与气血的关系.mp4",
+      "status": "success",
+      "chars": 1319
+    },
+    {
+      "file": "059_050中医病因学-内因-七情与脏腑的关系.mp4",
+      "status": "success",
+      "chars": 931
+    },
+    {
+      "file": "060_049中医病因学-外因-六淫-火.mp4",
+      "status": "success",
+      "chars": 839
+    },
+    {
+      "file": "061_048中医病因学-外因-六淫-燥.mp4",
+      "status": "success",
+      "chars": 605
+    },
+    {
+      "file": "062_047中医病因学-外因-六yin—湿.mp4",
+      "status": "success",
+      "chars": 437
+    },
+    {
+      "file": "063_046中医病因学-外因-六淫-暑.mp4",
+      "status": "success",
+      "chars": 769
+    },
+    {
+      "file": "064_045中医病因学-外因-六淫-寒.mp4",
+      "status": "success",
+      "chars": 657
+    },
+    {
+      "file": "065_044中医病因学-外因-六淫-风.mp4",
+      "status": "success",
+      "chars": 1141
+    },
+    {
+      "file": "066_043中医病因学-三因论.mp4",
+      "status": "success",
+      "chars": 1065
+    },
+    {
+      "file": "067_042精气血津液-津液-水液运化图.mp4",
+      "status": "success",
+      "chars": 1425
+    },
+    {
+      "file": "068_041精气血津液-津液-水液运化之相关脏腑总整理.mp4",
+      "status": "success",
+      "chars": 1013
+    },
+    {
+      "file": "069_040精气血津液-津液-津和液的分别.mp4",
+      "status": "success",
+      "chars": 747
+    },
+    {
+      "file": "070_039精气血津液-血-血病的主因.mp4",
+      "status": "success",
+      "chars": 1009
+    },
+    {
+      "file": "071_038精气血津液-血-和血有关的脏腑.mp4",
+      "status": "success",
+      "chars": 474
+    },
+    {
+      "file": "072_037精气血津液-血.mp4",
+      "status": "success",
+      "chars": 1081
+    },
+    {
+      "file": "073_036精气血津液-气-各种气受损引起之病症案例.mp4",
+      "status": "success",
+      "chars": 912
+    },
+    {
+      "file": "074_035精气血津液-气-气的运动形式.mp4",
+      "status": "success",
+      "chars": 860
+    },
+    {
+      "file": "075_034精气血津液-气-各种气生成与相互关系4.mp4",
+      "status": "success",
+      "chars": 797
+    },
+    {
+      "file": "076_033精气血津液-气-各种气生成与相互关系3.mp4",
+      "status": "success",
+      "chars": 441
+    },
+    {
+      "file": "077_032精气血津液-气-各种气生成与相互关系2.mp4",
+      "status": "success",
+      "chars": 332
+    },
+    {
+      "file": "078_031精气血津液-气-各种气生成与相互关系1.mp4",
+      "status": "success",
+      "chars": 781
+    },
+    {
+      "file": "079_030精气血津液-精.mp4",
+      "status": "success",
+      "chars": 851
+    },
+    {
+      "file": "080_029精气血津液-概说.mp4",
+      "status": "success",
+      "chars": 886
+    },
+    {
+      "file": "081_028五行脏腑-阴阳脏腑之间的虚实关系.mp4",
+      "status": "success",
+      "chars": 764
+    },
+    {
+      "file": "082_027五行脏腑-脏腑之间的关系.mp4",
+      "status": "success",
+      "chars": 5213
+    },
+    {
+      "file": "083_026五行脏腑-肾.mp4",
+      "status": "success",
+      "chars": 1844
+    },
+    {
+      "file": "084_025五行脏腑-肺.mp4",
+      "status": "success",
+      "chars": 2245
+    },
+    {
+      "file": "085_024五行脏腑-脾.mp4",
+      "status": "success",
+      "chars": 4129
+    },
+    {
+      "file": "086_023五行脏腑-肝.mp4",
+      "status": "success",
+      "chars": 2496
+    },
+    {
+      "file": "087_022五行脏腑-心包.mp4",
+      "status": "success",
+      "chars": 753
+    },
+    {
+      "file": "088_021五行脏腑-心.mp4",
+      "status": "success",
+      "chars": 1747
+    },
+    {
+      "file": "089_020五行脏腑-中医藏象学简介.mp4",
+      "status": "success",
+      "chars": 3389
+    },
+    {
+      "file": "090_019五行脏腑-五行脏腑理论之君火与相火.mp4",
+      "status": "success",
+      "chars": 1650
+    },
+    {
+      "file": "091_018五行脏腑-五行脏腑理论.mp4",
+      "status": "success",
+      "chars": 1224
+    },
+    {
+      "file": "092_017五行脏腑-五行理论母子补泻.mp4",
+      "status": "success",
+      "chars": 800
+    },
+    {
+      "file": "093_016五行脏腑-五行理论相侮与相乘.mp4",
+      "status": "success",
+      "chars": 716
+    },
+    {
+      "file": "094_015五行脏腑-五行理论相生与相克.mp4",
+      "status": "success",
+      "chars": 1813
+    },
+    {
+      "file": "095_014阴阳-扶阳与滋阴.mp4",
+      "status": "success",
+      "chars": 1906
+    },
+    {
+      "file": "096_013阴阳-阴阳互相隔拒.mp4",
+      "status": "success",
+      "chars": 1013
+    },
+    {
+      "file": "097_012阴阳-阴阳衍化.mp4",
+      "status": "success",
+      "chars": 564
+    },
+    {
+      "file": "098_011阴阳-阴阳转化.mp4",
+      "status": "success",
+      "chars": 683
+    },
+    {
+      "file": "099_010阴阳-阴阳消长.mp4",
+      "status": "success",
+      "chars": 696
+    },
+    {
+      "file": "100_009阴阳-阴阳互根.mp4",
+      "status": "success",
+      "chars": 1261
+    },
+    {
+      "file": "101_008阴阳-阴阳对立制约.mp4",
+      "status": "success",
+      "chars": 528
+    },
+    {
+      "file": "102_007阴阳-阴阳之间的关系.mp4",
+      "status": "success",
+      "chars": 587
+    },
+    {
+      "file": "103_006阴阳-脏腑分阴阳.mp4",
+      "status": "success",
+      "chars": 550
+    },
+    {
+      "file": "104_005阴阳-气血与阴阳.mp4",
+      "status": "success",
+      "chars": 1143
+    },
+    {
+      "file": "105_004阴阳-阴阳虚实之阶段2.mp4",
+      "status": "success",
+      "chars": 1028
+    },
+    {
+      "file": "106_003阴阳-阴阳虚实之阶段1.mp4",
+      "status": "success",
+      "chars": 1704
+    },
+    {
+      "file": "107_002阴阳-阴阳虚实阶段.mp4",
+      "status": "success",
+      "chars": 1302
+    },
+    {
+      "file": "108_001阴阳-中国阴阳的根本定义及其意义.mp4",
+      "status": "skipped"
+    }
+  ]
+}

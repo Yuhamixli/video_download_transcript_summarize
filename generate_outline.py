@@ -1,6 +1,7 @@
 """
 大纲生成: 使用大模型将讲义整理为结构化大纲
 支持: OpenAI API / 本地模型 / 任何兼容 API
+优先使用纠错后的转录文本 (transcripts_corrected/)
 """
 
 import os
@@ -8,15 +9,28 @@ import json
 import glob
 from openai import OpenAI
 
+# ============ .env 加载 ============
+def load_env():
+    env_path = os.path.join(os.path.dirname(__file__), ".env")
+    if os.path.exists(env_path):
+        with open(env_path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    os.environ.setdefault(k.strip(), v.strip())
+
+load_env()
+
 # ============ 配置 ============
+CORRECTED_DIR = os.path.join(os.path.dirname(__file__), "transcripts_corrected")
 TRANSCRIPT_DIR = os.path.join(os.path.dirname(__file__), "transcripts")
 OUTLINE_DIR = os.path.join(os.path.dirname(__file__), "outlines")
 os.makedirs(OUTLINE_DIR, exist_ok=True)
 
-# API 配置 - 按需修改
-API_KEY = os.environ.get("OPENAI_API_KEY", "your-api-key-here")
-API_BASE = os.environ.get("OPENAI_API_BASE", "https://api.openai.com/v1")
-MODEL = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+API_KEY = os.environ.get("OPENAI_API_KEY", "")
+API_BASE = os.environ.get("OPENAI_API_BASE", "https://openrouter.ai/api/v1")
+MODEL = os.environ.get("LLM_MODEL", "minimax/minimax-m2.5")
 
 SYSTEM_PROMPT = """你是一位专业的中医学讲义整理专家。请根据以下视频课程的文字转录内容，整理为结构化的大纲讲义。
 
@@ -84,7 +98,44 @@ def generate_full_outline(client, all_transcripts):
     return response.choices[0].message.content
 
 
+def get_transcript_files():
+    """获取转录文件列表，优先使用纠错后版本"""
+    corrected = {}
+    original = {}
+
+    for t in sorted(glob.glob(os.path.join(CORRECTED_DIR, "*.txt"))):
+        name = os.path.splitext(os.path.basename(t))[0]
+        corrected[name] = t
+
+    for t in sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt"))):
+        name = os.path.splitext(os.path.basename(t))[0]
+        original[name] = t
+
+    result = []
+    all_names = sorted(set(list(corrected.keys()) + list(original.keys())))
+    corrected_count = 0
+    for name in all_names:
+        if name in corrected:
+            result.append((name, corrected[name]))
+            corrected_count += 1
+        elif name in original:
+            result.append((name, original[name]))
+
+    return result, corrected_count
+
+
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="大模型大纲生成")
+    parser.add_argument("--force", action="store_true", help="强制重新生成已存在的大纲")
+    parser.add_argument("--file", help="只处理指定文件 (文件名关键字)")
+    parser.add_argument("--no-summary", action="store_true", help="不生成完整课程汇总大纲")
+    args = parser.parse_args()
+
+    if not API_KEY:
+        print("错误: 请设置 OPENAI_API_KEY (在 .env 文件中)")
+        return
+
     print("=" * 60)
     print(" 大模型大纲生成")
     print(f" 模型: {MODEL}")
@@ -93,36 +144,38 @@ def main():
 
     client = OpenAI(api_key=API_KEY, base_url=API_BASE)
 
-    # 获取所有转录文件
-    transcripts = sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt")))
-    transcripts = [t for t in transcripts if not t.endswith("_detail.json")]
+    transcripts, corrected_count = get_transcript_files()
+    if args.file:
+        transcripts = [(n, p) for n, p in transcripts if args.file in n]
+
     if not transcripts:
-        print(f"\n没有找到转录文件: {TRANSCRIPT_DIR}")
-        print("请先运行 transcribe.py")
+        print(f"\n没有找到转录文件")
+        print("请先运行 transcribe.py 和 fix_terminology.py")
         return
 
-    print(f"\n共 {len(transcripts)} 个转录文件")
+    print(f"\n共 {len(transcripts)} 个转录文件 (其中 {corrected_count} 个为纠错版)")
 
     all_outlines = []
     success = 0
+    errors = 0
+    failed_files = []
 
-    for i, txt_path in enumerate(transcripts):
-        name = os.path.splitext(os.path.basename(txt_path))[0]
+    for i, (name, txt_path) in enumerate(transcripts):
         outline_path = os.path.join(OUTLINE_DIR, f"{name}.md")
 
-        if os.path.exists(outline_path) and os.path.getsize(outline_path) > 10:
+        if not args.force and os.path.exists(outline_path) and os.path.getsize(outline_path) > 10:
             print(f"[{i+1}/{len(transcripts)}] 跳过: {name}")
             with open(outline_path, "r", encoding="utf-8") as f:
                 all_outlines.append((name, f.read()))
             continue
 
-        print(f"\n[{i+1}/{len(transcripts)}] 生成大纲: {name}")
+        print(f"[{i+1}/{len(transcripts)}] 生成大纲: {name}")
 
         with open(txt_path, "r", encoding="utf-8") as f:
             text = f.read()
 
-        if not text.strip():
-            print("  [SKIP] 内容为空")
+        if not text.strip() or len(text) < 20:
+            print(f"  [SKIP] 内容过短")
             continue
 
         try:
@@ -134,9 +187,11 @@ def main():
             print(f"  [OK] {len(outline)} 字")
         except Exception as e:
             print(f"  [ERROR] {e}")
+            errors += 1
+            failed_files.append(name)
 
     # 生成完整课程大纲
-    if all_outlines and len(all_outlines) >= 5:
+    if not args.no_summary and all_outlines and len(all_outlines) >= 5:
         print(f"\n生成完整课程知识体系大纲...")
         try:
             full_outline = generate_full_outline(client, all_outlines)
@@ -150,6 +205,9 @@ def main():
     print(f"\n{'=' * 60}")
     print(f" 大纲生成完成!")
     print(f"   成功: {success}")
+    print(f"   失败: {errors}")
+    if failed_files:
+        print(f"   失败列表: {', '.join(failed_files[:10])}")
     print(f"   输出: {OUTLINE_DIR}")
     print(f"{'=' * 60}")
 
