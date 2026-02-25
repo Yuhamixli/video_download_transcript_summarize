@@ -28,7 +28,7 @@ if os.path.exists(_config_path):
         _cfg = json.load(_f)
     COLUMN_ALIAS = _cfg.get("column_alias", COLUMN_ALIAS)
     KDT_ID = _cfg.get("kdt_id", KDT_ID)
-    CHAPTER_ID = _cfg.get("chapter_id", CHAPTER_ID)
+    CHAPTER_ID = _cfg.get("chapter_id", "")
     BASE_URL = _cfg.get("base_url", BASE_URL)
     print(f"[config] Loaded course_config.json: alias={COLUMN_ALIAS}, kdt={KDT_ID}")
 
@@ -76,8 +76,8 @@ def get_course_list(session):
             f"?columnAlias={COLUMN_ALIAS}"
             f"&pageNumber={page}"
             f"&sortType=asc"
-            f"&chapterId={CHAPTER_ID}"
-            f"&goodsType=1"
+            + (f"&chapterId={CHAPTER_ID}" if CHAPTER_ID else "")
+            + f"&goodsType=1"
             f"&kdt_id={KDT_ID}"
             f"&t_vis_get={int(time.time() * 1000)}"
         )

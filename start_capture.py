@@ -140,6 +140,7 @@ def start_mitmdump():
         "--listen-port", str(PROXY_PORT),
         "--set", "connection_strategy=lazy",
         "--set", f"confdir={MITMPROXY_CA_DIR}",
+        "--set", "http2=false",
         "-s", ADDON_SCRIPT,
     ]
 

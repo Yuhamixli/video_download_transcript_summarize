@@ -1,5 +1,10 @@
 # === 数据文件（大文件不上传） ===
 downloads/
+captured/
+transcripts/
+transcripts_corrected/
+outlines/
+outlines_docx/
 
 # === 敏感信息 ===
 cookies.txt
