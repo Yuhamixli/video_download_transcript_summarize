@@ -1,8 +1,18 @@
 """从捕获数据中提取完整的 Cookie"""
 
 import json
+import glob
+import os
 
-with open("captured/capture_20260217_145959.json", "r", encoding="utf-8") as f:
+capture_dir = os.path.join(os.path.dirname(__file__), "captured")
+files = sorted(glob.glob(os.path.join(capture_dir, "capture_*.json")))
+if not files:
+    print("Error: No capture files in captured/")
+    exit(1)
+capture_file = files[-1]
+print(f"Using: {os.path.basename(capture_file)}")
+
+with open(capture_file, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # Find the fullest cookie from youzan requests

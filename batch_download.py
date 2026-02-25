@@ -14,20 +14,32 @@ from urllib.parse import urljoin, quote
 from concurrent.futures import ThreadPoolExecutor
 
 # ============ 配置 ============
+# Defaults (overridden by course_config.json if present)
 COLUMN_ALIAS = "2oqezgma011w4g9"  # 课程 ID
 KDT_ID = "42145140"               # 店铺 ID
 CHAPTER_ID = "100611207"          # 章节 ID
 PAGE_SIZE = 10                     # 每页数量 (有赞默认)
+BASE_URL = "https://shop42337308.youzan.com"
+
+# Load from course_config.json if available
+_config_path = os.path.join(os.path.dirname(__file__), "course_config.json")
+if os.path.exists(_config_path):
+    with open(_config_path, "r", encoding="utf-8") as _f:
+        _cfg = json.load(_f)
+    COLUMN_ALIAS = _cfg.get("column_alias", COLUMN_ALIAS)
+    KDT_ID = _cfg.get("kdt_id", KDT_ID)
+    CHAPTER_ID = _cfg.get("chapter_id", CHAPTER_ID)
+    BASE_URL = _cfg.get("base_url", BASE_URL)
+    print(f"[config] Loaded course_config.json: alias={COLUMN_ALIAS}, kdt={KDT_ID}")
+
 SAVE_DIR = os.path.join(os.path.dirname(__file__), "downloads")
 os.makedirs(SAVE_DIR, exist_ok=True)
 
-# 从捕获数据中获取的请求头
-BASE_URL = "https://shop42337308.youzan.com"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254162e) XWEB/18163 Flue",
     "Accept": "application/json, text/plain, */*",
-    "Referer": f"https://shop42337308.youzan.com/wscvis/course/detail/{COLUMN_ALIAS}?kdt_id={KDT_ID}",
-    "Origin": "https://shop42337308.youzan.com",
+    "Referer": f"{BASE_URL}/wscvis/course/detail/{COLUMN_ALIAS}?kdt_id={KDT_ID}",
+    "Origin": BASE_URL,
     "Accept-Language": "zh-CN,zh;q=0.9",
 }
 

@@ -39,6 +39,7 @@ wechat-course-dl/
 │   ├── show_diff.py           # 显示纠错前后差异
 │   ├── show_corrections.py    # 显示纠错报告
 │   ├── check_report.py        # 检查处理状态
+│   ├── md_to_docx.py          # 大纲导出 Word（大字版）
 │   └── ...
 ├── downloads/                 # MP4 视频
 ├── transcripts/               # 原始转录文本 (.txt + _detail.json)
@@ -120,6 +121,20 @@ python transcribe.py --force
 python fix_terminology.py --force
 python generate_outline.py --force
 ```
+
+### 大纲导出为 Word（大字版）
+
+将 `outlines/` 下的 Markdown 大纲转为 MS Word，便于长辈阅读（默认 16pt 正文）：
+
+```bash
+# 需先安装 pandoc: winget install pandoc 或 choco install pandoc
+pip install python-docx
+python scripts/md_to_docx.py
+```
+
+输出到 `outlines_docx/`。可选参数：
+- `--font-size 18`：正文字号（默认 16pt）
+- `--single 00_完整课程大纲.md`：只转换单个文件
 
 ## 术语纠错机制
 
