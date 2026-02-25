@@ -4,6 +4,7 @@
 """
 
 import subprocess
+import shutil
 import sys
 import os
 import time
@@ -16,6 +17,17 @@ PROXY_PORT = 8899
 MITMPROXY_CA_DIR = os.path.join(os.path.expanduser("~"), ".mitmproxy")
 MITMPROXY_CA_CERT = os.path.join(MITMPROXY_CA_DIR, "mitmproxy-ca-cert.cer")
 ADDON_SCRIPT = os.path.join(os.path.dirname(__file__), "capture_addon.py")
+
+
+def _mitmdump_cmd():
+    """Find the mitmdump executable: direct command or python -m fallback."""
+    mitmdump = shutil.which("mitmdump")
+    if mitmdump:
+        return [mitmdump]
+    venv_bin = os.path.join(os.path.dirname(sys.executable), "mitmdump")
+    if os.path.exists(venv_bin) or os.path.exists(venv_bin + ".exe"):
+        return [venv_bin]
+    return [sys.executable, "-m", "mitmproxy.tools.dump"]
 
 
 def is_admin():
@@ -60,15 +72,18 @@ def generate_mitmproxy_ca():
         return True
 
     print("[...] 首次运行，生成 mitmproxy CA 证书...")
-    # 快速启动再关闭 mitmdump 来生成证书
+    cmd = _mitmdump_cmd() + ["--listen-port", "18888"]
     proc = subprocess.Popen(
-        [sys.executable, "-m", "mitmproxy.tools.main", "mitmdump", "--listen-port", "18888"],
+        cmd,
         stdout=subprocess.PIPE, stderr=subprocess.PIPE,
         creationflags=subprocess.CREATE_NEW_PROCESS_GROUP,
     )
-    time.sleep(3)
+    time.sleep(5)
     proc.terminate()
-    proc.wait(timeout=5)
+    try:
+        proc.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        proc.kill()
 
     if os.path.exists(MITMPROXY_CA_CERT):
         print(f"[OK] CA 证书已生成: {MITMPROXY_CA_CERT}")
@@ -120,8 +135,7 @@ def start_mitmdump():
     print(f" 按 Ctrl+C 停止捕获")
     print(f"{'='*60}\n")
 
-    cmd = [
-        sys.executable, "-m", "mitmproxy.tools.main", "mitmdump",
+    cmd = _mitmdump_cmd() + [
         "--listen-host", PROXY_HOST,
         "--listen-port", str(PROXY_PORT),
         "--set", "connection_strategy=lazy",
