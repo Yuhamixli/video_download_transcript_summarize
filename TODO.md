@@ -11,9 +11,9 @@
 
 ### 课程 2：本草/方剂（130集）🔄 进行中
 - [x] 视频下载：130/130 集完成，存于 `downloads/`
-- [ ] 语音识别：进行中（faster-whisper large-v3, GPU）
-- [ ] LLM 术语纠错
-- [ ] 大纲提炼
+- [x] 语音识别：（faster-whisper large-v3, GPU）
+- [x] LLM 术语纠错
+- [x] 大纲提炼
 - [ ] Word 导出
 
 ### 通用
