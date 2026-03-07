@@ -10,6 +10,7 @@ import glob
 import os
 import re
 import sys
+from urllib.parse import parse_qs, urlparse
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAPTURE_DIR = os.path.join(PROJECT_ROOT, "captured")
@@ -23,34 +24,54 @@ def find_latest_capture():
     return files[-1]
 
 
+def _extract_alias_from_detail_path(url):
+    m = re.search(r"/wscvis/course/detail/([a-z0-9]+)", url)
+    if not m:
+        return None
+    alias = m.group(1)
+    # reportViewProcess.json is not a real course alias.
+    if alias.lower().startswith("report"):
+        return None
+    return alias
+
+
 def extract_from_urls(urls):
     """Extract course params from a list of URLs."""
     config = {}
+    detail_alias_candidates = []
+    from_column_candidates = []
 
     for url in urls:
-        if "columnAlias=" in url:
-            m = re.search(r"columnAlias=([^&]+)", url)
-            if m:
-                config["column_alias"] = m.group(1)
+        if not url:
+            continue
 
-        if "kdt_id=" in url:
-            m = re.search(r"kdt_id=([^&]+)", url)
-            if m:
-                config["kdt_id"] = m.group(1)
+        parsed = urlparse(url)
+        query = parse_qs(parsed.query)
 
-        if "chapterId=" in url:
-            m = re.search(r"chapterId=([^&]+)", url)
-            if m:
-                config["chapter_id"] = m.group(1)
+        if "kdt_id" in query and query["kdt_id"]:
+            config["kdt_id"] = query["kdt_id"][0]
 
-        m = re.match(r"(https://shop\d+\.youzan\.com)", url)
-        if m:
-            config["base_url"] = m.group(1)
+        if "chapterId" in query and query["chapterId"]:
+            config["chapter_id"] = query["chapterId"][0]
 
-        # Also try /wscvis/course/detail/{alias} pattern
-        m = re.search(r"/wscvis/course/detail/([a-z0-9]+)", url)
-        if m and "column_alias" not in config:
-            config["column_alias"] = m.group(1)
+        if "fromColumn" in query and query["fromColumn"]:
+            from_column_candidates.append(query["fromColumn"][0])
+
+        if "columnAlias" in query and query["columnAlias"]:
+            from_column_candidates.append(query["columnAlias"][0])
+
+        if parsed.scheme and parsed.netloc:
+            config["base_url"] = f"{parsed.scheme}://{parsed.netloc}"
+
+        detail_alias = _extract_alias_from_detail_path(url)
+        if detail_alias:
+            detail_alias_candidates.append(detail_alias)
+
+    # Prefer fromColumn/columnAlias because that's the real course list alias.
+    if from_column_candidates:
+        config["column_alias"] = from_column_candidates[0]
+    elif detail_alias_candidates:
+        config["column_alias"] = detail_alias_candidates[0]
 
     return config
 
@@ -70,6 +91,9 @@ def main():
     all_urls = []
     for api in data.get("apis", []):
         all_urls.append(api.get("url", ""))
+        referer = api.get("request_headers", {}).get("Referer", "")
+        if referer:
+            all_urls.append(referer)
     for video in data.get("videos", []):
         all_urls.append(video.get("url", ""))
 
