@@ -14,6 +14,7 @@ import argparse
 import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 DEFAULT_BODY_PT = 16
@@ -78,18 +79,32 @@ def create_reference_docx(ref_path: Path, body_pt: int) -> bool:
 
 
 def convert_md_to_docx(md_path: Path, docx_path: Path, ref_docx: Path) -> bool:
-    result = subprocess.run(
-        [
-            "pandoc", str(md_path),
-            "-o", str(docx_path),
-            f"--reference-doc={ref_docx}",
-            "--from=markdown", "--to=docx",
-        ],
-        capture_output=True, text=True,
-    )
-    if result.returncode != 0:
-        print(f"  Error: {result.stderr.strip()}")
+    """Convert via temp dir to avoid pandoc Windows path encoding issues with Chinese."""
+    md_path = md_path.resolve()
+    docx_path = docx_path.resolve()
+    ref_docx = ref_docx.resolve()
+    if not md_path.exists():
+        print(f"  Error: File not found: {md_path}")
         return False
+    with tempfile.TemporaryDirectory(prefix="md2docx_") as tmp:
+        tmp_path = Path(tmp)
+        tmp_md = tmp_path / "input.md"
+        tmp_docx = tmp_path / "output.docx"
+        shutil.copy2(md_path, tmp_md)
+        result = subprocess.run(
+            [
+                "pandoc", str(tmp_md),
+                "-o", str(tmp_docx),
+                f"--reference-doc={ref_docx}",
+                "--from=markdown", "--to=docx",
+            ],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            print(f"  Error: {result.stderr.strip()}")
+            return False
+        docx_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(tmp_docx, docx_path)
     return True
 
 
@@ -134,12 +149,17 @@ def main():
             print(f"Error: File not found: {md_files[0]}")
             sys.exit(1)
     else:
-        md_files = sorted(outlines_dir.glob("*.md"))
+        flat = list(outlines_dir.glob("*.md"))
+        nested = list(outlines_dir.rglob("*.md"))
+        nested = [p for p in nested if p.parent != outlines_dir]
+        md_files = sorted(set(flat + nested))
 
     print(f"Converting {len(md_files)} file(s) to .docx...")
     ok, fail = 0, 0
     for md_path in md_files:
-        docx_path = out_dir / (md_path.stem + ".docx")
+        rel = md_path.relative_to(outlines_dir)
+        docx_path = out_dir / rel.with_suffix(".docx")
+        docx_path.parent.mkdir(parents=True, exist_ok=True)
         if convert_md_to_docx(md_path, docx_path, ref_docx):
             print(f"  OK: {md_path.name}")
             ok += 1

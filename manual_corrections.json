@@ -17836,6 +17836,71 @@
       "wrong": "因wyb调补",
       "correct": "阴虚调补 [病机]",
       "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心肾不焦了",
+      "correct": "心肾不交 [脏腑辨证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肝势力",
+      "correct": "肝血虚 [脏腑辨证]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "心肌哦",
+      "correct": "心悸哦 [症状]",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "两全红",
+      "correct": "两颧红",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾的变症",
+      "correct": "肾的辨证",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "腰痛、骨痛",
+      "correct": "腰痛、骨蒸",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脏腔",
+      "correct": "脏腑",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肾食、肾阳食",
+      "correct": "肾阴、肾阳虚",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "滑筋",
+      "correct": "滑精",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "带肾",
+      "correct": "带下",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "肺腑",
+      "correct": "肺",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "耻摇",
+      "correct": "齿摇",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "取血",
+      "correct": "取穴",
+      "note": "LLM 自动发现，待人工审核"
     }
   ]
 }

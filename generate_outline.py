@@ -98,28 +98,47 @@ def generate_full_outline(client, all_transcripts):
     return response.choices[0].message.content
 
 
+def _relpath_from_base(path, base):
+    """Get relative path from base, used as key for dedup."""
+    abs_path = os.path.abspath(path)
+    base_abs = os.path.abspath(base)
+    if abs_path.startswith(base_abs):
+        return os.path.relpath(abs_path, base_abs)
+    return path
+
+
 def get_transcript_files():
-    """获取转录文件列表，优先使用纠错后版本"""
+    """获取转录文件列表，优先使用纠错后版本。支持子目录结构。"""
     corrected = {}
     original = {}
 
     for t in sorted(glob.glob(os.path.join(CORRECTED_DIR, "*.txt"))):
-        name = os.path.splitext(os.path.basename(t))[0]
-        corrected[name] = t
+        rel = _relpath_from_base(t, CORRECTED_DIR)
+        key = rel.replace("\\", "/")
+        corrected[key] = t
+    for t in sorted(glob.glob(os.path.join(CORRECTED_DIR, "*", "*.txt"))):
+        rel = _relpath_from_base(t, CORRECTED_DIR)
+        key = rel.replace("\\", "/")
+        corrected[key] = t
 
     for t in sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt"))):
-        name = os.path.splitext(os.path.basename(t))[0]
-        original[name] = t
+        rel = _relpath_from_base(t, TRANSCRIPT_DIR)
+        key = rel.replace("\\", "/")
+        original[key] = t
+    for t in sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*", "*.txt"))):
+        rel = _relpath_from_base(t, TRANSCRIPT_DIR)
+        key = rel.replace("\\", "/")
+        original[key] = t
 
     result = []
-    all_names = sorted(set(list(corrected.keys()) + list(original.keys())))
+    all_keys = sorted(set(list(corrected.keys()) + list(original.keys())))
     corrected_count = 0
-    for name in all_names:
-        if name in corrected:
-            result.append((name, corrected[name]))
+    for key in all_keys:
+        if key in corrected:
+            result.append((key, corrected[key]))
             corrected_count += 1
-        elif name in original:
-            result.append((name, original[name]))
+        elif key in original:
+            result.append((key, original[key]))
 
     return result, corrected_count
 
@@ -160,16 +179,18 @@ def main():
     errors = 0
     failed_files = []
 
-    for i, (name, txt_path) in enumerate(transcripts):
-        outline_path = os.path.join(OUTLINE_DIR, f"{name}.md")
+    for i, (key, txt_path) in enumerate(transcripts):
+        name = os.path.splitext(os.path.basename(key))[0]
+        outline_path = os.path.join(OUTLINE_DIR, os.path.splitext(key)[0] + ".md")
+        os.makedirs(os.path.dirname(outline_path), exist_ok=True)
 
         if not args.force and os.path.exists(outline_path) and os.path.getsize(outline_path) > 10:
-            print(f"[{i+1}/{len(transcripts)}] 跳过: {name}")
+            print(f"[{i+1}/{len(transcripts)}] 跳过: {key}")
             with open(outline_path, "r", encoding="utf-8") as f:
-                all_outlines.append((name, f.read()))
+                all_outlines.append((key, f.read()))
             continue
 
-        print(f"[{i+1}/{len(transcripts)}] 生成大纲: {name}")
+        print(f"[{i+1}/{len(transcripts)}] 生成大纲: {key}")
 
         with open(txt_path, "r", encoding="utf-8") as f:
             text = f.read()
@@ -182,13 +203,13 @@ def main():
             outline = generate_outline(client, text, name)
             with open(outline_path, "w", encoding="utf-8") as f:
                 f.write(outline)
-            all_outlines.append((name, outline))
+            all_outlines.append((key, outline))
             success += 1
             print(f"  [OK] {len(outline)} 字")
         except Exception as e:
             print(f"  [ERROR] {e}")
             errors += 1
-            failed_files.append(name)
+            failed_files.append(key)
 
     # 生成完整课程大纲
     if not args.no_summary and all_outlines and len(all_outlines) >= 5:

@@ -40,11 +40,16 @@ wechat-course-dl/
 │   ├── show_corrections.py    # 显示纠错报告
 │   ├── check_report.py        # 检查处理状态
 │   ├── md_to_docx.py          # 大纲导出 Word（大字版）
+│   ├── organize_transcripts.py # 转录文件按课程分类整理
 │   └── ...
 ├── downloads/                 # MP4 视频
-├── transcripts/               # 原始转录文本 (.txt + _detail.json)
-├── transcripts_corrected/     # 纠错后转录文本
-└── outlines/                  # 结构化大纲 (.md)
+├── transcripts/               # 原始转录文本（按课程分子目录）
+│   ├── 中医辨证学/            # .txt 按课程分类
+│   ├── 实用经络针灸学/
+│   ├── 方剂学/
+│   └── whisper_detail/        # Whisper 详细 JSON（时间戳等）
+├── transcripts_corrected/     # 纠错后转录（同目录结构）
+└── outlines/                  # 结构化大纲 .md（按课程分子目录）
 ```
 
 ## 环境搭建
@@ -80,20 +85,24 @@ cp .env.example .env
 
 ## 使用方法
 
-### 完整流程（4 步）
+### 完整流程（5 步）
 
 ```bash
 # 1. 转录视频 (GPU 加速, ~4.5h for 107 episodes)
 python transcribe.py
 
-# 2. 术语纠错 (LLM API, ~70min)
+# 2. 整理转录文件（按课程分目录，_detail.json 移至 whisper_detail/）
+python scripts/organize_transcripts.py
+
+# 3. 术语纠错 (LLM API, ~70min)
 python fix_terminology.py
 
-# 3. 生成大纲 (LLM API, ~60min)
+# 4. 生成大纲 (LLM API, ~60min)
 python generate_outline.py
 
-# 4. 生成课程总大纲
-python generate_outline.py --force  # 不带 --no-summary
+# 5. 生成课程总大纲 + 导出 Word
+python generate_outline.py --force
+python scripts/md_to_docx.py --font-size 18
 ```
 
 ### 术语纠错持续改进

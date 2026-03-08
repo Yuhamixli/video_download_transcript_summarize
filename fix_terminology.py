@@ -247,10 +247,23 @@ def parse_correction_result(result):
     return corrected_text, corrections
 
 
+def _relpath_from_transcripts(txt_path):
+    """Get relative path from TRANSCRIPT_DIR (e.g. 中医辨证学/name.txt or name.txt)."""
+    abs_path = os.path.abspath(txt_path)
+    base = os.path.abspath(TRANSCRIPT_DIR)
+    if abs_path.startswith(base):
+        rel = os.path.relpath(abs_path, base)
+        return rel
+    return os.path.basename(txt_path)
+
+
 def process_transcript(client, txt_path, model, system_prompt, force=False):
     """处理单个转录文件"""
     name = os.path.splitext(os.path.basename(txt_path))[0]
-    output_path = os.path.join(CORRECTED_DIR, f"{name}.txt")
+    rel = _relpath_from_transcripts(txt_path)
+    rel_dir = os.path.dirname(rel)
+    output_path = os.path.join(CORRECTED_DIR, rel_dir, f"{name}.txt") if rel_dir else os.path.join(CORRECTED_DIR, f"{name}.txt")
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     if not force and os.path.exists(output_path) and os.path.getsize(output_path) > 10:
         return {"file": name, "status": "skipped"}
@@ -277,10 +290,13 @@ def process_transcript(client, txt_path, model, system_prompt, force=False):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(corrected_text)
 
-    # 更新 _detail.json（如有）
+    # 更新 _detail.json（如有，可能在 whisper_detail/ 或同目录）
     detail_src = txt_path.replace(".txt", "_detail.json")
-    if os.path.exists(detail_src):
-        detail_dst = os.path.join(CORRECTED_DIR, f"{name}_detail.json")
+    if not os.path.exists(detail_src):
+        whisper_detail = os.path.join(TRANSCRIPT_DIR, "whisper_detail", f"{name}_detail.json")
+        detail_src = whisper_detail if os.path.exists(whisper_detail) else None
+    if detail_src and os.path.exists(detail_src):
+        detail_dst = os.path.join(os.path.dirname(output_path), f"{name}_detail.json")
         with open(detail_src, "r", encoding="utf-8") as f:
             detail = json.load(f)
         detail["text"] = corrected_text
@@ -334,12 +350,14 @@ def main():
     manual_count = len(json.load(open(MANUAL_CORRECTIONS_PATH, encoding="utf-8")).get("corrections", [])) if os.path.exists(MANUAL_CORRECTIONS_PATH) else 0
     print(f" 已加载 {manual_count} 条手动纠错规则")
 
-    # 获取转录文件列表
+    # 获取转录文件列表 (支持 transcripts/ 根目录及子目录)
     if args.file:
-        pattern = os.path.join(TRANSCRIPT_DIR, f"*{args.file}*.txt")
+        pattern = os.path.join(TRANSCRIPT_DIR, "**", f"*{args.file}*.txt")
         transcripts = sorted(glob.glob(pattern))
     else:
-        transcripts = sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt")))
+        flat = glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt"))
+        nested = glob.glob(os.path.join(TRANSCRIPT_DIR, "*", "*.txt"))
+        transcripts = sorted(set(flat + nested))
 
     if args.limit:
         transcripts = transcripts[:args.limit]
