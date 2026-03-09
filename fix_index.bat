@@ -1,0 +1,108 @@
+@echo off
+chcp 65001 >nul
+title 修复知识库索引
+color 0E
+
+echo ===========================================
+echo    修复知识库索引
+echo ===========================================
+echo.
+
+cd /d "%~dp0"
+
+:: Check uv
+where uv >nul 2>nul
+if %errorlevel% neq 0 (
+    echo [错误] 未找到 uv 命令
+    pause
+    exit /b 1
+)
+
+echo [步骤 1/4] 检查源数据...
+echo.
+
+:: Check if source data exists
+set "HAS_OUTLINES=0"
+set "HAS_TRANSCRIPTS=0"
+
+if exist "outlines" (
+    dir /s /b "outlines\*.md" >nul 2>nul
+    if %errorlevel% equ 0 set "HAS_OUTLINES=1"
+)
+
+if exist "transcripts_corrected" (
+    dir /s /b "transcripts_corrected\*.txt" >nul 2>nul
+    if %errorlevel% equ 0 set "HAS_TRANSCRIPTS=1"
+)
+
+if %HAS_OUTLINES% equ 0 (
+    echo [错误] 未找到 outlines/ 数据
+    echo 请先运行 generate_outline.py 生成大纲
+    pause
+    exit /b 1
+)
+
+if %HAS_TRANSCRIPTS% equ 0 (
+    echo [警告] 未找到 transcripts_corrected/ 数据
+    echo 将仅同步 outlines
+)
+
+echo [OK] 源数据检查完成
+echo.
+
+:: Clean old index
+echo [步骤 2/4] 清理旧索引...
+if exist "knowledge" (
+    rmdir /s /q "knowledge"
+    echo [OK] 已清理 knowledge/
+)
+if exist "vector_db" (
+    rmdir /s /q "vector_db"
+    echo [OK] 已清理 vector_db/
+)
+echo.
+
+:: Sync knowledge
+echo [步骤 3/4] 同步知识库...
+uv run python scripts/knowledge_sync.py
+if %errorlevel% neq 0 (
+    echo [错误] 同步失败
+    pause
+    exit /b 1
+)
+echo.
+
+:: Build index
+echo [步骤 4/4] 构建向量索引...
+echo [注意] 首次构建需要下载嵌入模型，约需 2-5 分钟
+echo.
+uv run python scripts/knowledge_sync.py --index
+if %errorlevel% neq 0 (
+    echo [错误] 索引构建失败
+    pause
+    exit /b 1
+)
+
+echo.
+echo ===========================================
+echo    索引修复完成!
+echo ===========================================
+echo.
+
+:: Show stats
+echo 知识库统计:
+uv run python -c "
+from rag import KnowledgeBase
+from rag.retriever import Retriever
+kb = KnowledgeBase()
+stats = kb.get_stats()
+print(f\"  大纲: {stats['outlines']} 个\")
+print(f\"  转录: {stats['transcripts']} 个\")
+print(f\"  总计: {stats['total']} 个\")
+retriever = Retriever()
+vs_stats = retriever.vector_store.get_stats()
+print(f\"  向量: {vs_stats.get('count', 0)} 个\")
+"
+
+echo.
+pause

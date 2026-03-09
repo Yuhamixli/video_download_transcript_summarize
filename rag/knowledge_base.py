@@ -94,9 +94,12 @@ class KnowledgeBase:
     
     def sync_all(self, outlines_dir: str = None, transcripts_dir: str = None) -> Dict[str, int]:
         """Sync both outlines and transcripts"""
+        outlines_count = self.sync_from_outlines(outlines_dir)
+        transcripts_count = self.sync_from_transcripts(transcripts_dir)
         return {
-            "outlines": self.sync_from_outlines(outlines_dir),
-            "transcripts": self.sync_from_transcripts(transcripts_dir)
+            "outlines": outlines_count,
+            "transcripts": transcripts_count,
+            "total": outlines_count + transcripts_count
         }
     
     def load_documents(self, collection: str = COLLECTION_ALL) -> List[Document]:
