@@ -18,6 +18,7 @@
 | 语音识别 | ✅ 完成 | 107/107 集 (faster-whisper large-v3, GPU, ~4.5h) |
 | 术语纠错 | ✅ 完成 | 107/107 集, 913 处修改 (MiniMax-M2.5 via OpenRouter) |
 | 大纲提炼 | ✅ 完成 | 107/107 集结构化 Markdown 大纲 |
+| 知识问答 | ✅ 可用 | RAG 本地向量知识库，支持语义检索与问答 |
 
 ## 项目结构
 
@@ -49,7 +50,17 @@ wechat-course-dl/
 │   ├── 方剂学/
 │   └── whisper_detail/        # Whisper 详细 JSON（时间戳等）
 ├── transcripts_corrected/     # 纠错后转录（同目录结构）
-└── outlines/                  # 结构化大纲 .md（按课程分子目录）
+├── outlines/                  # 结构化大纲 .md（按课程分子目录）
+├── knowledge/                 # RAG 知识库 (合并 outlines + transcripts)
+├── vector_db/                 # 向量数据库 (ChromaDB)
+├── rag/                       # RAG 模块
+│   ├── config.py              # 配置
+│   ├── knowledge_base.py      # 知识库管理
+│   ├── embeddings.py          # 嵌入模型
+│   ├── vector_store.py        # 向量存储
+│   ├── retriever.py           # 检索器
+│   └── chat_engine.py         # 对话引擎
+└── rag_chat.py                # 交互式中医问答入口
 ```
 
 ## 环境搭建
@@ -144,6 +155,34 @@ python scripts/md_to_docx.py
 输出到 `outlines_docx/`。可选参数：
 - `--font-size 18`：正文字号（默认 16pt）
 - `--single 00_完整课程大纲.md`：只转换单个文件
+
+### RAG 知识问答 (NEW)
+
+基于 outlines 和 transcripts 构建本地向量知识库，支持中医知识智能问答：
+
+```bash
+# 1. 初始化知识库 (同步 outlines + transcripts)
+python scripts/knowledge_sync.py --index
+
+# 2. 启动交互式对话
+python rag_chat.py
+
+# 3. 单次查询模式
+python rag_chat.py -q "什么是五行相生相克？"
+
+# 4. 指定课程范围
+python rag_chat.py -q "手太阴肺经的原穴" -c "实用经络针灸学"
+```
+
+对话命令：
+- `/help` — 显示帮助
+- `/courses` — 列出课程
+- `/search <关键词>` — 仅搜索文档
+- `/course <课程名>` — 设置范围
+- `/clear` — 清空历史
+- `/quit` — 退出
+
+详见 [README_RAG.md](README_RAG.md)
 
 ## 术语纠错机制
 
