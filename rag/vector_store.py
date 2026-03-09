@@ -1,14 +1,14 @@
 """
-Vector store using ChromaDB for local storage
+Vector store using ChromaDB for local storage.
 """
 
 import os
 from typing import List, Dict, Optional
+
 import numpy as np
 
 try:
     import chromadb
-    from chromadb.config import Settings
 except ImportError:
     chromadb = None
 
@@ -32,16 +32,10 @@ class VectorStore:
     def _init_chroma(self):
         """Initialize ChromaDB client"""
         os.makedirs(VECTOR_DB_DIR, exist_ok=True)
-        
-        self.client = chromadb.Client(
-            Settings(
-                chroma_db_impl="duckdb+parquet",
-                persist_directory=VECTOR_DB_DIR,
-                anonymized_telemetry=False,
-            )
-        )
-        
-        # Get or create collection
+
+        # Chroma 0.5+ uses PersistentClient with a sqlite-backed local store.
+        self.client = chromadb.PersistentClient(path=VECTOR_DB_DIR)
+
         self.collection = self.client.get_or_create_collection(
             name=self.collection_name,
             metadata={"hnsw:space": "cosine"},
@@ -66,17 +60,13 @@ class VectorStore:
         ids = [doc.doc_id for doc in docs_to_add]
         metadatas = [doc.metadata for doc in docs_to_add]
         
-        # Add to collection
-        self.collection.add(
+        # Upsert makes re-indexing idempotent.
+        self.collection.upsert(
             ids=ids,
             embeddings=embeddings.tolist(),
             documents=texts,
             metadatas=metadatas,
         )
-        
-        # Persist
-        if hasattr(self.client, 'persist'):
-            self.client.persist()
     
     def search(
         self,
@@ -168,9 +158,16 @@ class VectorStore:
     
     def delete_collection(self):
         """Delete the collection"""
-        if self.client and self.collection:
+        if not self.client:
+            return
+        try:
             self.client.delete_collection(self.collection_name)
-            self.collection = None
+        except Exception:
+            pass
+        self.collection = self.client.get_or_create_collection(
+            name=self.collection_name,
+            metadata={"hnsw:space": "cosine"},
+        )
     
     def get_stats(self) -> Dict:
         """Get collection statistics"""

@@ -13,7 +13,7 @@ COLLECTION_TRANSCRIPTS = "transcripts"
 COLLECTION_ALL = "all"
 
 # Embedding settings
-EMBEDDING_MODEL = "BAAI/bge-large-zh-v1.5"  # Good for Chinese
+EMBEDDING_MODEL = "BAAI/bge-small-zh-v1.5"  # Faster first-run on Windows
 EMBEDDING_DEVICE = "auto"  # auto, cpu, cuda
 CHUNK_SIZE = 512
 CHUNK_OVERLAP = 128

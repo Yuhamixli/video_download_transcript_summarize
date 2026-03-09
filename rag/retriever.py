@@ -90,6 +90,9 @@ class Retriever:
         
         if not documents:
             return 0
+
+        # Rebuild collection from scratch to avoid stale/duplicate entries.
+        self.vector_store.delete_collection()
         
         # Chunk documents if requested
         if chunk:

@@ -13,6 +13,8 @@ echo.
 
 set "PROJECT_DIR=%~dp0"
 cd /d "%PROJECT_DIR%"
+set "HF_HUB_DISABLE_SYMLINKS_WARNING=1"
+set "TOKENIZERS_PARALLELISM=false"
 
 :: Check .env exists
 if not exist "%PROJECT_DIR%\.env" (
@@ -24,7 +26,7 @@ if not exist "%PROJECT_DIR%\.env" (
 
 :: Check if uv is available
 where uv >nul 2>nul
-if %errorlevel% neq 0 (
+if errorlevel 1 (
     echo [错误] 未找到 uv 命令
     echo 请先安装 uv: irm https://astral.sh/uv/install.ps1 ^| iex
     pause
@@ -61,7 +63,7 @@ if not exist "%KNOWLEDGE_DIR%\outlines" (
 ) else (
     :: Check if outlines folder has any .md files
     dir /s /b "%KNOWLEDGE_DIR%\outlines\*.md" >nul 2>nul
-    if %errorlevel% neq 0 (
+    if errorlevel 1 (
         echo [提示] 知识库大纲为空，需要同步...
         set "NEED_INDEX=1"
     )
@@ -73,14 +75,14 @@ if not exist "%KNOWLEDGE_DIR%\transcripts" (
 ) else (
     :: Check if transcripts folder has any .txt files
     dir /s /b "%KNOWLEDGE_DIR%\transcripts\*.txt" >nul 2>nul
-    if %errorlevel% neq 0 (
+    if errorlevel 1 (
         echo [提示] 知识库转录为空，需要同步...
         set "NEED_INDEX=1"
     )
 )
 
 :: Build index if needed
-if %NEED_INDEX% equ 1 (
+if !NEED_INDEX! equ 1 (
     echo.
     echo ===========================================
     echo    正在构建知识库索引...
@@ -90,7 +92,7 @@ if %NEED_INDEX% equ 1 (
     
     uv run python scripts/knowledge_sync.py --index
     
-    if %errorlevel% neq 0 (
+    if errorlevel 1 (
         echo.
         echo [错误] 索引构建失败
         pause
@@ -123,7 +125,7 @@ echo.
 uv run python rag_chat.py
 
 :: Pause if chat exits with error
-if %errorlevel% neq 0 (
+if errorlevel 1 (
     echo.
     echo [错误] 程序异常退出 (code: %errorlevel%)
     pause

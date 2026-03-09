@@ -27,7 +27,7 @@ from rag import KnowledgeBase, Retriever, ChatEngine
 
 def print_banner():
     print("=" * 60)
-    print("  🏥 中医知识助手 (TCM Knowledge Assistant)")
+    print("  中医知识助手 (TCM Knowledge Assistant)")
     print("  基于 RAG 技术的智能问答系统")
     print("=" * 60)
     print()
@@ -74,7 +74,7 @@ def format_sources(sources):
     if not sources:
         return ""
     
-    parts = ["\n📚 参考资料："]
+    parts = ["\n参考资料："]
     for src in sources:
         parts.append(f"  [{src['rank']}] {src['source']} (相关度: {src['score']:.2f})")
     
@@ -96,11 +96,11 @@ def interactive_chat():
     # Check if index exists
     stats = retriever.vector_store.get_stats()
     if stats.get("count", 0) == 0:
-        print("⚠️ 向量索引为空，请先运行: python rag_chat.py --index\n")
+        print("[WARN] 向量索引为空，请先运行: python rag_chat.py --index\n")
         print("或者继续，但搜索功能将不可用。")
         print()
     else:
-        print(f"✓ 向量索引已加载 ({stats['count']} 个文档块)\n")
+        print(f"[OK] 向量索引已加载 ({stats['count']} 个文档块)\n")
     
     print_help()
     
@@ -110,7 +110,7 @@ def interactive_chat():
         try:
             # Get user input
             prompt = f"[{current_course}] " if current_course else ""
-            user_input = input(f"{prompt}💬 ").strip()
+            user_input = input(f"{prompt}> ").strip()
             
             if not user_input:
                 continue
@@ -121,7 +121,7 @@ def interactive_chat():
                 args = user_input[len(cmd)+2:].strip()
                 
                 if cmd in ("quit", "exit", "q"):
-                    print("再见！👋")
+                    print("再见!")
                     break
                 
                 elif cmd == "help":
@@ -175,7 +175,7 @@ def interactive_chat():
                 continue
             
             # Regular chat
-            print("🤔 思考中...", end="\r")
+            print("思考中...", end="\r")
             
             response = chat_engine.chat(
                 question=user_input,
@@ -186,7 +186,7 @@ def interactive_chat():
             print(" " * 20, end="\r")
             
             # Print answer
-            print(f"\n📝 回答:")
+            print(f"\n回答:")
             print(response["answer"])
             
             # Print sources
@@ -196,7 +196,7 @@ def interactive_chat():
             print()
         
         except KeyboardInterrupt:
-            print("\n再见！👋")
+            print("\n再见!")
             break
         except Exception as e:
             print(f"\n错误: {e}\n")

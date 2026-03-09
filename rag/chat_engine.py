@@ -134,8 +134,14 @@ class ChatEngine:
                 }
         
         except Exception as e:
+            error_text = str(e)
+            if "401" in error_text or "User not found" in error_text:
+                error_text = (
+                    "LLM API 鉴权失败。请更新 `.env` 里的 `OPENAI_API_KEY`，"
+                    "然后重新运行 `start_chat.bat`。"
+                )
             return {
-                "answer": f"生成回答时出错: {str(e)}",
+                "answer": f"生成回答时出错: {error_text}",
                 "sources": sources,
                 "context_used": bool(context),
             }

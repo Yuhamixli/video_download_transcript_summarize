@@ -2,6 +2,7 @@
 chcp 65001 >nul
 title 修复知识库索引
 color 0E
+setlocal EnableDelayedExpansion
 
 echo ===========================================
 echo    修复知识库索引
@@ -9,6 +10,8 @@ echo ===========================================
 echo.
 
 cd /d "%~dp0"
+set "HF_HUB_DISABLE_SYMLINKS_WARNING=1"
+set "TOKENIZERS_PARALLELISM=false"
 
 :: Check uv
 where uv >nul 2>nul
@@ -27,12 +30,12 @@ set "HAS_TRANSCRIPTS=0"
 
 if exist "outlines" (
     dir /s /b "outlines\*.md" >nul 2>nul
-    if %errorlevel% equ 0 set "HAS_OUTLINES=1"
+    if not errorlevel 1 set "HAS_OUTLINES=1"
 )
 
 if exist "transcripts_corrected" (
     dir /s /b "transcripts_corrected\*.txt" >nul 2>nul
-    if %errorlevel% equ 0 set "HAS_TRANSCRIPTS=1"
+    if not errorlevel 1 set "HAS_TRANSCRIPTS=1"
 )
 
 if %HAS_OUTLINES% equ 0 (
@@ -65,7 +68,7 @@ echo.
 :: Sync knowledge
 echo [步骤 3/4] 同步知识库...
 uv run python scripts/knowledge_sync.py
-if %errorlevel% neq 0 (
+if errorlevel 1 (
     echo [错误] 同步失败
     pause
     exit /b 1
@@ -77,7 +80,7 @@ echo [步骤 4/4] 构建向量索引...
 echo [注意] 首次构建需要下载嵌入模型，约需 2-5 分钟
 echo.
 uv run python scripts/knowledge_sync.py --index
-if %errorlevel% neq 0 (
+if errorlevel 1 (
     echo [错误] 索引构建失败
     pause
     exit /b 1
@@ -90,8 +93,7 @@ echo ===========================================
 echo.
 
 :: Show stats
-echo 知识库统计:
-call uv run python -c "from rag import KnowledgeBase; kb = KnowledgeBase(); stats = kb.get_stats(); print(f'  大纲: {stats[\"outlines\"]} 个'); print(f'  转录: {stats[\"transcripts\"]} 个'); print(f'  总计: {stats[\"total\"]} 个'); from rag.retriever import Retriever; retriever = Retriever(); vs_stats = retriever.vector_store.get_stats(); print(f'  向量: {vs_stats.get(\"count\", 0)} 个')"
+call uv run python scripts/show_kb_stats.py
 
 echo.
 pause

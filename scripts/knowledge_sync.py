@@ -32,9 +32,9 @@ def main():
     kb = KnowledgeBase()
     stats = kb.sync_all()
     
-    print(f"✓ 大纲同步完成: {stats['outlines']} 个文件")
-    print(f"✓ 转录文本同步完成: {stats['transcripts']} 个文件")
-    print(f"✓ 总计: {stats['total']} 个文件")
+    print(f"[OK] 大纲同步完成: {stats['outlines']} 个文件")
+    print(f"[OK] 转录文本同步完成: {stats['transcripts']} 个文件")
+    print(f"[OK] 总计: {stats['total']} 个文件")
     print()
     
     # Index if requested
@@ -42,7 +42,7 @@ def main():
         print("正在构建向量索引...")
         retriever = Retriever()
         count = retriever.index_knowledge_base(chunk=True)
-        print(f"\n✓ 索引完成！共 {count} 个文档块")
+        print(f"\n[OK] 索引完成! 共 {count} 个文档块")
     else:
         print("提示: 使用 --index 参数可立即构建向量索引")
         print("      python scripts/knowledge_sync.py --index")
