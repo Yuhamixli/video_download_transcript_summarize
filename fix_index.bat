@@ -91,18 +91,7 @@ echo.
 
 :: Show stats
 echo 知识库统计:
-uv run python -c "
-from rag import KnowledgeBase
-from rag.retriever import Retriever
-kb = KnowledgeBase()
-stats = kb.get_stats()
-print(f\"  大纲: {stats['outlines']} 个\")
-print(f\"  转录: {stats['transcripts']} 个\")
-print(f\"  总计: {stats['total']} 个\")
-retriever = Retriever()
-vs_stats = retriever.vector_store.get_stats()
-print(f\"  向量: {vs_stats.get('count', 0)} 个\")
-"
+call uv run python -c "from rag import KnowledgeBase; kb = KnowledgeBase(); stats = kb.get_stats(); print(f'  大纲: {stats[\"outlines\"]} 个'); print(f'  转录: {stats[\"transcripts\"]} 个'); print(f'  总计: {stats[\"total\"]} 个'); from rag.retriever import Retriever; retriever = Retriever(); vs_stats = retriever.vector_store.get_stats(); print(f'  向量: {vs_stats.get(\"count\", 0)} 个')"
 
 echo.
 pause
