@@ -142,6 +142,21 @@ python fix_terminology.py --force
 python generate_outline.py --force
 ```
 
+### 一键流水线（转录结果已就绪时）
+
+若转录结果已放在 `transcripts/`（含子目录如 `transcripts/高级/`），可一键跑全流程：
+
+```bash
+# 完整流水线：organize -> fix -> outline -> sync -> docx
+run_pipeline_from_transcripts.bat
+```
+
+或分步执行（organize 已完成时）：
+
+```bash
+run_full_pipeline.bat   # outline + knowledge_sync + md_to_docx
+```
+
 ### 大纲导出为 Word（大字版）
 
 将 `outlines/` 下的 Markdown 大纲转为 MS Word，便于长辈阅读（默认 16pt 正文）：

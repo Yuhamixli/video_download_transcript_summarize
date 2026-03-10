@@ -5,6 +5,7 @@ transcripts/
 transcripts_corrected/
 outlines/
 outlines_docx/
+vector_db/
 
 # === 敏感信息 ===
 cookies.txt

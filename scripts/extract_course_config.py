@@ -40,6 +40,7 @@ def extract_from_urls(urls):
     config = {}
     detail_alias_candidates = []
     from_column_candidates = []
+    base_url_candidates = []
 
     for url in urls:
         if not url:
@@ -61,7 +62,11 @@ def extract_from_urls(urls):
             from_column_candidates.append(query["columnAlias"][0])
 
         if parsed.scheme and parsed.netloc:
-            config["base_url"] = f"{parsed.scheme}://{parsed.netloc}"
+            base_url = f"{parsed.scheme}://{parsed.netloc}"
+            if "youzan.com" in parsed.netloc:
+                base_url_candidates.append(base_url)
+            elif "yzcdn.cn" not in parsed.netloc:
+                base_url_candidates.append(base_url)
 
         detail_alias = _extract_alias_from_detail_path(url)
         if detail_alias:
@@ -72,6 +77,9 @@ def extract_from_urls(urls):
         config["column_alias"] = from_column_candidates[0]
     elif detail_alias_candidates:
         config["column_alias"] = detail_alias_candidates[0]
+
+    if base_url_candidates:
+        config["base_url"] = base_url_candidates[0]
 
     return config
 

@@ -229,6 +229,8 @@ def correct_transcript(client, text, title, model, system_prompt):
 
 def parse_correction_result(result):
     """解析 LLM 返回的纠错结果"""
+    if not result:
+        return "", []
     if "---CORRECTIONS---" in result:
         parts = result.split("---CORRECTIONS---", 1)
         corrected_text = parts[0].strip()

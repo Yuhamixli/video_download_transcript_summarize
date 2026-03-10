@@ -17,7 +17,9 @@ WHISPER_DETAIL_DIR = TRANSCRIPT_DIR / "whisper_detail"
 COURSE_PATTERNS = [
     (r"中医辨证学", "中医辨证学"),
     (r"实用经络针灸学", "实用经络针灸学"),
-    (r"经方|方剂|汤$|散$|丸$|饮$", "方剂学"),  # formula names: 普济消毒饮, 柴陷汤, etc.
+    (r"实用本草学", "实用本草学"),
+    (r"解析本草学", "解析本草学"),
+    (r"解析方剂学|经方|方剂|汤$|散$|丸$|饮$", "方剂学"),
 ]
 
 
@@ -33,6 +35,20 @@ def infer_course(basename: str) -> str:
     return "其他"
 
 
+def _collect_files():
+    """Collect .txt and _detail.json from transcripts/ root and all subdirs."""
+    txt_files = []
+    json_files = []
+    for f in TRANSCRIPT_DIR.rglob("*"):
+        if not f.is_file():
+            continue
+        if f.suffix == ".json" and "_detail" in f.stem:
+            json_files.append(f)
+        elif f.suffix == ".txt":
+            txt_files.append(f)
+    return txt_files, json_files
+
+
 def main():
     if not TRANSCRIPT_DIR.exists():
         print("Error: transcripts/ not found")
@@ -44,27 +60,26 @@ def main():
     moved_txt = 0
     course_dirs = {}
 
+    txt_files, json_files = _collect_files()
+
     # Move _detail.json to whisper_detail/
-    for f in list(TRANSCRIPT_DIR.iterdir()):
-        if not f.is_file():
-            continue
-        if f.suffix == ".json" and "_detail" in f.stem:
-            dest = WHISPER_DETAIL_DIR / f.name
+    for f in json_files:
+        dest = WHISPER_DETAIL_DIR / f.name
+        if dest != f:
             shutil.move(str(f), str(dest))
             moved_json += 1
 
     # Group .txt by course and move to transcripts/<course>/
-    for f in list(TRANSCRIPT_DIR.iterdir()):
-        if not f.is_file() or f.suffix != ".txt":
-            continue
+    for f in txt_files:
         course = infer_course(f.name)
         if course not in course_dirs:
             course_dir = TRANSCRIPT_DIR / course
             course_dir.mkdir(parents=True, exist_ok=True)
             course_dirs[course] = course_dir
         dest = course_dirs[course] / f.name
-        shutil.move(str(f), str(dest))
-        moved_txt += 1
+        if dest.resolve() != f.resolve():
+            shutil.move(str(f), str(dest))
+            moved_txt += 1
 
     print(f"Organized transcripts:")
     print(f"  _detail.json -> whisper_detail/: {moved_json}")

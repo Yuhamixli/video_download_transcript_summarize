@@ -1,1519 +1,599 @@
 {
-  "run_time": "2026-03-08T07:55:58.116044",
+  "run_time": "2026-03-10T19:26:26.745190",
   "model": "large-v3",
   "device": "cuda",
   "compute_type": "float16",
-  "total_videos": 301,
-  "success": 301,
-  "skipped": 0,
+  "total_videos": 122,
+  "success": 97,
+  "skipped": 25,
   "failed": 0,
-  "total_seconds": 41720.5,
+  "total_seconds": 29920.2,
   "failed_files": [],
   "results": [
     {
-      "file": "000_279实用经络针灸学 -督脉：命门.mp4",
+      "file": "001_0401解析方剂学-养生抗老方剂.mp4",
       "status": "success",
-      "chars": 485
+      "chars": 1798
     },
     {
-      "file": "001_130当归四逆加吴茱萸生姜汤.mp4",
+      "file": "002_0400解析方剂学-血瘀调养方剂.mp4",
       "status": "success",
-      "chars": 1047
+      "chars": 1950
     },
     {
-      "file": "001_278实用经络针灸学 -督脉：风府.mp4",
+      "file": "003_0399解析方剂学-气虚调养方剂.mp4",
       "status": "success",
-      "chars": 709
+      "chars": 1517
     },
     {
-      "file": "002_129甘草干姜茯苓白术汤.mp4",
+      "file": "004_0398解析方剂学-血虚调养方剂.mp4",
       "status": "success",
-      "chars": 729
+      "chars": 1928
     },
     {
-      "file": "002_277实用经络针灸学 -督脉：上星.mp4",
+      "file": "005_0397解析方剂学-阴虚调养方剂.mp4",
       "status": "success",
-      "chars": 558
+      "chars": 1771
     },
     {
-      "file": "003_128桂姜草枣黄辛附子汤.mp4",
+      "file": "006_0396解析方剂学-阳虚身冷调养方剂.mp4",
       "status": "success",
-      "chars": 1162
+      "chars": 2168
     },
     {
-      "file": "003_276实用经络针灸学 -督脉：水沟.mp4",
+      "file": "007_0395解析方剂学-治疗出血的方剂.mp4",
       "status": "success",
-      "chars": 557
+      "chars": 1346
     },
     {
-      "file": "004_127葛根汤加川芎辛夷.mp4",
+      "file": "008_0394解析方剂学-治疗眩晕的方剂.mp4",
       "status": "success",
-      "chars": 1184
+      "chars": 2019
     },
     {
-      "file": "004_275实用经络针灸学 -督脉：身柱.mp4",
+      "file": "009_0393解析方剂学-治疗水肿的方剂.mp4",
       "status": "success",
-      "chars": 954
+      "chars": 1591
     },
     {
-      "file": "005_126苓甘姜味辛夏仁汤.mp4",
+      "file": "010_0392解析方剂学-治疗中风的方剂.mp4",
       "status": "success",
-      "chars": 1421
+      "chars": 2243
     },
     {
-      "file": "005_274实用经络针灸学 -督脉：百会.mp4",
+      "file": "011_0391解析方剂学-治疗容易亢奋的方剂.mp4",
       "status": "success",
-      "chars": 694
+      "chars": 1700
     },
     {
-      "file": "006_125桂枝加龙骨牡蛎汤.mp4",
+      "file": "012_0390解析方剂学-治疗全身倦怠的方剂.mp4",
       "status": "success",
-      "chars": 729
+      "chars": 2290
     },
     {
-      "file": "006_273实用经络针灸学 -督脉：总论.mp4",
-      "status": "success",
-      "chars": 725
-    },
-    {
-      "file": "007_124柴胡加龙骨牡蛎汤.mp4",
-      "status": "success",
-      "chars": 1482
-    },
-    {
-      "file": "007_272实用经络针灸学 -任脉：膻中.mp4",
-      "status": "success",
-      "chars": 1286
-    },
-    {
-      "file": "008_123黄岐桂枝五物汤.mp4",
-      "status": "success",
-      "chars": 845
-    },
-    {
-      "file": "008_271实用经络针灸学 -任脉：中脘.mp4",
-      "status": "success",
-      "chars": 679
-    },
-    {
-      "file": "009_122麻黄附子细辛汤.mp4",
-      "status": "success",
-      "chars": 1257
-    },
-    {
-      "file": "009_270实用经络针灸学 -任脉：水分.mp4",
-      "status": "success",
-      "chars": 671
-    },
-    {
-      "file": "010_121葛根黄芩黄连汤.mp4",
-      "status": "success",
-      "chars": 791
-    },
-    {
-      "file": "010_269实用经络针灸学 -任脉：神阙.mp4",
-      "status": "success",
-      "chars": 543
-    },
-    {
-      "file": "011_120桂枝二越婢一汤.mp4",
-      "status": "success",
-      "chars": 983
-    },
-    {
-      "file": "011_268实用经络针灸学 -任脉：关元.mp4",
-      "status": "success",
-      "chars": 854
-    },
-    {
-      "file": "012_119柴胡桂枝干姜汤.mp4",
-      "status": "success",
-      "chars": 1654
-    },
-    {
-      "file": "012_267实用经络针灸学 -任脉：中极.mp4",
-      "status": "success",
-      "chars": 446
-    },
-    {
-      "file": "013_118半夏天麻白术汤.mp4",
-      "status": "success",
-      "chars": 809
-    },
-    {
-      "file": "013_266实用经络针灸学 -任脉：总论.mp4",
-      "status": "success",
-      "chars": 780
-    },
-    {
-      "file": "014_117越婢加半夏汤.mp4",
-      "status": "success",
-      "chars": 1175
-    },
-    {
-      "file": "014_265实用经络针灸学 -足厥阴肝经：期门.mp4",
-      "status": "success",
-      "chars": 708
-    },
-    {
-      "file": "015_116白虎加人参汤.mp4",
-      "status": "success",
-      "chars": 1167
-    },
-    {
-      "file": "015_264实用经络针灸学 -足厥阴肝经：章门.mp4",
-      "status": "success",
-      "chars": 452
-    },
-    {
-      "file": "016_115桂枝加黄芪汤.mp4",
-      "status": "success",
-      "chars": 1351
-    },
-    {
-      "file": "016_263实用经络针灸学 -足厥阴肝经：蠡沟.mp4",
-      "status": "success",
-      "chars": 818
-    },
-    {
-      "file": "017_114桂枝加葛根汤.mp4",
-      "status": "success",
-      "chars": 955
-    },
-    {
-      "file": "017_262实用经络针灸学 -足厥阴肝经：太冲.mp4",
+      "file": "013_0389解析方剂学-治疗失眠的方剂.mp4",
       "status": "success",
       "chars": 1248
     },
     {
-      "file": "018_113桂枝加芍药汤.mp4",
+      "file": "014_0388解析方剂学-治疗湿疹的方剂.mp4",
       "status": "success",
-      "chars": 914
+      "chars": 2079
     },
     {
-      "file": "018_261实用经络针灸学 -足厥阴肝经：行间.mp4",
+      "file": "015_0387解析方剂学-治疗干癬的方剂.mp4",
       "status": "success",
-      "chars": 570
+      "chars": 1898
     },
     {
-      "file": "019_112桂枝加大黄汤.mp4",
+      "file": "016_0386解析方剂学-治疗皮肤容易化脓的方剂.mp4",
       "status": "success",
-      "chars": 761
+      "chars": 1822
     },
     {
-      "file": "019_260实用经络针灸学 -足厥阴肝经：大敦.mp4",
+      "file": "017_0385解析方剂学-治疗青春痘-痤疮的方剂.mp4",
       "status": "success",
-      "chars": 574
+      "chars": 1553
     },
     {
-      "file": "020_111旋覆代赭汤.mp4",
+      "file": "018_0384解析方剂学-治疗荨麻疹的方剂.mp4",
       "status": "success",
-      "chars": 978
+      "chars": 2005
     },
     {
-      "file": "020_259实用经络针灸学 -足厥阴肝经：总论.mp4",
+      "file": "019_0383解析方剂学-治疗皮肤痒的方剂.mp4",
       "status": "success",
-      "chars": 1015
+      "chars": 2231
     },
     {
-      "file": "021_110大黄牡丹皮汤.mp4",
+      "file": "020_0382解析方剂学-治疗赤白带下的方剂.mp4",
       "status": "success",
-      "chars": 1261
+      "chars": 1266
     },
     {
-      "file": "021_258实用经络针灸学 -足少阳胆经：足临泣.mp4",
+      "file": "021_0381解析方剂学-治疗经痛的方剂.mp4",
       "status": "success",
-      "chars": 756
+      "chars": 1352
     },
     {
-      "file": "022_109龙胆泻肝汤.mp4",
+      "file": "022_0380解析方剂学-治疗闭经的方剂.mp4",
       "status": "success",
-      "chars": 973
+      "chars": 1660
     },
     {
-      "file": "022_257实用经络针灸学 -足少阳胆经：丘墟.mp4",
+      "file": "023_0379解析方剂学-治疗咽炎的方剂.mp4",
       "status": "success",
-      "chars": 549
+      "chars": 1640
     },
     {
-      "file": "023_108黄连阿胶汤.mp4",
-      "status": "success",
-      "chars": 841
-    },
-    {
-      "file": "023_256实用经络针灸学 -足少阳胆经：光明.mp4",
-      "status": "success",
-      "chars": 638
-    },
-    {
-      "file": "024_107黄连解毒汤.mp4",
-      "status": "success",
-      "chars": 1332
-    },
-    {
-      "file": "024_255实用经络针灸学 -足少阳胆经：阳陵泉.mp4",
-      "status": "success",
-      "chars": 875
-    },
-    {
-      "file": "025_106黄芪建中汤.mp4",
-      "status": "success",
-      "chars": 676
-    },
-    {
-      "file": "025_254实用经络针灸学 -足少阳胆经：环跳.mp4",
-      "status": "success",
-      "chars": 1488
-    },
-    {
-      "file": "026_105麻桂各半汤.mp4",
-      "status": "success",
-      "chars": 1114
-    },
-    {
-      "file": "026_253实用经络针灸学 -足少阳胆经：带脉.mp4",
-      "status": "success",
-      "chars": 835
-    },
-    {
-      "file": "027_104麻杏甘石汤.mp4",
-      "status": "success",
-      "chars": 1421
-    },
-    {
-      "file": "027_252实用经络针灸学 -足少阳胆经：京门.mp4",
-      "status": "success",
-      "chars": 581
-    },
-    {
-      "file": "028_103麦味地黄丸.mp4",
-      "status": "success",
-      "chars": 875
-    },
-    {
-      "file": "028_251实用经络针灸学 -足少阳胆经：肩井.mp4",
-      "status": "success",
-      "chars": 1064
-    },
-    {
-      "file": "029_102防风通圣散.mp4",
-      "status": "success",
-      "chars": 1764
-    },
-    {
-      "file": "029_250实用经络针灸学 -足少阳胆经：风池.mp4",
-      "status": "success",
-      "chars": 832
-    },
-    {
-      "file": "030_101防己黄芪汤.mp4",
-      "status": "success",
-      "chars": 1043
-    },
-    {
-      "file": "030_249实用经络针灸学 -足少阳胆经：率谷.mp4",
-      "status": "success",
-      "chars": 763
-    },
-    {
-      "file": "031_100调胃承气汤.mp4",
-      "status": "success",
-      "chars": 962
-    },
-    {
-      "file": "031_248实用经络针灸学 -足少阳胆经：瞳子髎.mp4",
-      "status": "success",
-      "chars": 565
-    },
-    {
-      "file": "032_099补阳还五汤.mp4",
-      "status": "success",
-      "chars": 994
-    },
-    {
-      "file": "032_247实用经络针灸学 -足少阳胆经：风市.mp4",
-      "status": "success",
-      "chars": 730
-    },
-    {
-      "file": "033_098补中益气汤.mp4",
-      "status": "success",
-      "chars": 1527
-    },
-    {
-      "file": "033_246实用经络针灸学 -足少阳胆经：总论.mp4",
-      "status": "success",
-      "chars": 1043
-    },
-    {
-      "file": "034_097血府逐淤汤.mp4",
-      "status": "success",
-      "chars": 1246
-    },
-    {
-      "file": "034_245实用经络针灸学 -手少阳三焦经：翳风.mp4",
-      "status": "success",
-      "chars": 765
-    },
-    {
-      "file": "035_096苏子降气汤.mp4",
-      "status": "success",
-      "chars": 946
-    },
-    {
-      "file": "035_244实用经络针灸学 -手少阳三焦经：支沟.mp4",
-      "status": "success",
-      "chars": 1045
-    },
-    {
-      "file": "036_095荆芥连翘汤.mp4",
-      "status": "success",
-      "chars": 1262
-    },
-    {
-      "file": "036_243实用经络针灸学 -手少阳三焦经：外关.mp4",
-      "status": "success",
-      "chars": 842
-    },
-    {
-      "file": "037_094茵陈五苓散.mp4",
-      "status": "success",
-      "chars": 764
-    },
-    {
-      "file": "037_242实用经络针灸学 -手少阳三焦经：阳池.mp4",
-      "status": "success",
-      "chars": 667
-    },
-    {
-      "file": "038_093苓桂术甘汤.mp4",
-      "status": "success",
-      "chars": 1259
-    },
-    {
-      "file": "038_241实用经络针灸学 -手少阳三焦经：液门.mp4",
-      "status": "success",
-      "chars": 787
-    },
-    {
-      "file": "039_092芎归胶艾汤.mp4",
-      "status": "success",
-      "chars": 1712
-    },
-    {
-      "file": "039_240实用经络针灸学 -手少阳三焦经：总论.mp4",
-      "status": "success",
-      "chars": 1032
-    },
-    {
-      "file": "040_091芍药甘草汤.mp4",
-      "status": "success",
-      "chars": 843
-    },
-    {
-      "file": "040_239实用经络针灸学 -手厥阴心包经：天泉.mp4",
-      "status": "success",
-      "chars": 592
-    },
-    {
-      "file": "041_090竹叶石膏汤.mp4",
-      "status": "success",
-      "chars": 1133
-    },
-    {
-      "file": "041_238实用经络针灸学 -手厥阴心包经：曲泽.mp4",
-      "status": "success",
-      "chars": 646
-    },
-    {
-      "file": "042_089百合固金汤.mp4",
-      "status": "success",
-      "chars": 1366
-    },
-    {
-      "file": "042_237实用经络针灸学 -手厥阴心包经：郄门.mp4",
-      "status": "success",
-      "chars": 726
-    },
-    {
-      "file": "043_088疏经活血汤.mp4",
-      "status": "success",
-      "chars": 1424
-    },
-    {
-      "file": "043_236实用经络针灸学 -手厥阴心包经：内关.mp4",
-      "status": "success",
-      "chars": 860
-    },
-    {
-      "file": "044_087当归芍药散.mp4",
-      "status": "success",
-      "chars": 1601
-    },
-    {
-      "file": "044_235实用经络针灸学 -手厥阴心包经：劳宫.mp4",
-      "status": "success",
-      "chars": 763
-    },
-    {
-      "file": "045_086当归建中汤.mp4",
-      "status": "success",
-      "chars": 641
-    },
-    {
-      "file": "045_234实用经络针灸学 -手厥阴心包经：总论.mp4",
-      "status": "success",
-      "chars": 1151
-    },
-    {
-      "file": "046_085当归四逆汤.mp4",
-      "status": "success",
-      "chars": 1233
-    },
-    {
-      "file": "046_233实用经络针灸学 -足少阴肾经：筑宾.mp4",
-      "status": "success",
-      "chars": 671
-    },
-    {
-      "file": "047_084甘草泻心汤.mp4",
-      "status": "success",
-      "chars": 1098
-    },
-    {
-      "file": "047_232实用经络针灸学 -足少阴肾经：复溜.mp4",
-      "status": "success",
-      "chars": 1273
-    },
-    {
-      "file": "048_083甘草干姜汤.mp4",
-      "status": "success",
-      "chars": 854
-    },
-    {
-      "file": "048_231实用经络针灸学 -足少阴肾经：太谿.mp4",
-      "status": "success",
-      "chars": 747
-    },
-    {
-      "file": "049_082济生肾气丸.mp4",
-      "status": "success",
-      "chars": 887
-    },
-    {
-      "file": "049_230实用经络针灸学 -足少阴肾经：大锺.mp4",
-      "status": "success",
-      "chars": 746
-    },
-    {
-      "file": "050_081滋阴降火汤.mp4",
-      "status": "success",
-      "chars": 1578
-    },
-    {
-      "file": "050_229实用经络针灸学 -足少阴肾经：然谷.mp4",
-      "status": "success",
-      "chars": 797
-    },
-    {
-      "file": "051_080清暑益气汤.mp4",
-      "status": "success",
-      "chars": 690
-    },
-    {
-      "file": "051_228实用经络针灸学 -足少阴肾经：涌泉.mp4",
-      "status": "success",
-      "chars": 1391
-    },
-    {
-      "file": "052_079清上防风汤.mp4",
-      "status": "success",
-      "chars": 1013
-    },
-    {
-      "file": "052_227实用经络针灸学 -足少阴肾经：总论.mp4",
-      "status": "success",
-      "chars": 841
-    },
-    {
-      "file": "053_078归耆建中汤.mp4",
-      "status": "success",
-      "chars": 610
-    },
-    {
-      "file": "053_226实用经络针灸学 -足太阳膀胱经：背俞穴.mp4",
-      "status": "success",
-      "chars": 597
-    },
-    {
-      "file": "054_077桃核承气汤.mp4",
-      "status": "success",
-      "chars": 981
-    },
-    {
-      "file": "054_225实用经络针灸学 -足太阳膀胱经：肾俞.mp4",
-      "status": "success",
-      "chars": 562
-    },
-    {
-      "file": "055_076桂枝茯苓丸.mp4",
-      "status": "success",
-      "chars": 1180
-    },
-    {
-      "file": "055_224实用经络针灸学 -足太阳膀胱经：至阴.mp4",
-      "status": "success",
-      "chars": 492
-    },
-    {
-      "file": "056_075桂枝人参汤.mp4",
-      "status": "success",
-      "chars": 921
-    },
-    {
-      "file": "056_223实用经络针灸学 -足太阳膀胱经：金门.mp4",
-      "status": "success",
-      "chars": 801
-    },
-    {
-      "file": "057_074柴胡疏肝汤.mp4",
-      "status": "success",
-      "chars": 773
-    },
-    {
-      "file": "057_222实用经络针灸学 -足太阳膀胱经：崑仑.mp4",
-      "status": "success",
-      "chars": 476
-    },
-    {
-      "file": "058_073柴胡桂枝汤.mp4",
-      "status": "success",
-      "chars": 1192
-    },
-    {
-      "file": "058_221实用经络针灸学 -足太阳膀胱经：飞扬.mp4",
+      "file": "024_0378解析方剂学-治疗唾液多的方剂.mp4",
       "status": "success",
       "chars": 1048
     },
     {
-      "file": "059_072杞菊地黄丸.mp4",
+      "file": "025_0377解析方剂学-治疗喉咙痛的方剂.mp4",
       "status": "success",
-      "chars": 1510
+      "chars": 1521
     },
     {
-      "file": "059_220实用经络针灸学 -足太阳膀胱经：承山.mp4",
+      "file": "026_0376解析方剂学-治疗头重的方剂.mp4",
       "status": "success",
-      "chars": 1131
+      "chars": 1879
     },
     {
-      "file": "060_071普济消毒饮.mp4",
+      "file": "027_0375解析方剂学-眼底出血的方剂.mp4",
       "status": "success",
-      "chars": 787
+      "chars": 1570
     },
     {
-      "file": "060_219实用经络针灸学 -足太阳膀胱经：委中.mp4",
+      "file": "028_0374解析方剂学-治疗眼睛干涩的方剂.mp4",
       "status": "success",
-      "chars": 693
+      "chars": 1796
     },
     {
-      "file": "061_070排脓散及汤.mp4",
+      "file": "029_0373解析方剂学-治疗眼睛疲劳的方剂.mp4",
       "status": "success",
-      "chars": 788
+      "chars": 1589
     },
     {
-      "file": "061_218实用经络针灸学 -足太阳膀胱经：大杼.mp4",
+      "file": "030_0372解析方剂学-治疗耳鸣的方剂.mp4",
       "status": "success",
-      "chars": 887
+      "chars": 1353
     },
     {
-      "file": "062_069托里消毒散.mp4",
+      "file": "031_0371解析方剂学-治疗牙痛的方剂.mp4",
       "status": "success",
-      "chars": 1097
+      "chars": 1061
     },
     {
-      "file": "062_217实用经络针灸学 -足太阳膀胱经：睛明.mp4",
+      "file": "032_0370解析方剂学-治疗打鼾的方剂.mp4",
       "status": "success",
-      "chars": 953
+      "chars": 1717
     },
     {
-      "file": "063_068少腹逐瘀汤.mp4",
+      "file": "033_0369解析方剂学-治疗大量掉发的方剂.mp4",
       "status": "success",
-      "chars": 895
+      "chars": 2755
     },
     {
-      "file": "063_216实用经络针灸学 -足太阳膀胱经：总论.mp4",
+      "file": "034_0368解析方剂学-治疗头痛的方剂.mp4",
       "status": "success",
-      "chars": 907
+      "chars": 2519
     },
     {
-      "file": "064_067大黄附子汤.mp4",
+      "file": "035_0367解析方剂学-治疗口腔发炎的方剂.mp4",
       "status": "success",
-      "chars": 958
+      "chars": 1814
     },
     {
-      "file": "064_215实用经络针灸学 -手太阳小肠经：听宫.mp4",
+      "file": "036_0366解析方剂学-鼻炎-鼻窦炎的方剂.mp4",
       "status": "success",
-      "chars": 927
+      "chars": 1501
     },
     {
-      "file": "065_066大黄蛰虫丸.mp4",
+      "file": "037_0365解析方剂学-治疗腮腺炎的方剂.mp4",
+      "status": "success",
+      "chars": 1424
+    },
+    {
+      "file": "038_0364解析方剂学-治疗扁桃腺炎的方剂.mp4",
+      "status": "success",
+      "chars": 1311
+    },
+    {
+      "file": "039_0363解析方剂学-治疗口苦的方剂.mp4",
+      "status": "success",
+      "chars": 1802
+    },
+    {
+      "file": "040_0362解析方剂学-治疗口渴的方剂.mp4",
+      "status": "success",
+      "chars": 2017
+    },
+    {
+      "file": "041_0361解析方剂学-治疗声音沙哑的方剂.mp4",
+      "status": "success",
+      "chars": 1406
+    },
+    {
+      "file": "042_0360解析方剂学-治疗血尿的方剂.mp4",
+      "status": "success",
+      "chars": 1623
+    },
+    {
+      "file": "043_0359解析方剂学-治疗尿道结石的方剂.mp4",
+      "status": "success",
+      "chars": 1722
+    },
+    {
+      "file": "044_0358解析方剂学-治疗尿失禁的方剂.mp4",
+      "status": "success",
+      "chars": 1406
+    },
+    {
+      "file": "045_0357解析方剂学-治疗小便不利的方剂.mp4",
+      "status": "success",
+      "chars": 1653
+    },
+    {
+      "file": "046_0356解析方剂学-治疗夜尿的方剂.mp4",
+      "status": "success",
+      "chars": 2107
+    },
+    {
+      "file": "047_0355解析方剂学-治疗频尿的方剂.mp4",
+      "status": "success",
+      "chars": 1237
+    },
+    {
+      "file": "048_0354解析方剂学-治疗痔疮的方剂.mp4",
+      "status": "success",
+      "chars": 1977
+    },
+    {
+      "file": "049_0353解析方剂学-治疗腹胀的方剂.mp4",
+      "status": "success",
+      "chars": 1620
+    },
+    {
+      "file": "050_0352解析方剂学-治疗胃酸过多的方剂.mp4",
+      "status": "success",
+      "chars": 902
+    },
+    {
+      "file": "051_0351解析方剂学-治疗便秘的方剂.mp4",
+      "status": "success",
+      "chars": 2217
+    },
+    {
+      "file": "052_0350解析方剂学-治疗腹泻下利的方剂.mp4",
+      "status": "success",
+      "chars": 2137
+    },
+    {
+      "file": "053_0349解析方剂学-治疗腹痛的方剂.mp4",
+      "status": "success",
+      "chars": 1433
+    },
+    {
+      "file": "054_0348解析方剂学-治疗恶心呕吐的方剂.mp4",
+      "status": "success",
+      "chars": 1568
+    },
+    {
+      "file": "055_0347解析方剂学-治疗肠病毒感冒的方剂.mp4",
+      "status": "success",
+      "chars": 2454
+    },
+    {
+      "file": "056_0346解析方剂学-治疗多痰的方剂.mp4",
+      "status": "success",
+      "chars": 1919
+    },
+    {
+      "file": "057_0345解析方剂学-治疗咳嗽的方剂.mp4",
+      "status": "success",
+      "chars": 1616
+    },
+    {
+      "file": "058_0344解析方剂学-治疗气喘的方剂.mp4",
+      "status": "success",
+      "chars": 1460
+    },
+    {
+      "file": "059_0343解析方剂学-感冒两三天的感冒方剂.mp4",
+      "status": "success",
+      "chars": 356
+    },
+    {
+      "file": "060_0342解析方剂学-水泛的感冒方剂.mp4",
+      "status": "success",
+      "chars": 389
+    },
+    {
+      "file": "061_0341解析方剂学-有汗或无汗时的感冒方剂.mp4",
       "status": "success",
       "chars": 1148
     },
     {
-      "file": "065_214实用经络针灸学 -手太阳小肠经：天宗.mp4",
+      "file": "062_0340解析方剂学-感冒初起时的方剂.mp4",
       "status": "success",
-      "chars": 649
+      "chars": 597
     },
     {
-      "file": "066_065大黄甘草汤.mp4",
+      "file": "063_0339解析方剂学-周围人都在感冒时的预防方剂.mp4",
       "status": "success",
-      "chars": 917
+      "chars": 444
     },
     {
-      "file": "066_213实用经络针灸学 -手太阳小肠经：小海.mp4",
+      "file": "064_0338解析方剂学-常用感冒方剂.mp4",
       "status": "success",
-      "chars": 570
+      "chars": 4580
     },
     {
-      "file": "067_064参苓白术散.mp4",
+      "file": "065_0337解析方剂学-从单味药到方剂.mp4",
       "status": "success",
-      "chars": 867
+      "chars": 3220
     },
     {
-      "file": "067_212实用经络针灸学 -手太阳小肠经：支正.mp4",
+      "file": "066_0336-解析本草学-总结.mp4",
       "status": "success",
-      "chars": 858
+      "chars": 502
     },
     {
-      "file": "068_063半夏泻心汤.mp4",
+      "file": "067_0335-解析本草学-化湿药.mp4",
       "status": "success",
-      "chars": 1470
+      "chars": 4067
     },
     {
-      "file": "068_211实用经络针灸学 -手太阳小肠经：养老.mp4",
+      "file": "068_0334-解析本草学-杀虫止痒药.mp4",
       "status": "success",
-      "chars": 1037
+      "chars": 3224
     },
     {
-      "file": "069_062半夏厚朴汤.mp4",
+      "file": "069_0333解析本草学-涌吐药.mp4",
       "status": "success",
-      "chars": 2096
+      "chars": 1912
     },
     {
-      "file": "069_210实用经络针灸学 -手太阳小肠经：后谿.mp4",
+      "file": "070_0332解析本草学-收涩药-固精缩尿止带药.mp4",
       "status": "success",
-      "chars": 1024
+      "chars": 3571
     },
     {
-      "file": "070_061十味败毒散.mp4",
+      "file": "071_0331解析本草-收涩药-敛肺润肠药.mp4",
       "status": "success",
-      "chars": 921
+      "chars": 3682
     },
     {
-      "file": "070_209实用经络针灸学 -手太阳小肠经：少泽.mp4",
+      "file": "072_0330解析本草-收涩药-止汗药.mp4",
       "status": "success",
-      "chars": 439
+      "chars": 2564
     },
     {
-      "file": "071_060十全大补汤.mp4",
+      "file": "073_0329解析本草-补虚药-补阴药.mp4",
       "status": "success",
-      "chars": 1201
+      "chars": 5033
     },
     {
-      "file": "071_208实用经络针灸学 -手太阳小肠经：总论.mp4",
+      "file": "074_0328解析本草-补虚药-补血药.mp4",
       "status": "success",
-      "chars": 1135
+      "chars": 3916
     },
     {
-      "file": "072_059加味逍遥丸.mp4",
+      "file": "075_0327解析本草-补虚药-补阳药.mp4",
       "status": "success",
-      "chars": 1989
+      "chars": 6040
     },
     {
-      "file": "072_207实用经络针灸学 -手少阴心经：少冲.mp4",
+      "file": "076_0326解析本草-补虚药-补气药.mp4",
       "status": "success",
-      "chars": 828
+      "chars": 6466
     },
     {
-      "file": "073_058六味地黄丸.mp4",
+      "file": "077_0325解析本草-解析本草-开窍药.mp4",
       "status": "success",
-      "chars": 1071
+      "chars": 2399
     },
     {
-      "file": "073_206实用经络针灸学 -手少阴心经：少府.mp4",
+      "file": "078_0324解析本草-平肝息风药-息风止痉药.mp4",
       "status": "success",
-      "chars": 733
+      "chars": 2389
     },
     {
-      "file": "074_057八味地黄丸.mp4",
+      "file": "079_0323解析本草-平肝息风药-平抑肝阳药.mp4",
       "status": "success",
-      "chars": 1836
+      "chars": 4361
     },
     {
-      "file": "074_205实用经络针灸学 -手少阴心经：神门.mp4",
+      "file": "080_0322解析本草学-安神药-养心安神药.mp4",
       "status": "success",
-      "chars": 765
+      "chars": 4050
     },
     {
-      "file": "075_056人参养荣汤.mp4",
+      "file": "081_0321解析本草学-安神药-重镇安神药.mp4",
       "status": "success",
-      "chars": 1169
+      "chars": 3563
     },
     {
-      "file": "075_204实用经络针灸学 -手少阴心经：少海.mp4",
+      "file": "082_0320解析本草学-化痰止咳平喘药-止咳平喘药.mp4",
       "status": "success",
-      "chars": 491
+      "chars": 4302
     },
     {
-      "file": "076_055三黄泻心汤.mp4",
+      "file": "083_0319解析本草学-化痰止咳平喘药-清热化痰药.mp4",
       "status": "success",
-      "chars": 1253
+      "chars": 3769
     },
     {
-      "file": "076_203实用经络针灸学 -手少阴心经：极泉.mp4",
+      "file": "084_0318解析本草学-化痰止咳平喘药-温化寒痰药.mp4",
       "status": "success",
-      "chars": 723
+      "chars": 4114
     },
     {
-      "file": "077_054三物黄芩汤.mp4",
+      "file": "085_0317解析本草学-解析本草学-活血化瘀药.mp4",
       "status": "success",
-      "chars": 1013
+      "chars": 7083
     },
     {
-      "file": "077_202实用经络针灸学 -手少阴心经：总论.mp4",
-      "status": "success",
-      "chars": 1189
-    },
-    {
-      "file": "078_053麻子仁丸.mp4",
-      "status": "success",
-      "chars": 1260
-    },
-    {
-      "file": "078_201实用经络针灸学 -足太阴脾经：大包.mp4",
-      "status": "success",
-      "chars": 1025
-    },
-    {
-      "file": "079_052麦门冬汤.mp4",
-      "status": "success",
-      "chars": 1931
-    },
-    {
-      "file": "079_200实用经络针灸学 -足太阴脾经：血海.mp4",
-      "status": "success",
-      "chars": 894
-    },
-    {
-      "file": "080_051酸枣仁汤.mp4",
-      "status": "success",
-      "chars": 1018
-    },
-    {
-      "file": "080_199实用经络针灸学 -足太阴脾经：阴陵泉.mp4",
-      "status": "success",
-      "chars": 830
-    },
-    {
-      "file": "081_050茵陈蒿汤.mp4",
-      "status": "success",
-      "chars": 912
-    },
-    {
-      "file": "081_198实用经络针灸学 -足太阴脾经：三阴交.mp4",
-      "status": "success",
-      "chars": 1163
-    },
-    {
-      "file": "082_049木防己汤.mp4",
-      "status": "success",
-      "chars": 1060
-    },
-    {
-      "file": "082_197实用经络针灸学 -足太阴脾经：公孙.mp4",
-      "status": "success",
-      "chars": 625
-    },
-    {
-      "file": "083_048小青龙汤.mp4",
-      "status": "success",
-      "chars": 2615
-    },
-    {
-      "file": "083_196实用经络针灸学 -足太阴脾经：太白.mp4",
-      "status": "success",
-      "chars": 905
-    },
-    {
-      "file": "084_047小柴胡汤.mp4",
-      "status": "success",
-      "chars": 3031
-    },
-    {
-      "file": "084_195实用经络针灸学 -足太阴脾经：隐白.mp4",
-      "status": "success",
-      "chars": 1890
-    },
-    {
-      "file": "085_046小承气汤.mp4",
-      "status": "success",
-      "chars": 747
-    },
-    {
-      "file": "085_194实用经络针灸学 -足阳明胃经：内庭.mp4",
-      "status": "success",
-      "chars": 728
-    },
-    {
-      "file": "086_045小建中汤.mp4",
-      "status": "success",
-      "chars": 1621
-    },
-    {
-      "file": "086_193实用经络针灸学 -足阳明胃经：解谿.mp4",
-      "status": "success",
-      "chars": 441
-    },
-    {
-      "file": "087_044大柴胡汤.mp4",
-      "status": "success",
-      "chars": 1901
-    },
-    {
-      "file": "087_192实用经络针灸学 -下巨虚：丰隆.mp4",
-      "status": "success",
-      "chars": 2462
-    },
-    {
-      "file": "088_043大承气汤.mp4",
-      "status": "success",
-      "chars": 1345
-    },
-    {
-      "file": "088_191实用经络针灸学 -足阳明胃经：足三里.mp4",
-      "status": "success",
-      "chars": 1228
-    },
-    {
-      "file": "089_042大建中汤.mp4",
-      "status": "success",
-      "chars": 1268
-    },
-    {
-      "file": "089_190实用经络针灸学 -足阳明胃经：犊鼻.mp4",
-      "status": "success",
-      "chars": 1389
-    },
-    {
-      "file": "090_041吴茱萸汤.mp4",
-      "status": "success",
-      "chars": 1389
-    },
-    {
-      "file": "090_189实用经络针灸学 -足阳明胃经：梁丘.mp4",
-      "status": "success",
-      "chars": 981
-    },
-    {
-      "file": "091_040六君子汤.mp4",
-      "status": "success",
-      "chars": 1065
-    },
-    {
-      "file": "091_188实用经络针灸学 -足阳明胃经：天枢.mp4",
-      "status": "success",
-      "chars": 727
-    },
-    {
-      "file": "092_039黄连汤.mp4",
-      "status": "success",
-      "chars": 1060
-    },
-    {
-      "file": "092_187实用经络针灸学 -颊车：下关.mp4",
-      "status": "success",
-      "chars": 998
-    },
-    {
-      "file": "093_038黄芩汤.mp4",
-      "status": "success",
-      "chars": 1284
-    },
-    {
-      "file": "093_186实用经络针灸学 -四白：巨髎.mp4",
-      "status": "success",
-      "chars": 1086
-    },
-    {
-      "file": "094_037麻黄汤.mp4",
-      "status": "success",
-      "chars": 1618
-    },
-    {
-      "file": "094_185实用经络针灸学 -足阳明胃经：总论.mp4",
-      "status": "success",
-      "chars": 1280
-    },
-    {
-      "file": "095_036银翘散.mp4",
-      "status": "success",
-      "chars": 1161
-    },
-    {
-      "file": "095_184实用经络针灸学 -手阳明大肠经：迎香.mp4",
-      "status": "success",
-      "chars": 539
-    },
-    {
-      "file": "096_035钩藤散.mp4",
-      "status": "success",
-      "chars": 833
-    },
-    {
-      "file": "096_183实用经络针灸学 -手阳明大肠经：肩髃.mp4",
-      "status": "success",
-      "chars": 1182
-    },
-    {
-      "file": "097_034逍遥散.mp4",
-      "status": "success",
-      "chars": 1555
-    },
-    {
-      "file": "097_182实用经络针灸学 -手阳明大肠经：曲池.mp4",
-      "status": "success",
-      "chars": 729
-    },
-    {
-      "file": "098_033猪苓汤.mp4",
-      "status": "success",
-      "chars": 1381
-    },
-    {
-      "file": "098_181实用经络针灸学 -手阳明大肠经：合谷.mp4",
-      "status": "success",
-      "chars": 1461
-    },
-    {
-      "file": "099_032葛根汤.mp4",
-      "status": "success",
-      "chars": 1869
-    },
-    {
-      "file": "099_180实用经络针灸学 -二间：三间.mp4",
-      "status": "success",
-      "chars": 1426
-    },
-    {
-      "file": "100_031胃苓散.mp4",
-      "status": "success",
-      "chars": 957
-    },
-    {
-      "file": "100_179实用经络针灸学 -手阳明大肠经：商阳.mp4",
-      "status": "success",
-      "chars": 739
-    },
-    {
-      "file": "101_030续命汤.mp4",
-      "status": "success",
-      "chars": 815
-    },
-    {
-      "file": "101_178实用经络针灸学 -手阳明大肠经：总论.mp4",
-      "status": "success",
-      "chars": 893
-    },
-    {
-      "file": "102_029真武汤.mp4",
-      "status": "success",
-      "chars": 1324
-    },
-    {
-      "file": "102_177实用经络针灸学 -实用经络针灸学：六脉神剑.mp4",
-      "status": "success",
-      "chars": 795
-    },
-    {
-      "file": "103_028甘草汤.mp4",
-      "status": "success",
-      "chars": 1192
-    },
-    {
-      "file": "103_176实用经络针灸学 -手太阴肺经：少商.mp4",
-      "status": "success",
-      "chars": 603
-    },
-    {
-      "file": "104_027泽泻汤.mp4",
-      "status": "success",
-      "chars": 1036
-    },
-    {
-      "file": "104_175实用经络针灸学 -手太阴肺经：鱼际.mp4",
-      "status": "success",
-      "chars": 829
-    },
-    {
-      "file": "105_026润肠汤.mp4",
-      "status": "success",
-      "chars": 989
-    },
-    {
-      "file": "105_174实用经络针灸学 -手太阴肺经：太渊.mp4",
-      "status": "success",
-      "chars": 804
-    },
-    {
-      "file": "106_025温经汤.mp4",
-      "status": "success",
-      "chars": 965
-    },
-    {
-      "file": "106_173实用经络针灸学 -手太阴肺经：列缺.mp4",
-      "status": "success",
-      "chars": 992
-    },
-    {
-      "file": "107_024温清饮.mp4",
-      "status": "success",
-      "chars": 1435
-    },
-    {
-      "file": "107_172实用经络针灸学 -手太阴肺经：孔最.mp4",
-      "status": "success",
-      "chars": 653
-    },
-    {
-      "file": "108_023消风散.mp4",
-      "status": "success",
-      "chars": 861
-    },
-    {
-      "file": "108_171实用经络针灸学 -手太阴肺经：尺泽.mp4",
-      "status": "success",
-      "chars": 823
-    },
-    {
-      "file": "109_022归脾汤.mp4",
-      "status": "success",
-      "chars": 1027
-    },
-    {
-      "file": "109_170实用经络针灸学 -手太阴肺经：天府.mp4",
-      "status": "success",
-      "chars": 639
-    },
-    {
-      "file": "110_021桔梗汤.mp4",
-      "status": "success",
-      "chars": 668
-    },
-    {
-      "file": "110_169实用经络针灸学 -手太阴肺经：中府.mp4",
-      "status": "success",
-      "chars": 888
-    },
-    {
-      "file": "111_020桂枝汤.mp4",
-      "status": "success",
-      "chars": 2548
-    },
-    {
-      "file": "111_168实用经络针灸学 -手太阴肺经：总论2.mp4",
-      "status": "success",
-      "chars": 832
-    },
-    {
-      "file": "112_0167实用经络针灸学-手太阴肺经总论1.mp4",
+      "file": "086_0316解析本草学-止血药-温经止血药.mp4",
       "status": "success",
       "chars": 1665
     },
     {
-      "file": "112_019柴陷汤.mp4",
+      "file": "087_0315解析本草学-止血药-收敛止血药.mp4",
       "status": "success",
-      "chars": 1144
+      "chars": 1019
     },
     {
-      "file": "113_0166实用经络针灸学-下合穴.mp4",
+      "file": "088_0314解析本草学-止血药-化瘀止血药.mp4",
       "status": "success",
-      "chars": 883
+      "chars": 2820
     },
     {
-      "file": "113_018柴苓汤.mp4",
+      "file": "089_0313解析本草学-止血药-凉血止血药.mp4",
       "status": "success",
-      "chars": 1008
+      "chars": 3362
     },
     {
-      "file": "114_0165实用经络针灸学-郄穴、会穴v.mp4",
+      "file": "090_0312解析本草学-解析本草学-消食药.mp4",
       "status": "success",
-      "chars": 1736
+      "chars": 3232
     },
     {
-      "file": "114_017排脓散.mp4",
+      "file": "091_0311解析本草学-解析本草学-理气药.mp4",
       "status": "success",
-      "chars": 1080
+      "chars": 5126
     },
     {
-      "file": "115_0164实用经络针灸学-特定穴-原穴、络穴.mp4",
+      "file": "092_0310解析本草学-解析本草学-温里药.mp4",
       "status": "success",
-      "chars": 1173
+      "chars": 4525
     },
     {
-      "file": "115_016折冲饮.mp4",
+      "file": "093_0309解析本草学-利水渗湿药-利湿退黄药.mp4",
       "status": "success",
-      "chars": 666
+      "chars": 1344
     },
     {
-      "file": "116_015抑肝散.mp4",
+      "file": "094_0308解析本草学-利水渗湿药-利尿通淋药.mp4",
       "status": "success",
-      "chars": 1187
+      "chars": 2635
     },
     {
-      "file": "116_0163实用经络针灸学-特定穴-背腧、募穴.mp4",
+      "file": "095_0307解析本草学-利水渗湿药-利水消肿药.mp4",
       "status": "success",
-      "chars": 1139
+      "chars": 3128
     },
     {
-      "file": "117_014平胃散.mp4",
+      "file": "096_0306解析本草学-解析本草学-祛风湿药.mp4",
       "status": "success",
-      "chars": 883
+      "chars": 3796
     },
     {
-      "file": "117_0162实用经络针灸学-特定穴-五腧穴.mp4",
+      "file": "097_0305解析本草学-泻下药-峻下逐水药.mp4",
       "status": "success",
-      "chars": 3523
+      "chars": 2789
     },
     {
-      "file": "118_013完带汤.mp4",
-      "status": "success",
-      "chars": 1227
-    },
-    {
-      "file": "118_0161实用经络针灸学-十二皮部.mp4",
-      "status": "success",
-      "chars": 520
-    },
-    {
-      "file": "119_012安中散.mp4",
-      "status": "success",
-      "chars": 677
-    },
-    {
-      "file": "119_0160实用经络针灸学-十二筋经.mp4",
-      "status": "success",
-      "chars": 631
-    },
-    {
-      "file": "120_011四逆汤.mp4",
-      "status": "success",
-      "chars": 1447
-    },
-    {
-      "file": "120_0159实用经络针灸学-络脉、十五络脉.mp4",
-      "status": "success",
-      "chars": 982
-    },
-    {
-      "file": "121_010四逆散.mp4",
-      "status": "success",
-      "chars": 1656
-    },
-    {
-      "file": "121_0158实用经络针灸学-十二经别.mp4",
-      "status": "success",
-      "chars": 1055
-    },
-    {
-      "file": "122_009四物汤.mp4",
-      "status": "success",
-      "chars": 883
-    },
-    {
-      "file": "122_0157实用经络针灸学-阴跷脉.mp4",
-      "status": "success",
-      "chars": 813
-    },
-    {
-      "file": "123_008八珍汤.mp4",
-      "status": "success",
-      "chars": 824
-    },
-    {
-      "file": "123_0156实用经络针灸学-阳跷脉.mp4",
-      "status": "success",
-      "chars": 493
-    },
-    {
-      "file": "124_007人参汤.mp4",
-      "status": "success",
-      "chars": 1030
-    },
-    {
-      "file": "124_0155实用经络针灸学-阴维脉.mp4",
-      "status": "success",
-      "chars": 553
-    },
-    {
-      "file": "125_006五苓散.mp4",
-      "status": "success",
-      "chars": 1844
-    },
-    {
-      "file": "125_0154实用经络针灸学-阳维脉.mp4",
-      "status": "success",
-      "chars": 510
-    },
-    {
-      "file": "126_005五积散.mp4",
-      "status": "success",
-      "chars": 1086
-    },
-    {
-      "file": "126_0153实用经络针灸学-带脉.mp4",
-      "status": "success",
-      "chars": 681
-    },
-    {
-      "file": "127_004五淋散.mp4",
-      "status": "success",
-      "chars": 923
-    },
-    {
-      "file": "127_0152实用经络针灸学-冲脉.mp4",
-      "status": "success",
-      "chars": 515
-    },
-    {
-      "file": "128_003二陈汤.mp4",
-      "status": "success",
-      "chars": 1273
-    },
-    {
-      "file": "128_0151实用经络针灸学-督脉.mp4",
-      "status": "success",
-      "chars": 461
-    },
-    {
-      "file": "129_002乙字汤.mp4",
-      "status": "success",
-      "chars": 995
-    },
-    {
-      "file": "129_0150实用经络针灸学-任脉.mp4",
-      "status": "success",
-      "chars": 969
-    },
-    {
-      "file": "130_001一贯煎.mp4",
-      "status": "success",
-      "chars": 753
-    },
-    {
-      "file": "130_0149实用经络针灸学-奇经八脉和八脉交会穴.mp4",
-      "status": "success",
-      "chars": 1330
-    },
-    {
-      "file": "131_0148实用经络针灸学-十二经络循行时长图.mp4",
-      "status": "success",
-      "chars": 840
-    },
-    {
-      "file": "132_0147实用经络针灸学-十二经脉.mp4",
-      "status": "success",
-      "chars": 2541
-    },
-    {
-      "file": "133_0146实用经络针灸学-人体经络系统介绍.mp4",
-      "status": "success",
-      "chars": 570
-    },
-    {
-      "file": "134_0145中医辨证学-肾和膀胱辨证3.mp4",
-      "status": "success",
-      "chars": 570
-    },
-    {
-      "file": "135_0144中医辨证学-肾和膀胱辨证2.mp4",
-      "status": "success",
-      "chars": 338
-    },
-    {
-      "file": "136_0143中医辨证学-肾和膀胱辨证1.mp4",
-      "status": "success",
-      "chars": 730
-    },
-    {
-      "file": "137_0142中医辨证学-肝和胆辨证6.mp4",
-      "status": "success",
-      "chars": 496
-    },
-    {
-      "file": "138_0141中医辨证学-肝和胆辨证5.mp4",
-      "status": "success",
-      "chars": 842
-    },
-    {
-      "file": "139_0140中医辨证学-肝和胆辨证4.mp4",
-      "status": "success",
-      "chars": 542
-    },
-    {
-      "file": "140_0139中医辨证学-肝和胆辨证3.mp4",
-      "status": "success",
-      "chars": 673
-    },
-    {
-      "file": "141_0138中医辨证学-肝和胆辨证2.mp4",
-      "status": "success",
-      "chars": 975
-    },
-    {
-      "file": "142_0137中医辨证学-肝和胆辨证1.mp4",
-      "status": "success",
-      "chars": 1059
-    },
-    {
-      "file": "143_0136中医辨证学-脾和胃辨证5.mp4",
-      "status": "success",
-      "chars": 1068
-    },
-    {
-      "file": "144_0135中医辨证学-脾和胃辨证4.mp4",
-      "status": "success",
-      "chars": 865
-    },
-    {
-      "file": "145_0134中医辨证学-脾和胃辨证2和3.mp4",
-      "status": "success",
-      "chars": 583
-    },
-    {
-      "file": "146_0133中医辨证学-脾和胃辨证1.mp4",
-      "status": "success",
-      "chars": 1182
+      "file": "098_0304解析本草学-泻下药-润下药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "147_0132中医辨证学-各种湿热比较.mp4",
-      "status": "success",
-      "chars": 2077
+      "file": "099_0303解析本草学-泻下药-攻下药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "148_0131中医辨证学-肺和大肠辨证4.mp4",
-      "status": "success",
-      "chars": 1097
+      "file": "100_0302解析本草学-清热药-清虚热药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "149_0130中医辨证学-肺和大肠辨证3.mp4",
-      "status": "success",
-      "chars": 1290
+      "file": "101_0301解析本草学-清热药-清热凉血药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "150_0129中医辨证学-肺和大肠辨证2.mp4",
-      "status": "success",
-      "chars": 748
+      "file": "102_0300解析本草学-清热药-清热解毒药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "151_0128中医辨证学-肺和大肠辨证1.mp4",
-      "status": "success",
-      "chars": 939
+      "file": "103_0299解析本草学-清热药-清热燥湿药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "152_0127中医辨证学-心和小肠辨证6和7.mp4",
-      "status": "success",
-      "chars": 909
+      "file": "104_0298解析本草学-清热药-清热泻火药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "153_0126中医辨证学-心和小肠辨证5.mp4",
-      "status": "success",
-      "chars": 766
+      "file": "105_0297解析本草学-解表药-发散风热药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "154_0125中医辨证学-心和小肠辨证4.mp4",
-      "status": "success",
-      "chars": 785
+      "file": "106_0296解析本草学-解表药-发散风寒药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "155_0124中医辨证学-心和小肠辨证3.mp4",
-      "status": "success",
-      "chars": 704
+      "file": "107_0295解析本草学-前言.mp4",
+      "status": "skipped"
     },
     {
-      "file": "156_0123中医辨证学-心和小肠辨证2.mp4",
-      "status": "success",
-      "chars": 1020
+      "file": "108_0294实用本草学-强健脾胃药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "157_0122中医辨证学-心和小肠辨证1.mp4",
-      "status": "success",
-      "chars": 1388
+      "file": "109_0293实用本草学-止咳平喘药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "158_0121中医辨证学-脏腑辨证.mp4",
-      "status": "success",
-      "chars": 2596
+      "file": "110_0292实用本草学-清热解毒药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "159_0120中医辨证学-气血津液辨证-水.mp4",
-      "status": "success",
-      "chars": 4299
+      "file": "111_0291实用本草学-利水渗湿药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "160_0119中医辨证学-气血津液辨证-血.mp4",
-      "status": "success",
-      "chars": 1535
+      "file": "112_0290实用本草学-凉血药活血药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "161_0118中医辨证学-气血津液辨证.mp4",
-      "status": "success",
-      "chars": 1707
+      "file": "113_0289实用本草学-补血药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "162_0117中医辨证学-三焦辨证.mp4",
-      "status": "success",
-      "chars": 1121
+      "file": "114_0288实用本草学-理气药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "163_0116中医辨证学-卫气营血辨证.mp4",
-      "status": "success",
-      "chars": 2488
+      "file": "115_0287实用本草学-补气药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "164_0115中医辨证学-五行辨证-相侮关系.mp4",
-      "status": "success",
-      "chars": 669
+      "file": "116_0286实用本草学-补阴药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "165_0114中医辨证学-五行辨证-相乘关系.mp4",
-      "status": "success",
-      "chars": 920
+      "file": "117_0285实用本草学-温里药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "166_0113中医辨证学-五行辨证-母不生子.mp4",
-      "status": "success",
-      "chars": 1341
+      "file": "118_0284实用本草学-补阳药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "167_0112中医辨证学-五行辨证.mp4",
-      "status": "success",
-      "chars": 1139
+      "file": "119_0283实用本草学-上中下三品的中药.mp4",
+      "status": "skipped"
     },
     {
-      "file": "168_0111中医辨证学-六经辨证.mp4",
-      "status": "success",
-      "chars": 1725
+      "file": "120_0282实用本草学-五味.mp4",
+      "status": "skipped"
     },
     {
-      "file": "169_0110中医辨证学-八纲辨证.mp4",
-      "status": "success",
-      "chars": 1938
+      "file": "121_0281实用本草学-四气.mp4",
+      "status": "skipped"
     },
     {
-      "file": "170_0109中医辨证学-辨证论治.mp4",
-      "status": "success",
-      "chars": 1000
+      "file": "122_0280实用本草学中药及食物的四气五味.mp4",
+      "status": "skipped"
     }
   ]
 }
