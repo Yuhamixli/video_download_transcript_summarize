@@ -42111,6 +42111,101 @@
       "wrong": "姿势",
       "correct": "知识",
       "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "必修科",
+      "correct": "必修课",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "味淋汤",
+      "correct": "胃苓汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "桂枝加勺药汤",
+      "correct": "桂枝加芍药汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "当归健中汤",
+      "correct": "当归建中汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "柴胡桂枝甘姜汤",
+      "correct": "柴胡桂枝干姜汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "造型药",
+      "correct": "燥性药",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "动力学",
+      "correct": "药性",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "深、深、降、收、散",
+      "correct": "升、降、收、散",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "凉解",
+      "correct": "两解",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "半下泻型汤",
+      "correct": "半夏泻心汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "藕皮粒繁",
+      "correct": "呕痞利烦",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "藕吐",
+      "correct": "呕吐",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "脾",
+      "correct": "痞",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "下粒",
+      "correct": "下利",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "确湿",
+      "correct": "祛湿",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "品味散",
+      "correct": "平胃散",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "见中汤",
+      "correct": "建中汤",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "降溺",
+      "correct": "降逆",
+      "note": "LLM 自动发现，待人工审核"
+    },
+    {
+      "wrong": "扫阳",
+      "correct": "少阳",
+      "note": "LLM 自动发现，待人工审核"
     }
   ]
 }

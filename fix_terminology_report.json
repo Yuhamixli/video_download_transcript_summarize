@@ -1,31 +1,23 @@
 {
-  "run_time": "2026-03-11T09:23:20.713373",
+  "run_time": "2026-03-11T12:21:31.384095",
   "model": "moonshotai/kimi-k2.5",
   "api_base": "https://openrouter.ai/api/v1",
   "total_files": 1,
   "success": 1,
   "skipped": 0,
   "failed": 0,
-  "total_corrections": 7,
-  "total_seconds": 271.5,
+  "total_corrections": 0,
+  "total_seconds": 57.6,
   "failed_files": [],
   "results": [
     {
-      "file": "122_0280实用本草学中药及食物的四气五味",
+      "file": "112_0290实用本草学-凉血药活血药",
       "status": "success",
-      "time": 270.4,
-      "original_chars": 906,
-      "corrected_chars": 903,
-      "num_corrections": 7,
-      "corrections": [
-        "国物 → 国民 (台湾口音同音误识)",
-        "分配 → 分别 (同音误识，语义修正)",
-        "制正 → 治病 (同音误识，中医术语)",
-        "说穿了你也没有什么 → 说穿了也没有什么 (口语表达修正)",
-        "本朝学 → 本草学 (中医术语，多次出现)",
-        "本朝 → 本草 (中医术语)",
-        "姿势 → 知识 (同音误识)"
-      ]
+      "time": 56.3,
+      "original_chars": 922,
+      "corrected_chars": 922,
+      "num_corrections": 0,
+      "corrections": []
     }
   ]
 }

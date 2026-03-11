@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -45,6 +46,39 @@ def run_step(command: list[str], timeout: int) -> tuple[bool, str]:
         return False, f"timeout={timeout}s"
 
 
+def fallback_copy_to_corrected(project_root: Path, resolved_entry: str) -> bool:
+    """Copy source transcript into transcripts_corrected/ as a passthrough fallback."""
+    transcripts_root = project_root / "transcripts"
+    corrected_root = project_root / "transcripts_corrected"
+
+    source_path = transcripts_root / resolved_entry
+    corrected_path = corrected_root / resolved_entry
+    corrected_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if not source_path.exists():
+        return False
+
+    text = source_path.read_text(encoding="utf-8")
+    corrected_path.write_text(text, encoding="utf-8")
+
+    detail_name = f"{Path(resolved_entry).stem}_detail.json"
+    detail_src_candidates = [
+        source_path.with_name(detail_name),
+        transcripts_root / "whisper_detail" / detail_name,
+    ]
+    detail_src = next((p for p in detail_src_candidates if p.exists()), None)
+    if detail_src:
+        detail = json.loads(detail_src.read_text(encoding="utf-8"))
+        detail["text"] = text
+        detail["corrections"] = []
+        detail["correction_model"] = "passthrough-fallback"
+        detail["correction_status"] = "fallback_copy"
+        detail_dst = corrected_path.with_name(detail_name)
+        detail_dst.write_text(json.dumps(detail, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    return True
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run targeted pipeline from transcript manifest")
     parser.add_argument("--manifest", required=True, help="Manifest path relative to project root or absolute")
@@ -68,6 +102,7 @@ def main() -> int:
 
     fix_ok = 0
     fix_fail = 0
+    fix_fallback = 0
     for idx, entry in enumerate(entries, start=1):
         resolved_entry = transcript_lookup.get(Path(entry).name)
         if not resolved_entry:
@@ -90,8 +125,12 @@ def main() -> int:
         if ok:
             fix_ok += 1
         else:
-            fix_fail += 1
-            print(f"  [fix-error] {resolved_entry}: {status}")
+            if fallback_copy_to_corrected(project_root, resolved_entry):
+                fix_fallback += 1
+                print(f"  [fix-fallback] {resolved_entry}: {status}")
+            else:
+                fix_fail += 1
+                print(f"  [fix-error] {resolved_entry}: {status}")
 
     outline_ok = 0
     outline_fail = 0
@@ -149,6 +188,7 @@ def main() -> int:
 
     print("=" * 60)
     print(f"fix newly completed: {fix_ok}, failed: {fix_fail}")
+    print(f"fix fallback copied: {fix_fallback}")
     print(f"outline newly completed: {outline_ok}, failed: {outline_fail}")
     print(f"sync ok: {sync_ok}")
     print(f"docx ok: {docx_ok}")
