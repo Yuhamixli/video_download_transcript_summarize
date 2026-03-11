@@ -18,6 +18,7 @@
 
 ### 通用
 - [ ] 人工审核 `manual_corrections.json` 中 LLM 自动发现的纠错规则
+- [x] 增加按目录直接补跑能力（`run_folder_pipeline.bat`）
 
 ---
 

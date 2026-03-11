@@ -107,25 +107,29 @@ def _relpath_from_base(path, base):
     return path
 
 
+def load_manifest_entries(manifest_path):
+    """Load transcript relative paths from a manifest file."""
+    entries = []
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            entries.append(line.replace("\\", "/"))
+    return entries
+
+
 def get_transcript_files():
     """获取转录文件列表，优先使用纠错后版本。支持子目录结构。"""
     corrected = {}
     original = {}
 
-    for t in sorted(glob.glob(os.path.join(CORRECTED_DIR, "*.txt"))):
-        rel = _relpath_from_base(t, CORRECTED_DIR)
-        key = rel.replace("\\", "/")
-        corrected[key] = t
-    for t in sorted(glob.glob(os.path.join(CORRECTED_DIR, "*", "*.txt"))):
+    for t in sorted(glob.glob(os.path.join(CORRECTED_DIR, "**", "*.txt"), recursive=True)):
         rel = _relpath_from_base(t, CORRECTED_DIR)
         key = rel.replace("\\", "/")
         corrected[key] = t
 
-    for t in sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt"))):
-        rel = _relpath_from_base(t, TRANSCRIPT_DIR)
-        key = rel.replace("\\", "/")
-        original[key] = t
-    for t in sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "*", "*.txt"))):
+    for t in sorted(glob.glob(os.path.join(TRANSCRIPT_DIR, "**", "*.txt"), recursive=True)):
         rel = _relpath_from_base(t, TRANSCRIPT_DIR)
         key = rel.replace("\\", "/")
         original[key] = t
@@ -148,6 +152,7 @@ def main():
     parser = argparse.ArgumentParser(description="大模型大纲生成")
     parser.add_argument("--force", action="store_true", help="强制重新生成已存在的大纲")
     parser.add_argument("--file", help="只处理指定文件 (文件名关键字)")
+    parser.add_argument("--manifest", help="只处理清单中的文件 (相对 transcripts/ 路径)")
     parser.add_argument("--no-summary", action="store_true", help="不生成完整课程汇总大纲")
     args = parser.parse_args()
 
@@ -164,8 +169,19 @@ def main():
     client = OpenAI(api_key=API_KEY, base_url=API_BASE, timeout=120.0, max_retries=5)
 
     transcripts, corrected_count = get_transcript_files()
-    if args.file:
+    if args.manifest:
+        manifest_entries = set(load_manifest_entries(args.manifest))
+        transcripts = [(n, p) for n, p in transcripts if n in manifest_entries]
+        corrected_count = sum(
+            1 for _, p in transcripts
+            if os.path.abspath(p).startswith(os.path.abspath(CORRECTED_DIR))
+        )
+    elif args.file:
         transcripts = [(n, p) for n, p in transcripts if args.file in n]
+        corrected_count = sum(
+            1 for _, p in transcripts
+            if os.path.abspath(p).startswith(os.path.abspath(CORRECTED_DIR))
+        )
 
     if not transcripts:
         print(f"\n没有找到转录文件")

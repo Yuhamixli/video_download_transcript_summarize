@@ -151,6 +151,16 @@ python generate_outline.py --force
 run_pipeline_from_transcripts.bat
 ```
 
+若你已经手工把一批转录放进某个目录，最简单的方式是直接按该目录跑，不做课程推断：
+
+```bash
+# 默认跑 transcripts/高级
+run_folder_pipeline.bat
+
+# 或显式指定目录
+run_folder_pipeline.bat "transcripts\高级"
+```
+
 或分步执行（organize 已完成时）：
 
 ```bash

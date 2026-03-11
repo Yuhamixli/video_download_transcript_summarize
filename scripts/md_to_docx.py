@@ -108,6 +108,26 @@ def convert_md_to_docx(md_path: Path, docx_path: Path, ref_docx: Path) -> bool:
     return True
 
 
+def load_manifest_md_files(manifest_path: Path, outlines_dir: Path):
+    """Map transcript manifest entries to outline markdown files."""
+    md_files = []
+    missing = []
+
+    with manifest_path.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            rel_md = Path(line.replace("\\", "/")).with_suffix(".md")
+            md_path = outlines_dir / rel_md
+            if md_path.exists():
+                md_files.append(md_path)
+            else:
+                missing.append(rel_md)
+
+    return md_files, missing
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Convert outlines/*.md to MS Word with larger fonts."
@@ -118,6 +138,8 @@ def main():
                         help=f"Body font size in pt (default: {DEFAULT_BODY_PT})")
     parser.add_argument("--single", type=str, default=None,
                         help="Convert only this .md file (relative to outlines/)")
+    parser.add_argument("--manifest", type=Path, default=None,
+                        help="Convert only files listed in transcript manifest")
     args = parser.parse_args()
 
     project_root = Path(__file__).resolve().parent.parent
@@ -143,11 +165,19 @@ def main():
     if not create_reference_docx(ref_docx, args.font_size):
         sys.exit(1)
 
+    if args.single and args.manifest:
+        print("Error: --single and --manifest cannot be used together.")
+        sys.exit(1)
+
     if args.single:
         md_files = [outlines_dir / args.single]
         if not md_files[0].exists():
             print(f"Error: File not found: {md_files[0]}")
             sys.exit(1)
+    elif args.manifest:
+        md_files, missing = load_manifest_md_files(args.manifest, outlines_dir)
+        if missing:
+            print(f"Warning: {len(missing)} outline file(s) listed in manifest do not exist yet.")
     else:
         flat = list(outlines_dir.glob("*.md"))
         nested = list(outlines_dir.rglob("*.md"))

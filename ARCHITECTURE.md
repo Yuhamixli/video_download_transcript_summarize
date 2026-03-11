@@ -92,6 +92,8 @@
         ↓
    transcripts/{course}/*.txt
         ↓
+   build_transcript_manifest.py (--date or --source-dir)
+        ↓
    fix_terminology.py (LLM correction)
         ↓
    transcripts_corrected/{course}/*.txt ─────┐

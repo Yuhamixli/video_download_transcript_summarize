@@ -259,6 +259,39 @@ def _relpath_from_transcripts(txt_path):
     return os.path.basename(txt_path)
 
 
+def load_manifest_entries(manifest_path):
+    """Load transcript relative paths from a manifest file."""
+    entries = []
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            entries.append(line.replace("/", os.sep))
+    return entries
+
+
+def get_transcript_candidates():
+    """Return all transcript files under transcripts/ recursively."""
+    pattern = os.path.join(TRANSCRIPT_DIR, "**", "*.txt")
+    return sorted(glob.glob(pattern, recursive=True))
+
+
+def resolve_manifest_transcripts(manifest_path):
+    """Resolve manifest transcript relative paths to absolute paths."""
+    resolved = []
+    missing = []
+
+    for rel_path in load_manifest_entries(manifest_path):
+        abs_path = os.path.join(TRANSCRIPT_DIR, rel_path)
+        if os.path.exists(abs_path):
+            resolved.append(abs_path)
+        else:
+            missing.append(rel_path)
+
+    return resolved, missing
+
+
 def process_transcript(client, txt_path, model, system_prompt, force=False):
     """处理单个转录文件"""
     name = os.path.splitext(os.path.basename(txt_path))[0]
@@ -330,6 +363,7 @@ def main():
     parser.add_argument("--api-base", default=API_BASE, help=f"API Base URL (默认: {API_BASE})")
     parser.add_argument("--force", action="store_true", help="强制重新处理已存在的文件")
     parser.add_argument("--file", help="只处理指定文件 (文件名关键字)")
+    parser.add_argument("--manifest", help="只处理清单中的文件 (相对 transcripts/ 路径)")
     parser.add_argument("--limit", type=int, help="限制处理数量 (用于测试)")
     args = parser.parse_args()
 
@@ -352,14 +386,16 @@ def main():
     manual_count = len(json.load(open(MANUAL_CORRECTIONS_PATH, encoding="utf-8")).get("corrections", [])) if os.path.exists(MANUAL_CORRECTIONS_PATH) else 0
     print(f" 已加载 {manual_count} 条手动纠错规则")
 
-    # 获取转录文件列表 (支持 transcripts/ 根目录及子目录)
-    if args.file:
+    # 获取转录文件列表 (支持 transcripts/ 任意子目录)
+    if args.manifest:
+        transcripts, missing_manifest = resolve_manifest_transcripts(args.manifest)
+        if missing_manifest:
+            print(f"警告: 清单中有 {len(missing_manifest)} 个文件未找到，已跳过")
+    elif args.file:
         pattern = os.path.join(TRANSCRIPT_DIR, "**", f"*{args.file}*.txt")
-        transcripts = sorted(glob.glob(pattern))
+        transcripts = sorted(glob.glob(pattern, recursive=True))
     else:
-        flat = glob.glob(os.path.join(TRANSCRIPT_DIR, "*.txt"))
-        nested = glob.glob(os.path.join(TRANSCRIPT_DIR, "*", "*.txt"))
-        transcripts = sorted(set(flat + nested))
+        transcripts = get_transcript_candidates()
 
     if args.limit:
         transcripts = transcripts[:args.limit]
